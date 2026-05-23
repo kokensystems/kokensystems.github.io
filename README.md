@@ -1,19 +1,11 @@
 # KÖKEN — Bedenin Geometrisi
 
-> *"Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan doğruların üzerine ışık tutuyorum."*
+> *"Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."*
 
 > *Beden sonuç üretmez; mimariyi yansıtır.*
 
 Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir.  
 Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.
-
----
-
-## Ana Metin
-
-Sistemin detaylı açıklaması:
-
-→ [Köken Ana Metni](koken-core.md)
 
 ---
 
@@ -26,7 +18,6 @@ Sistemin detaylı açıklaması:
 ## Yaklaşım
 
 Bu sistem:
-
 - Semptomlarla değil, yapıyla ilgilenir  
 - Sonuçları değil, nedeni inceler  
 - Müdahale etmez, görünür kılar  
