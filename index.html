@@ -10,8 +10,8 @@
 
     <style>
         body {
-            background-color: #3d2f26; /* Figma Koyu Espresso */
-            color: #F4EFEA;            /* Asil Kemik Rengi */
+            background-color: #3d2f26; 
+            color: #F4EFEA;            
             font-family: 'Georgia', serif;
             line-height: 1.9;
             margin: 0;
@@ -51,7 +51,7 @@
             font-weight: bold;
             text-align: center;
             color: #F4EFEA;            
-            font-size: 1.05rem;        /* İstediğin gibi biraz daha küçültüldü */
+            font-size: 1.05rem;        
             margin: 25px auto;
             line-height: 1.7;
             max-width: 95%;
@@ -73,9 +73,8 @@
             font-size: 1.08rem;
             text-align: left;
         }
-        /* Modern tıp ve köken kısmını çok az küçültmek için eklenen özel ayar */
         .medical-intro {
-            font-size: 1.02rem;        /* Çok az, tam kıvamında küçültüldü */
+            font-size: 1.02rem;        
             opacity: 0.95;
         }
         .content p {
@@ -83,9 +82,17 @@
             opacity: 0.95;
             letter-spacing: 0.2px;
         }
+        .content ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+        .content li {
+            margin-bottom: 12px;
+            letter-spacing: 0.2px;
+        }
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         /* İstediğin gibi denklemin boyutu azıcık küçültüldü */
+            font-size: 1.5rem;         
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
@@ -134,7 +141,7 @@
             font-size: 0.95rem;
             color: #bfaea2;
             opacity: 0.85;
-            margin-top: 25px;          /* İsteğin üzerine butondan azıcık daha aşağı kaydırıldı */
+            margin-top: 25px;          
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
@@ -162,11 +169,13 @@
         "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
     </div>
 
-    <div class="formula">ΔBM = (A · Y) · Z!</div>
+    <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
 
     <hr class="section-divider">
 
     <div class="content">
+        <p>Beden, dışarıdan etki alarak içeriden şekillenir. Dış dünya süreçlerin başlamasını tetikleyen olaylar bütünüdür. Dış dünya yükü getirir ve bu yükün oluşturacağı şeyler bedenin mimarisine göre belirlenir. Bu matematiğin sonucu olarak beden, yıkım veya inşa süreçlerine girer.</p>
+
         <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar.</p>
 
         <p class="medical-intro">Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
@@ -174,8 +183,58 @@
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
         <div class="loop-box">
-            Mimari bir döngüdür:<br><strong>A → Eylem → ΔBM → Yeni Mimari → Yeni A</strong>
+            Mimari bir döngüdür:<br><strong>$$A \rightarrow \text{Eylem} \rightarrow \Delta BM \rightarrow \text{Yeni Mimari} \rightarrow \text{Yeni } A$$</strong>
         </div>
+
+        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
+
+        <p><strong>(A)nlayış:</strong> Denklemdeki değişkenler arasındaki en önemli unsurdur; Sürecin ilk adımı anlayış ile başlar ve denklemdeki tüm değişkenleri doğrudan veya dolaylı olarak etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. (B)akış açısı $0 < B \le 1$ aralığında kabul edilir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Ufak bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $G \rightleftharpoons H$. Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
+
+        <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
+
+        <ul>
+            <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
+            <li><strong>(B)akış açısı:</strong> $B$, bağımsız bir değişken değil; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. Farkındalıktan uzaktaysak, bakış açımız olması gerekenden dar olacağı için, $F = -1$ ise $B = (0,1)$ kabul edilir. Bakış açısı daraldıkça, sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. $F = 1$ ise o an mimari olabileceğin en uygun açıda olacağı için $B = 1$ olarak kabul edilir; bakış açısı sonucu etkilemeyecektir. $B = 1$ olduğunda ise inşa olması gerektiği gibi sürecektir. $$0 < B \le 1$$</li>
+            <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir. $$G \rightleftharpoons H$$</li>
+            <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir. $$H \rightleftharpoons Y$$</li>
+        </ul>
+
+        <p>Denkleme yön veren $\pm F$arkındalık, eyleme şekil veren ise $(B)$akış açımızdır. $(G)$ ve $(H)$'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla $\Delta BM$ üzerindeki birikim etkisini belirler. $$A = \frac{(\pm F) \cdot (G + H)}{B}$$ olarak formülize edilir.</p>
+
+        <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
+        
+        <ul>
+            <li><strong>(Y₁) İç sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum vb.</li>
+            <li><strong>(K)öprü:</strong> Diyafram, pelvik taban, multifidus ve transversus</li>
+            <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
+        </ul>
+
+        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu yüzden çarpan olarak formüldelerdir. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, $K \ge 1$ olarak kabul edilir, $K = 1$ olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, $K = 0$ olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. $$Y = \frac{Y_1 \cdot Y_2}{K}$$ olarak formülize edilir.</p>
+
+        <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. $0 < Z < 1$ aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
+        
+        <ul>
+            <li>Başlangıçta etkileri yüksekken: $(0,1)! \approx 0,9514$</li>
+            <li>Ortaya doğru etkileri düşer: $(0,5)! \approx 0,8862$</li>
+            <li>Sona doğru etkileri tekrar artar: $(0,9)! \approx 0,9618$</li>
+        </ul>
+        <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
+
+        <div class="formula">
+            $$\Delta BM = \left[ (\pm F) \cdot \frac{G + H}{B} \cdot \frac{Y_1 \cdot Y_2}{K} \right] \cdot Z!$$
+        </div>
+
+        <p>Fiziki bedenimizdeki sorunlar anlayışımıza göre şekillenir. Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir.</p>
+        
+        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
+        
+        <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur ve yapı kararsız hâle gelir; bu durum, tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
+        
+        <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
+        
+        <p>Köken, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Bununla birlikte, yoğunluğu taşıyabilmesi ve yeni mimarinin inşa süreci için iç yapıyı sağlamlaştırarak zaman değişkeni karşısında daha kararlı bir mimari hâline gelebiliriz.</p>
+
+        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. Bu, sistemin felsefesidir. Anlayışın yönü değişmezse yıkım devam eder; sistem hizalanamaz. İnşa, kişinin kendi sorumluluğundadır.</p>
 
         <hr class="section-divider">
 
@@ -183,7 +242,7 @@
             "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."
         </div>
 
-        <a href="koken-core.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
+        <a href="koken-systems.md.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
         
         <div class="math-motto">"Sistem bir mucize değil, matematiktir."</div>
     </div>
