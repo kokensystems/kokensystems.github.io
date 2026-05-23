@@ -1,6 +1,6 @@
 # KÖKEN — Bedenin Geometrisi
 
-> *"Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."*
+> *Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum.*
 
 > *Beden sonuç üretmez; mimariyi yansıtır.*
 
