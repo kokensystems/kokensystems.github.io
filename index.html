@@ -11,7 +11,7 @@
     <style>
         body {
             background-color: #3d2f26; /* Figma Koyu Espresso */
-            color: #F4EFEA;            /* Yeni talep edilen Asil Kemik Rengi */
+            color: #F4EFEA;            /* Asil Kemik Rengi */
             font-family: 'Georgia', serif;
             line-height: 1.9;
             margin: 0;
@@ -25,7 +25,7 @@
             width: 100%;
         }
         .header-title {
-            color: #F4EFEA;            /* Başlık rengi güncellendi */
+            color: #F4EFEA;
             font-size: 1.9rem;
             font-weight: bold;
             text-align: center;
@@ -50,8 +50,8 @@
             font-style: italic;
             font-weight: bold;
             text-align: center;
-            color: #F4EFEA;            /* Renk güncellendi */
-            font-size: 1.15rem;        /* İstediğin gibi font boyutu biraz küçültüldü */
+            color: #F4EFEA;            
+            font-size: 1.05rem;        /* İstediğin gibi biraz daha küçültüldü */
             margin: 25px auto;
             line-height: 1.7;
             max-width: 95%;
@@ -73,6 +73,11 @@
             font-size: 1.08rem;
             text-align: left;
         }
+        /* Modern tıp ve köken kısmını çok az küçültmek için eklenen özel ayar */
+        .medical-intro {
+            font-size: 1.02rem;        /* Çok az, tam kıvamında küçültüldü */
+            opacity: 0.95;
+        }
         .content p {
             margin-bottom: 24px;
             opacity: 0.95;
@@ -80,13 +85,13 @@
         }
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;         /* İstediğin gibi denklemin boyutu azıcık küçültüldü */
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
-            color: #F4EFEA;            /* Renk güncellendi */
+            color: #F4EFEA;            
             background-color: rgba(74, 58, 47, 0.35); 
-            padding: 20px;
+            padding: 18px;
             border-radius: 4px;
             border: 1px solid rgba(191, 174, 162, 0.12);
             letter-spacing: 1.5px;
@@ -97,7 +102,7 @@
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
-            color: #F4EFEA;            /* Renk güncellendi */
+            color: #F4EFEA;            
             background-color: rgba(84, 67, 55, 0.2); 
             padding: 15px;
             border-radius: 4px;
@@ -108,13 +113,13 @@
             display: block;
             text-align: center;
             background-color: #544337; 
-            color: #F4EFEA;            /* Renk güncellendi */
+            color: #F4EFEA;            
             padding: 16px 20px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.05rem;
-            margin: 35px 0 15px 0;     /* Alttaki yeni yazı için alt margin azaltıldı */
+            margin: 35px 0 15px 0;     
             border: 1px solid #bfaea2; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
@@ -123,14 +128,13 @@
             background-color: #635042;
             border-color: #F4EFEA;
         }
-        /* Yeni matematik vurgusu için eklenen profesyonel stil */
         .math-motto {
             text-align: center;
             font-style: italic;
             font-size: 0.95rem;
             color: #bfaea2;
             opacity: 0.85;
-            margin-top: 20px;          /* Butondan azıcık aşağıya almak için boşluk */
+            margin-top: 25px;          /* İsteğin üzerine butondan azıcık daha aşağı kaydırıldı */
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
@@ -163,9 +167,9 @@
     <hr class="section-divider">
 
     <div class="content">
-        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar.</p>
+        <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar.</p>
 
-        <p>Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p class="medical-intro">Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
