@@ -79,7 +79,7 @@
         }
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         
+            font-size: 1.5rem;         /* Index sayfasıyla birebir eşitlendi */
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
@@ -103,25 +103,42 @@
             border-left: 3px solid #bfaea2;
             letter-spacing: 0.5px;
         }
+        /* Zaman değerlerinin tam karşıya gelmesini sağlayan hizalama */
+        .time-align-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
         .back-link {
             display: block;
             text-align: center;
-            background-color: transparent; 
-            color: #bfaea2;            
-            padding: 12px 20px;
+            background-color: #544337; 
+            color: #F4EFEA;            
+            padding: 16px 20px;
             text-decoration: none;
             border-radius: 4px;
-            font-weight: normal;
-            font-size: 0.95rem;
-            margin: 40px 0 15px 0;     
-            border: 1px solid rgba(191, 174, 162, 0.2); 
+            font-weight: bold;
+            font-size: 1.05rem;
+            margin: 35px 0 15px 0;     
+            border: 1px solid #bfaea2; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .back-link:hover {
-            background-color: rgba(84, 67, 55, 0.2);
-            color: #F4EFEA;
-            border-color: #bfaea2;
+            background-color: #635042;
+            border-color: #F4EFEA;
+        }
+        .math-motto {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #bfaea2;
+            opacity: 0.85;
+            margin-top: 25px;          
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
@@ -161,7 +178,7 @@
         <p>Denklem en sade hâliyle şu şekildedir;</p>
         <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
         
-        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
+        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, $(A)$nlayış, $(Y)$oğunluk ve $(Z)$aman; inşa veya yıkım sürecini ortaya koyar.</p>
         
         <p><strong>(A)nlayış:</strong> Denklemdeki değişkenler arasındaki en önemli unsurdur; Sürecin ilk adımı anlayış ile başlar ve denklemdeki tüm değişkenleri doğrudan veya dolaylı olarak etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. (B)akış açısı $0 < B \le 1$ aralığında kabul edilir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Ufak bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $G \rightleftharpoons H$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
 
@@ -174,7 +191,8 @@
             <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir. $$H \rightleftharpoons Y$$</li>
         </ul>
 
-        <p>Denkleme yön veren $\pm(F)$arkındalık, eyleme şekil veren ise $(B)$akış açımızdır. $(G)$ ve $(H)$'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla $\Delta BM$ üzerindeki birikim etkisini belirler. $$A = \frac{(\pm F) \cdot (G + H)}{B}$$ olarak formülize edilir.</p>
+        <p>Denkleme yön veren $\pm(F)$arkındalık, eyleme şekil veren ise $(B)$akış açımızdır. $(G)$ ve $(H)$'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla $\Delta BM$ üzerindeki birikim etkisini belirler. İstediğin formatta formülize edilmiş hali:</p>
+        <div class="formula">$$A = \pm F \cdot ((G + H) / B)$$</div>
 
         <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
         
@@ -184,20 +202,31 @@
             <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
         </ul>
 
-        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu yüzden çarpan olarak formüldelerdir. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, $K \ge 1$ olarak kabul edilir, $K = 1$ olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, $K = 0$ olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. $$Y = \frac{Y_1 \cdot Y_2}{K}$$ olarak formülize edilir.</p>
+        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu yüzden çarpan olarak formüldelerdir. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, $K \ge 1$ olarak kabul edilir, $K = 1$ olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, $K = 0$ olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. İstediğin formatta formülize edilmiş hali:</p>
+        <div class="formula">$$Y = (Y_1 \cdot Y_2) / K$$</div>
 
         <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. $0 < Z < 1$ aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
         
-        <ul>
-            <li>Başlangıçta etkileri yüksekken: $$(0,1)! \approx 0,9514$$</li>
-            <li>Ortaya doğru etkileri düşer: $$(0,5)! \approx 0,8862$$</li>
-            <li>Sona doğru etkileri tekrar artar: $$(0,9)! \approx 0,9618$$</li>
-        </ul>
+        <div style="margin-bottom: 24px;">
+            <div class="time-align-row">
+                <span>Başlangıçta etkileri yüksekken:</span>
+                <span>$$(0,1)! \approx 0,9514$$</span>
+            </div>
+            <div class="time-align-row">
+                <span>Ortaya doğru etkileri düşer:</span>
+                <span>$$(0,5)! \approx 0,8862$$</span>
+            </div>
+            <div class="time-align-row">
+                <span>Sona doğru etkileri tekrar artar:</span>
+                <span>$$(0,9)! \approx 0,9618$$</span>
+            </div>
+        </div>
+        
         <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
 
-        <p>Formülün açık hali şu şekildedir;</p>
+        <p>Formülün en açık hali tam olarak belirttiğin biçimsel düzende şu şekildedir;</p>
         <div class="formula">
-            $$\Delta BM = \left[ (\pm F) \cdot \frac{G + H}{B} \cdot \frac{Y_1 \cdot Y_2}{K} \right] \cdot Z!$$
+            $$\Delta BM = [\pm F \cdot ((G + H) / B) \cdot ((Y_1 \cdot Y_2) / K)] \cdot Z!$$
         </div>
 
         <div class="sub-heading">Yapısal Adaptasyon ve Algı Yönetimi</div>
@@ -216,7 +245,11 @@
 
         <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. Bu, sistemin felsefesidir. Anlayışın yönü değişmezse yıkım devam eder; sistem hizalanamaz. Sistem bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
 
+        <hr class="section-divider">
+
         <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+        
+        <div class="math-motto">"Sadece Işık Tutar"</div>
     </div>
 
     <div class="footer">
