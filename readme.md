@@ -3,7 +3,7 @@
 > **Beden sonuç üretmez; mimariyi yansıtır.**
 
 Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir.  
-Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.
+Fiziksel sonuçların arkasındaki yapısal dinamikleri görünür kılar.
 
 ---
 
@@ -25,8 +25,8 @@ Sistemin detaylı açıklaması:
 
 Bu sistem:
 
-- Semptomlarla değil, yapıyla ilgilenir  
-- Sonuçları değil, nedeni inceler  
+- Semptomları değil, yapıyı inceler  
+- Sonuçları değil, nedeni ele alır  
 - Müdahale etmez, görünür kılar  
 
 ---
