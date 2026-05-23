@@ -19,15 +19,14 @@ Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.
 
 Bu sistem:
 - Semptomlarla değil, yapıyla ilgilenir  
-- Sonuçları değil, nedeni inceler  
+- Sonuçları değil, nedenleri inceler  
 - Müdahale etmez, görünür kılar  
 
 ---
 
 ## Not
 
-Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir.  
-Bir modeldir.
+Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
 
 Anlamak ve uygulamak, bireysel sorumluluk gerektirir.
 
