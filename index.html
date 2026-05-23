@@ -10,12 +10,8 @@
 
     <style>
         body {
-            /* 🎨 ARKA PLAN RENGİNİ BURADAN DEĞİŞTİREBİLİRSİN: */
-            background-color: #3d2f26; 
-            
-            /* 🎨 GENEL YAZI RENGİNİ BURADAN DEĞİŞTİREBİLİRSİN: */
-            color: #d1c7bd; 
-            
+            background-color: #3d2f26; /* Figma Koyu Espresso */
+            color: #F4EFEA;            /* Yeni talep edilen Asil Kemik Rengi */
             font-family: 'Georgia', serif;
             line-height: 1.9;
             margin: 0;
@@ -29,8 +25,7 @@
             width: 100%;
         }
         .header-title {
-            /* 🎨 SİTE BAŞLIĞI RENGİ: */
-            color: #ebdcd0; 
+            color: #F4EFEA;            /* Başlık rengi güncellendi */
             font-size: 1.9rem;
             font-weight: bold;
             text-align: center;
@@ -39,7 +34,6 @@
         }
         .tagline {
             font-style: italic;
-            /* 🎨 ALT BAŞLIK RENGİ: */
             color: #bfaea2; 
             text-align: center;
             margin-bottom: 0;
@@ -49,7 +43,6 @@
         .section-divider {
             border: 0;
             height: 1px;
-            /* 🎨 ARADAKİ ÇİZGİLERİN RENGİ (#544337 yazan yerler): */
             background: linear-gradient(to right, transparent, #544337 20%, #544337 80%, transparent);
             margin: 40px 0;
         }
@@ -57,21 +50,19 @@
             font-style: italic;
             font-weight: bold;
             text-align: center;
-            /* 🎨 EN ÜSTTEKİ BÜYÜK SÖZLERİN RENGİ: */
-            color: #ebdcd0; 
-            font-size: 1.25rem;
+            color: #F4EFEA;            /* Renk güncellendi */
+            font-size: 1.15rem;        /* İstediğin gibi font boyutu biraz küçültüldü */
             margin: 25px auto;
             line-height: 1.7;
             max-width: 95%;
-            border-left: 2px solid #bfaea2;  /* Sol çizgi rengi */
-            border-right: 2px solid #bfaea2; /* Sağ çizgi rengi */
+            border-left: 2px solid #bfaea2;  
+            border-right: 2px solid #bfaea2; 
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
         .epigraph-final {
             font-style: italic;
             text-align: center;
-            /* 🎨 "GÜNEŞİN ALTINDA..." YAZISININ RENGİ: */
             color: #bfaea2; 
             font-size: 1.1rem;
             margin: 40px auto 20px auto;
@@ -93,9 +84,7 @@
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
-            /* 🎨 FORMÜL YAZI RENGİ: */
-            color: #ebdcd0; 
-            /* 🎨 FORMÜL KUTUSUNUN ARKA PLANI: */
+            color: #F4EFEA;            /* Renk güncellendi */
             background-color: rgba(74, 58, 47, 0.35); 
             padding: 20px;
             border-radius: 4px;
@@ -108,9 +97,7 @@
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
-            /* 🎨 DÖNGÜ KUTUSUNUN YAZI RENGİ: */
-            color: #ebdcd0; 
-            /* 🎨 DÖNGÜ KUTUSUNUN ARKA PLANI: */
+            color: #F4EFEA;            /* Renk güncellendi */
             background-color: rgba(84, 67, 55, 0.2); 
             padding: 15px;
             border-radius: 4px;
@@ -120,30 +107,36 @@
         .core-link {
             display: block;
             text-align: center;
-            /* 🎨 BUTONUN İÇ RENGİ: */
             background-color: #544337; 
-            /* 🎨 BUTONUN YAZI RENGİ: */
-            color: #ebdcd0; 
+            color: #F4EFEA;            /* Renk güncellendi */
             padding: 16px 20px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.05rem;
-            margin: 35px 0;
-            /* 🎨 BUTONUN DIŞ ÇİZGİ RENGİ: */
+            margin: 35px 0 15px 0;     /* Alttaki yeni yazı için alt margin azaltıldı */
             border: 1px solid #bfaea2; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .core-link:hover {
-            /* 🎨 MOUSE İLE ÜZERİNE GELİNDİĞİNDEKİ RENKLER: */
             background-color: #635042;
-            border-color: #ebdcd0;
+            border-color: #F4EFEA;
+        }
+        /* Yeni matematik vurgusu için eklenen profesyonel stil */
+        .math-motto {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #bfaea2;
+            opacity: 0.85;
+            margin-top: 20px;          /* Butondan azıcık aşağıya almak için boşluk */
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            /* 🎨 EN ALT TELİF YAZISI RENGİ: */
             color: #8c7a6e; 
             text-align: center;
             border-top: 1px solid #544337;
@@ -172,7 +165,7 @@
     <div class="content">
         <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar.</p>
 
-        </p>Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.<p>
+        <p>Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
@@ -187,9 +180,14 @@
         </div>
 
         <a href="koken-core.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
+        
+        <div class="math-motto">"Sistem bir mucize değil, matematiktir."</div>
     </div>
 
     <div class="footer">
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 10px; font-style: italic; color: #8c7a6e;">
+            Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
+        </p>
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
 
