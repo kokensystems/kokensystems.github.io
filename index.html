@@ -13,22 +13,23 @@
             background-color: #3d2f26; /* Figma Koyu Espresso */
             color: #d1c7bd; /* Figma Sıcak Toprak */
             font-family: 'Georgia', serif;
-            line-height: 1.8;
+            line-height: 1.9; /* Okumayı en çok rahatlatan satır aralığı */
             margin: 0;
             padding: 60px 24px;
             display: flex;
             justify-content: center;
+            -webkit-font-smoothing: antialiased; /* Font netliği için */
         }
         .container {
-            max-width: 560px;
+            max-width: 540px; /* Okuma odağını dağıtmayan en ideal genişlik */
             width: 100%;
         }
         .header-title {
             color: #ebdcd0;
-            font-size: 2rem;
+            font-size: 1.9rem;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             letter-spacing: 2px;
         }
         .tagline {
@@ -37,21 +38,21 @@
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         .section-divider {
             border: 0;
             height: 1px;
             background: linear-gradient(to right, transparent, #544337 20%, #544337 80%, transparent);
-            margin: 40px 0;
+            margin: 45px 0;
         }
         .epigraph-first {
             font-style: italic;
             text-align: center;
             color: #bfaea2;
             font-size: 1.1rem;
-            margin: 0 auto 25px auto;
-            line-height: 1.6;
+            margin: 0 auto 30px auto;
+            line-height: 1.7;
             max-width: 90%;
         }
         .epigraph-main {
@@ -59,69 +60,73 @@
             font-weight: bold;
             text-align: center;
             color: #ebdcd0;
-            font-size: 1.25rem;
-            margin: 25px auto;
-            line-height: 1.5;
-            max-width: 90%;
+            font-size: 1.3rem;
+            margin: 30px auto;
+            line-height: 1.6;
+            max-width: 95%;
             border-left: 2px solid #bfaea2;
             border-right: 2px solid #bfaea2;
-            padding: 0 10px;
+            padding: 0 15px;
+            letter-spacing: 0.5px;
         }
         .content {
-            font-size: 1.05rem;
-            text-align: left; /* Akıcı ve modern okuma için sola hizalama */
+            font-size: 1.08rem; /* Okunabilirliği artırmak için hafifçe büyütüldü */
+            text-align: left;
         }
         .content p {
-            margin-bottom: 24px;
+            margin-bottom: 28px; /* Paragraflar arası nefes boşluğu */
             opacity: 0.95;
+            letter-spacing: 0.2px;
         }
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            margin: 35px 0;
+            margin: 40px 0;
             text-align: center;
             color: #ebdcd0;
-            background-color: rgba(74, 58, 47, 0.4); /* Daha soft bir derinlik */
-            padding: 18px;
+            background-color: rgba(74, 58, 47, 0.35);
+            padding: 20px;
             border-radius: 4px;
-            border: 1px solid rgba(191, 174, 162, 0.15);
-            letter-spacing: 1px;
+            border: 1px solid rgba(191, 174, 162, 0.12);
+            letter-spacing: 1.5px;
         }
         .core-link {
             display: block;
             text-align: center;
             background-color: #544337;
             color: #ebdcd0;
-            padding: 16px;
+            padding: 16px 20px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            margin: 40px 0;
+            font-size: 1.05rem;
+            margin: 45px 0;
             border: 1px solid #bfaea2;
-            letter-spacing: 0.5px;
-            transition: transform 0.2s ease, background-color 0.3s ease;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
         }
         .core-link:hover {
             background-color: #635042;
-            transform: translateY(-1px); /* Mikro etkileşim */
+            border-color: #ebdcd0;
         }
         .motto-bottom {
             text-align: center; 
             font-style: italic; 
             color: #ebdcd0; 
-            margin-top: 40px;
-            font-size: 1.1rem;
-            border-top: 1px dashed rgba(84, 67, 55, 0.6);
-            padding-top: 30px;
+            margin-top: 45px;
+            font-size: 1.15rem;
+            border-top: 1px dashed rgba(84, 67, 55, 0.5);
+            padding-top: 35px;
+            line-height: 1.6;
         }
         .footer {
-            margin-top: 80px;
+            margin-top: 90px;
             font-size: 0.85rem;
             color: #8c7a6e;
             text-align: center;
             border-top: 1px solid #544337;
-            padding-top: 24px;
+            padding-top: 25px;
             letter-spacing: 0.5px;
         }
     </style>
@@ -154,7 +159,7 @@
 
         <div class="formula">ΔBM = (A · Y) · Z!</div>
 
-        <a href="koken-core.html" class="core-link">→ Sistem Mantığı ve Formüllerin Tamamına Ulaşın</a>
+        <a href="koken-core.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
 
         <div class="motto-bottom">
             "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir."
