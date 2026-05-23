@@ -79,7 +79,7 @@
         }
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         /* Index sayfasıyla birebir eşitlendi */
+            font-size: 1.5rem;         
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
@@ -103,12 +103,16 @@
             border-left: 3px solid #bfaea2;
             letter-spacing: 0.5px;
         }
-        /* Zaman değerlerinin tam karşıya gelmesini sağlayan hizalama */
+        /* Zaman alanındaki yaklaşık değerleri estetik bir yakınlığa (3/2 oranına) çeken CSS */
+        .time-align-container {
+            max-width: 420px;
+            margin: 0 auto 24px auto;
+        }
         .time-align-row {
             display: grid;
-            grid-template-columns: 1fr auto;
+            grid-template-columns: 1.2fr 1fr;
             gap: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             align-items: center;
         }
         .back-link {
@@ -180,7 +184,7 @@
         
         <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, $(A)$nlayış, $(Y)$oğunluk ve $(Z)$aman; inşa veya yıkım sürecini ortaya koyar.</p>
         
-        <p><strong>(A)nlayış:</strong> Denklemdeki değişkenler arasındaki en önemli unsurdur; Sürecin ilk adımı anlayış ile başlar ve denklemdeki tüm değişkenleri doğrudan veya dolaylı olarak etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. (B)akış açısı $0 < B \le 1$ aralığında kabul edilir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Ufak bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $G \rightleftharpoons H$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
+        <p><strong>(A)nlayış:</strong> Denklemdeki değişkenler arasındaki en önemli unsurdur; Sürecin ilk adımı anlayış ile başlar ve denklemdeki tüm değişkenleri doğrudan veya dolaylı olarak etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Bakış açısı $0 < B \le 1$ aralığında kabul edilir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Ufak bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise Geçmiş ve Hâl ekseninde şekillenir. Birbirlerini beslerler; $G \rightleftharpoons H$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
 
         <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
 
@@ -191,8 +195,8 @@
             <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir. $$H \rightleftharpoons Y$$</li>
         </ul>
 
-        <p>Denkleme yön veren $\pm(F)$arkındalık, eyleme şekil veren ise $(B)$akış açımızdır. $(G)$ ve $(H)$'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla $\Delta BM$ üzerindeki birikim etkisini belirler. İstediğin formatta formülize edilmiş hali:</p>
-        <div class="formula">$$A = \pm F \cdot ((G + H) / B)$$</div>
+        <p>Denkleme yön veren $\pm(F)$arkındalık, eyleme şekil veren ise $(B)$akış açımızdır. $(G)$ ve $(H)$'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla $\Delta BM$ üzerindeki birikim etkisini belirler. Gerçek kesir çizgisiyle formülize edilmiş hali:</p>
+        <div class="formula">$$A = \frac{\pm F \cdot (G + H)}{B}$$</div>
 
         <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
         
@@ -202,31 +206,31 @@
             <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
         </ul>
 
-        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu yüzden çarpan olarak formüldelerdir. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, $K \ge 1$ olarak kabul edilir, $K = 1$ olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, $K = 0$ olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. İstediğin formatta formülize edilmiş hali:</p>
-        <div class="formula">$$Y = (Y_1 \cdot Y_2) / K$$</div>
+        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu yüzden çarpan olarak formüldelerdir. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, $K \ge 1$ olarak kabul edilir, $K = 1$ olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, $K = 0$ olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. Gerçek kesir çizgisiyle formülize edilmiş hali:</p>
+        <div class="formula">$$Y = \frac{Y_1 \cdot Y_2}{K}$$</div>
 
         <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. $0 < Z < 1$ aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
         
-        <div style="margin-bottom: 24px;">
+        <div class="time-align-container">
             <div class="time-align-row">
-                <span>Başlangıçta etkileri yüksekken:</span>
+                <span>Başlangıçta etkileri yüksekken</span>
                 <span>$$(0,1)! \approx 0,9514$$</span>
             </div>
             <div class="time-align-row">
-                <span>Ortaya doğru etkileri düşer:</span>
+                <span>Ortaya doğru etkileri düşer</span>
                 <span>$$(0,5)! \approx 0,8862$$</span>
             </div>
             <div class="time-align-row">
-                <span>Sona doğru etkileri tekrar artar:</span>
+                <span>Sona doğru etkileri tekrar artar</span>
                 <span>$$(0,9)! \approx 0,9618$$</span>
             </div>
         </div>
         
         <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
 
-        <p>Formülün en açık hali tam olarak belirttiğin biçimsel düzende şu şekildedir;</p>
+        <p>Formülün en açık hali asil kesir yapısıyla şu şekildedir;</p>
         <div class="formula">
-            $$\Delta BM = [\pm F \cdot ((G + H) / B) \cdot ((Y_1 \cdot Y_2) / K)] \cdot Z!$$
+            $$\Delta BM = \left[ \frac{\pm F \cdot (G + H)}{B} \cdot \frac{Y_1 \cdot Y_2}{K} \right] \cdot Z!$$
         </div>
 
         <div class="sub-heading">Yapısal Adaptasyon ve Algı Yönetimi</div>
