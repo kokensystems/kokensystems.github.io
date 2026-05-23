@@ -78,7 +78,7 @@
             letter-spacing: 0.2px;
         }
         
-        /* Mobil Ekranlarda Taşmayı Önleyen Akıllı Esnek Kutular */
+        /* Yenilenen Akıllı Formül Alanı (Kaydırmayı Yok Eden Mimari) */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -92,11 +92,15 @@
             border: 1px solid rgba(191, 174, 162, 0.12);
             letter-spacing: 1.5px;
             
-            /* Taşma Önleyici CSS */
-            overflow-x: auto;
+            /* Sağa kaydırmayı tamamen engeller, içeriği sıkıştırarak sığdırır */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             max-width: 100%;
-            display: block;
+            box-sizing: border-box;
         }
+        
+        /* Döngü Kutusu Esnekliği */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.1rem;
@@ -109,9 +113,7 @@
             border-radius: 4px;
             border-left: 3px solid #bfaea2;
             letter-spacing: 0.5px;
-            
-            /* Taşma Önleyici CSS */
-            overflow-x: auto;
+            box-sizing: border-box;
             max-width: 100%;
         }
         
@@ -165,15 +167,26 @@
             letter-spacing: 0.5px;
         }
 
-        /* Telefonlar için Özel Font Boyutu Regülasyonu */
+        /* TELEFONLAR İÇİN KESİN ÇÖZÜM: Kaydırmayı bitiren, her şeyi içeri alan kurallar */
         @media (max-width: 480px) {
+            body {
+                padding: 40px 16px; /* Kenar boşluklarını daralttık */
+            }
             .formula {
-                font-size: 1.15rem; 
-                padding: 12px 6px;
+                font-size: 1.05rem; /* Formül fontunu sığacak şekilde optimize ettik */
+                padding: 14px 8px;
+                letter-spacing: 0.5px;
+            }
+            /* MathJax denklemlerinin mobilde dışarı taşmasını matematiksel olarak engeller */
+            .formula .MathJax {
+                font-size: 92% !important; 
             }
             .loop-box {
-                font-size: 0.9rem;
-                padding: 10px;
+                font-size: 0.85rem;
+                padding: 12px 8px;
+            }
+            .loop-box .MathJax {
+                font-size: 85% !important;
             }
             .time-align-row {
                 grid-template-columns: 1fr;
@@ -198,7 +211,7 @@
 
         <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar.</p>
         
-        <p class="medical-intro">Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p class="medical-intro">Köken; sonuçlerin ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
@@ -206,7 +219,7 @@
             Mimari bir döngüdür:<br><strong>$$A \rightarrow \text{Eylem} \rightarrow \Delta BM \rightarrow \text{Yeni Mimari} \rightarrow \text{Yeni } A$$</strong>
         </div>
 
-        <div class="sub-heading">Bedenin Mimarisi Denklem ve Bileşenleri</div>
+        <div class="sub-heading">Bedenin Mimarisi Denklem and Bileşenleri</div>
         
         <p>Denklem en sade hâliyle şu şekildedir;</p>
         <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
@@ -224,7 +237,7 @@
             <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir. $$H \rightleftharpoons Y$$</li>
         </ul>
 
-        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler. F kesrin tamamen dışına alınarak parantez içi kesirli formülize edilmiş hali:</p>
+        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler. F kesrin dışında kalacak biçimde formülize edilmiş hali:</p>
         <div class="formula">$$A = \pm F \cdot \left( \frac{G + H}{B} \right)$$</div>
 
         <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
@@ -257,7 +270,7 @@
         
         <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
 
-        <p>Formülün en açık hali, F dışarıda parantezler içi kesirli olacak şekilde mobil ekrana tam uyumlu olarak şu şekildedir;</p>
+        <p>Formülün en açık hali F tamamen dışarıda, parantez içleri asil kesirli yapıda ve telefon ekranına tam sığacak şekilde düzenlenmiştir:</p>
         <div class="formula">
             $$\Delta BM = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
         </div>
