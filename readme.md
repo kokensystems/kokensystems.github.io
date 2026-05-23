@@ -1,9 +1,11 @@
 # KÖKEN — Bedenin Geometrisi
 
-> **Beden sonuç üretmez; mimariyi yansıtır.**
+> *"Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."*
+
+> *Beden sonuç üretmez; mimariyi yansıtır.*
 
 Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir.  
-Fiziksel sonuçların arkasındaki yapısal dinamikleri görünür kılar.
+Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.
 
 ---
 
@@ -25,8 +27,8 @@ Sistemin detaylı açıklaması:
 
 Bu sistem:
 
-- Semptomları değil, yapıyı inceler  
-- Sonuçları değil, nedeni ele alır  
+- Semptomlarla değil, yapıyla ilgilenir  
+- Sonuçları değil, nedeni inceler  
 - Müdahale etmez, görünür kılar  
 
 ---
@@ -37,3 +39,5 @@ Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir.
 Bir modeldir.
 
 Anlamak ve uygulamak, bireysel sorumluluk gerektirir.
+
+© 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
