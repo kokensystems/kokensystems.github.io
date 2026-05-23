@@ -13,15 +13,15 @@
             background-color: #3d2f26; /* Figma Koyu Espresso */
             color: #d1c7bd; /* Figma Sıcak Toprak */
             font-family: 'Georgia', serif;
-            line-height: 1.9; /* Okumayı en çok rahatlatan satır aralığı */
+            line-height: 1.9;
             margin: 0;
             padding: 60px 24px;
             display: flex;
             justify-content: center;
-            -webkit-font-smoothing: antialiased; /* Font netliği için */
+            -webkit-font-smoothing: antialiased;
         }
         .container {
-            max-width: 540px; /* Okuma odağını dağıtmayan en ideal genişlik */
+            max-width: 540px;
             width: 100%;
         }
         .header-title {
@@ -44,24 +44,15 @@
             border: 0;
             height: 1px;
             background: linear-gradient(to right, transparent, #544337 20%, #544337 80%, transparent);
-            margin: 45px 0;
-        }
-        .epigraph-first {
-            font-style: italic;
-            text-align: center;
-            color: #bfaea2;
-            font-size: 1.1rem;
-            margin: 0 auto 30px auto;
-            line-height: 1.7;
-            max-width: 90%;
+            margin: 40px 0;
         }
         .epigraph-main {
             font-style: italic;
             font-weight: bold;
             text-align: center;
             color: #ebdcd0;
-            font-size: 1.3rem;
-            margin: 30px auto;
+            font-size: 1.25rem;
+            margin: 25px auto;
             line-height: 1.6;
             max-width: 95%;
             border-left: 2px solid #bfaea2;
@@ -69,12 +60,21 @@
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
+        .epigraph-final {
+            font-style: italic;
+            text-align: center;
+            color: #bfaea2;
+            font-size: 1.1rem;
+            margin: 40px auto 20px auto;
+            line-height: 1.7;
+            max-width: 90%;
+        }
         .content {
-            font-size: 1.08rem; /* Okunabilirliği artırmak için hafifçe büyütüldü */
+            font-size: 1.08rem;
             text-align: left;
         }
         .content p {
-            margin-bottom: 28px; /* Paragraflar arası nefes boşluğu */
+            margin-bottom: 24px;
             opacity: 0.95;
             letter-spacing: 0.2px;
         }
@@ -82,7 +82,7 @@
             font-family: 'Times New Roman', serif;
             font-size: 1.8rem;
             font-weight: bold;
-            margin: 40px 0;
+            margin: 35px 0;
             text-align: center;
             color: #ebdcd0;
             background-color: rgba(74, 58, 47, 0.35);
@@ -90,6 +90,19 @@
             border-radius: 4px;
             border: 1px solid rgba(191, 174, 162, 0.12);
             letter-spacing: 1.5px;
+        }
+        .loop-box {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin: 30px 0;
+            text-align: center;
+            color: #ebdcd0;
+            background-color: rgba(84, 67, 55, 0.2);
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #bfaea2;
+            letter-spacing: 0.5px;
         }
         .core-link {
             display: block;
@@ -101,7 +114,7 @@
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.05rem;
-            margin: 45px 0;
+            margin: 35px 0;
             border: 1px solid #bfaea2;
             letter-spacing: 1px;
             transition: all 0.2s ease;
@@ -110,18 +123,8 @@
             background-color: #635042;
             border-color: #ebdcd0;
         }
-        .motto-bottom {
-            text-align: center; 
-            font-style: italic; 
-            color: #ebdcd0; 
-            margin-top: 45px;
-            font-size: 1.15rem;
-            border-top: 1px dashed rgba(84, 67, 55, 0.5);
-            padding-top: 35px;
-            line-height: 1.6;
-        }
         .footer {
-            margin-top: 90px;
+            margin-top: 80px;
             font-size: 0.85rem;
             color: #8c7a6e;
             text-align: center;
@@ -140,30 +143,32 @@
 
     <hr class="section-divider">
 
-    <div class="epigraph-first">
-        "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."
-    </div>
-    
     <div class="epigraph-main">
-        "Beden sonuç üretmez; mimariyi yansıtır."
+        "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir. Beden sonuç üretmez; mimariyi yansıtır."
     </div>
+
+    <div class="formula">ΔBM = (A · Y) · Z!</div>
 
     <hr class="section-divider">
 
     <div class="content">
-        <p>Beden, dışarıdan etki alarak içeriden şekillenir. Dış dünya süreçlerin başlamasını tetikleyen olaylar bütünüdür. Dış dünya yükü getirir ve bu yükün oluşturacağı şeyler bedenin mimarisine göre belirlenir. Bu matematiğin sonucu olarak beden, yıkım veya inşa süreçlerine girer.</p>
+        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Modern Tıp, yapıyı ayakta tutar.</p>
 
-        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapının ayakta kalması için modern tıp müdahale edip yapıyı ayakta tutarken; Köken ise yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
-
+        <p>Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.<p>
+        
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
-        <div class="formula">ΔBM = (A · Y) · Z!</div>
-
-        <a href="koken-core.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
-
-        <div class="motto-bottom">
-            "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir."
+        <div class="loop-box">
+            Mimari bir döngüdür:<br><strong>A → Eylem → ΔBM → Yeni Mimari → Yeni A</strong>
         </div>
+
+        <hr class="section-divider">
+
+        <div class="epigraph-final">
+            "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."
+        </div>
+
+        <a href="koken-core.html" class="core-link">Köken Systems | Ana Metin →</a>
     </div>
 
     <div class="footer">
