@@ -28,7 +28,7 @@ Sistemin detaylı açıklaması:
 Bu sistem:
 
 - Semptomlarla değil, yapıyla ilgilenir  
-- Sonuçları değil, nedeni inceler  
+- Sonuçları değil, nedenleri inceler  
 - Müdahale etmez, görünür kılar  
 
 ---
