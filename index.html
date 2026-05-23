@@ -3,100 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN — Bedenin Geometrisi</title>
+    <title>KÖKEN Systems | Bedenin Geometrisi</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
-            background-color: #42312B; /* Koyu Espresso zemin */
-            color: #F2E9DE;            /* Asil kemik rengi yazı */
-            font-family: 'Georgia', serif; /* Felsefi dokuya uygun şık bir yazı tipi */
+            background-color: #3d2f26; /* Figma'daki o derin, koyu kahve/espresso tonu */
+            color: #d1c7bd; /* Figma'daki o sıcak, açık toprak/krem yazı rengi */
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
             margin: 0;
             padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            line-height: 1.6;
         }
         .container {
-            max-width: 500px; /* Mobilde taşmaz, masaüstünde dağılmaz */
+            max-width: 600px;
             width: 100%;
-            text-align: left; /* Manifestolar soldan hizalı daha asil durur */
         }
-        h1 {
+        .header-title {
+            color: #ebdcd0; /* Başlıklar için daha parlak ve net bir krem tonu */
             font-size: 1.8rem;
-            border-bottom: 1px solid #F2E9DE;
-            padding-bottom: 10px;
+            font-weight: bold;
             text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
         }
-        h2 {
-            font-size: 1.4rem;
-            margin-top: 30px;
-        }
-        blockquote {
+        .tagline {
             font-style: italic;
-            border-left: 2px solid #F2E9DE;
-            margin: 20px 0;
-            padding-left: 15px;
-            color: #D9CFC4;
+            color: #bfaea2; /* Alt başlık için yumuşak toprak tonu */
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1rem;
         }
-        hr {
+        .section-divider {
             border: 0;
-            border-top: 1px dashed #F2E9DE;
+            height: 1px;
+            background: #544337; /* Arka planla uyumlu, zarif koyu ara çizgi */
             margin: 30px 0;
-            opacity: 0.5;
         }
-        ul {
+        .epigraph {
+            font-style: italic;
+            text-align: center;
+            color: #ebdcd0;
+            font-size: 1.1rem;
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+        .content {
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        .content p {
+            margin-bottom: 18px;
+        }
+        .content h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #ebdcd0;
+            border-left: 3px solid #bfaea2;
+            padding-left: 10px;
+        }
+        .content ul {
             padding-left: 20px;
+            margin-bottom: 18px;
         }
-        li {
-            margin-bottom: 10px;
+        .content li {
+            margin-bottom: 8px;
+        }
+        /* Figma Görselindeki O Meşhur Formül Alanı */
+        .formula {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 25px 0;
+            text-align: center;
+            color: #ebdcd0;
+            background-color: #4a3a2f; /* Tasarımdaki diğer tonu yansıtan hafif açık kahve blok */
+            padding: 15px;
+            border-radius: 4px;
+        }
+        /* Tıklanabilir Link Tasarımı */
+        .core-link {
+            display: block;
+            text-align: center;
+            background-color: #544337;
+            color: #ebdcd0;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: background 0.3s ease;
+        }
+        .core-link:hover {
+            background-color: #635042;
         }
         .footer {
-            margin-top: 40px;
-            font-size: 0.8rem;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #8c7a6e;
             text-align: center;
-            opacity: 0.7;
+            border-top: 1px solid #544337;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>KÖKEN — Bedenin Geometrisi</h1>
+
+    <div class="header-title">KÖKEN — Bedenin Geometrisi</div>
+    <div class="tagline">Bedenin Mimarisi Üzerine</div>
+
+    <hr class="section-divider">
+
+    <div class="epigraph">
+        "Güneşin altında yeni bir şey yok;<br>ben sadece karanlıkta kalan yerlere ışık tutuyorum."
+    </div>
     
-    <blockquote>
-        "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan doğruların üzerine ışık tutuyorum."
-    </blockquote>
+    <div class="epigraph" style="font-weight: bold; margin-top: 15px;">
+        "Beden sonuç üretmez; mimariyi yansıtır."
+    </div>
 
-    <blockquote>
-        Beden sonuç üretmez; mimariyi yansıtır.
-    </blockquote>
+    <hr class="section-divider">
 
-    <p>Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir.<br>
-    Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.</p>
+    <div class="content">
+        <p>Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir. Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
 
-    <hr>
+        <h2>I. Yaklaşım Metodolojisi</h2>
+        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri kritik seviyedeyse önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapının ayakta kalması için modern tıp müdahale edip sistemi korur.</p>
+        <p>KÖKEN ise sonuçların ötesiyle, mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir. Yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        
+        <p>Bu sistem:</p>
+        <ul>
+            <li>Semptomlarla değil, yapıyla ilgilenir.</li>
+            <li>Sonuçları değil, nedeni inceler.</li>
+            <li>Müdahale etmez, görünür kılar.</li>
+        </ul>
 
-    <h2>Temel İlke</h2>
-    <blockquote>Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</blockquote>
+        <h2>II. Mimari Döngü</h2>
+        <p>Bedenin mimarisi, kendi kendini besleyen dinamik bir döngü sistemi üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari ise yeni bir anlayış üretir.</p>
+        <p style="text-align: center; font-weight: bold; font-style: italic; margin: 20px 0; color: #ebdcd0;">
+            Anlayış (A) → Eylem → ΔBM → Yeni Mimari → Yeni Anlayış
+        </p>
 
-    <hr>
+        <h2>III. Sistem Dokümantasyonu</h2>
+        <p>Detaylı matematiksel analiz, matris değişkenleri ve tüm teorik altyapıyı içeren ana metne aşağıdaki bağlantıdan ulaşabilirsiniz:</p>
+        
+        <a href="koken-systems.md" class="core-link">→ KÖKEN Systems Ana Metni</a>
 
-    <h2>Yaklaşım</h2>
-    <ul>
-        <li>Semptomlarla değil, yapıyla ilgilenir</li>
-        <li>Sonuçları değil, nedeni inceler</li>
-        <li>Müdahale etmez, görünür kılar</li>
-    </ul>
+        <h2>IV. Sembolik Model</h2>
+        <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
+        <p style="font-size: 0.95rem; font-style: italic; color: #bfaea2; text-align: center;">
+            *Bu denklem doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder.
+        </p>
 
-    <hr>
-
-    <p><strong>Not:</strong> Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir. Bir modeldir.<br>
-    Anlamak ve uygulamak, bireysel sorumluluk gerektirir.</p>
+        <h2>V. Sorumluluk Protokolü</h2>
+        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, Anlayış (A) değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir.</p>
+        <p style="text-align: center; font-weight: bold; margin-top: 25px; color: #ebdcd0;">Sistem bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
+    </div>
 
     <div class="footer">
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
+
 </div>
 
 </body>
