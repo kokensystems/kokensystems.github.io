@@ -10,8 +10,12 @@
 
     <style>
         body {
-            background-color: #3d2f26; /* Figma Koyu Espresso */
-            color: #d1c7bd; /* Figma Sıcak Toprak */
+            /* 🎨 ARKA PLAN RENGİNİ BURADAN DEĞİŞTİREBİLİRSİN: */
+            background-color: #3d2f26; 
+            
+            /* 🎨 GENEL YAZI RENGİNİ BURADAN DEĞİŞTİREBİLİRSİN: */
+            color: #d1c7bd; 
+            
             font-family: 'Georgia', serif;
             line-height: 1.9;
             margin: 0;
@@ -25,7 +29,8 @@
             width: 100%;
         }
         .header-title {
-            color: #ebdcd0;
+            /* 🎨 SİTE BAŞLIĞI RENGİ: */
+            color: #ebdcd0; 
             font-size: 1.9rem;
             font-weight: bold;
             text-align: center;
@@ -34,7 +39,8 @@
         }
         .tagline {
             font-style: italic;
-            color: #bfaea2;
+            /* 🎨 ALT BAŞLIK RENGİ: */
+            color: #bfaea2; 
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -43,6 +49,7 @@
         .section-divider {
             border: 0;
             height: 1px;
+            /* 🎨 ARADAKİ ÇİZGİLERİN RENGİ (#544337 yazan yerler): */
             background: linear-gradient(to right, transparent, #544337 20%, #544337 80%, transparent);
             margin: 40px 0;
         }
@@ -50,20 +57,22 @@
             font-style: italic;
             font-weight: bold;
             text-align: center;
-            color: #ebdcd0;
+            /* 🎨 EN ÜSTTEKİ BÜYÜK SÖZLERİN RENGİ: */
+            color: #ebdcd0; 
             font-size: 1.25rem;
             margin: 25px auto;
-            line-height: 1.6;
+            line-height: 1.7;
             max-width: 95%;
-            border-left: 2px solid #bfaea2;
-            border-right: 2px solid #bfaea2;
+            border-left: 2px solid #bfaea2;  /* Sol çizgi rengi */
+            border-right: 2px solid #bfaea2; /* Sağ çizgi rengi */
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
         .epigraph-final {
             font-style: italic;
             text-align: center;
-            color: #bfaea2;
+            /* 🎨 "GÜNEŞİN ALTINDA..." YAZISININ RENGİ: */
+            color: #bfaea2; 
             font-size: 1.1rem;
             margin: 40px auto 20px auto;
             line-height: 1.7;
@@ -84,8 +93,10 @@
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
-            color: #ebdcd0;
-            background-color: rgba(74, 58, 47, 0.35);
+            /* 🎨 FORMÜL YAZI RENGİ: */
+            color: #ebdcd0; 
+            /* 🎨 FORMÜL KUTUSUNUN ARKA PLANI: */
+            background-color: rgba(74, 58, 47, 0.35); 
             padding: 20px;
             border-radius: 4px;
             border: 1px solid rgba(191, 174, 162, 0.12);
@@ -97,8 +108,10 @@
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
-            color: #ebdcd0;
-            background-color: rgba(84, 67, 55, 0.2);
+            /* 🎨 DÖNGÜ KUTUSUNUN YAZI RENGİ: */
+            color: #ebdcd0; 
+            /* 🎨 DÖNGÜ KUTUSUNUN ARKA PLANI: */
+            background-color: rgba(84, 67, 55, 0.2); 
             padding: 15px;
             border-radius: 4px;
             border-left: 3px solid #bfaea2;
@@ -107,26 +120,31 @@
         .core-link {
             display: block;
             text-align: center;
-            background-color: #544337;
-            color: #ebdcd0;
+            /* 🎨 BUTONUN İÇ RENGİ: */
+            background-color: #544337; 
+            /* 🎨 BUTONUN YAZI RENGİ: */
+            color: #ebdcd0; 
             padding: 16px 20px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.05rem;
             margin: 35px 0;
-            border: 1px solid #bfaea2;
+            /* 🎨 BUTONUN DIŞ ÇİZGİ RENGİ: */
+            border: 1px solid #bfaea2; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .core-link:hover {
+            /* 🎨 MOUSE İLE ÜZERİNE GELİNDİĞİNDEKİ RENKLER: */
             background-color: #635042;
             border-color: #ebdcd0;
         }
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            color: #8c7a6e;
+            /* 🎨 EN ALT TELİF YAZISI RENGİ: */
+            color: #8c7a6e; 
             text-align: center;
             border-top: 1px solid #544337;
             padding-top: 25px;
@@ -144,7 +162,7 @@
     <hr class="section-divider">
 
     <div class="epigraph-main">
-        "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir. Beden sonuç üretmez; mimariyi yansıtır."
+        "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
     </div>
 
     <div class="formula">ΔBM = (A · Y) · Z!</div>
@@ -152,10 +170,8 @@
     <hr class="section-divider">
 
     <div class="content">
-        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Modern Tıp, yapıyı ayakta tutar.</p>
+        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapıyı ayakta tutar. Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
-        <p>Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.<p>
-        
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
         <div class="loop-box">
@@ -168,7 +184,7 @@
             "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."
         </div>
 
-        <a href="koken-systems.md.html" class="core-link">Köken Systems | Ana Metin →</a>
+        <a href="koken-core.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
     </div>
 
     <div class="footer">
