@@ -3,106 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN — Bedenin Geometrisi</title>
+    <title>KÖKEN Systems | Bedenin Geometrisi</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
-            background-color: #382A25; /* Koyu espresso zemin */
-            color: #F2E9DE;            /* Asil kemik rengi yazı */
+            background-color: #3d2f26; /* Figma Koyu Espresso */
+            color: #d1c7bd; /* Figma Sıcak Toprak */
             font-family: 'Georgia', serif;
+            line-height: 1.8;
             margin: 0;
             padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            line-height: 1.7;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
-            text-align: center; /* Giriş sayfası çarpıcı dursun diye ortalıyoruz */
         }
-        h1 {
-            font-size: 2.1rem;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-        }
-        h3 {
-            font-size: 1.1rem;
-            font-style: italic;
-            opacity: 0.8;
-            margin-bottom: 40px;
-            font-weight: normal;
-        }
-        blockquote {
-            font-style: italic;
-            border-left: 2px solid #F2E9DE;
-            margin: 30px auto;
-            padding: 0 15px;
-            max-width: 90%;
-            color: #D9CFC4;
+        .header-title {
+            color: #ebdcd0;
+            font-size: 1.8rem;
+            font-weight: bold;
             text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
         }
-        p {
+        .tagline {
+            font-style: italic;
+            color: #bfaea2;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: #544337;
+            margin: 30px 0;
+        }
+        .epigraph {
+            font-style: italic;
+            text-align: center;
+            color: #ebdcd0;
+            font-size: 1.1rem;
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+        .content {
             font-size: 1.05rem;
             text-align: justify;
-            text-align-last: center;
-            margin-bottom: 25px;
-            opacity: 0.95;
         }
-        .btn-continue {
-            display: inline-block;
+        .content p {
+            margin-bottom: 18px;
+        }
+        .content h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
             margin-top: 35px;
-            padding: 12px 25px;
-            background-color: transparent;
-            color: #F2E9DE;
-            border: 1px solid #F2E9DE;
-            text-decoration: none;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            color: #ebdcd0;
+            border-left: 3px solid #bfaea2;
+            padding-left: 10px;
         }
-        .btn-continue:hover {
-            background-color: #F2E9DE;
-            color: #382A25;
+        .formula {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 25px 0;
+            text-align: center;
+            color: #ebdcd0;
+            background-color: #4a3a2f;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .core-link {
+            display: block;
+            text-align: center;
+            background-color: #544337;
+            color: #ebdcd0;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 35px 0;
+            border: 1px solid #bfaea2;
+            transition: background 0.3s ease;
+        }
+        .core-link:hover {
+            background-color: #635042;
         }
         .footer {
             margin-top: 60px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            color: #8c7a6e;
+            text-align: center;
+            border-top: 1px solid #544337;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>KÖKEN</h1>
-    <h3>Bedenin Geometrisi</h3>
+
+    <div class="header-title">KÖKEN — Bedenin Geometrisi</div>
+    <div class="tagline">Bedenin Mimarisi Üzerine</div>
+
+    <hr class="section-divider">
+
+    <div class="epigraph">
+        "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."
+    </div>
     
-    <blockquote>
-        "Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan doğruların üzerine ışık tutuyorum."
-    </blockquote>
+    <div class="epigraph" style="font-weight: bold; margin-top: 15px;">
+        "Beden sonuç üretmez; mimariyi yansıtır."
+    </div>
 
-    <blockquote>
-        Beden sonuç üretmez; mimariyi yansıtır.
-    </blockquote>
+    <hr class="section-divider">
 
-    <p>Bu çalışma, bedenin mimarisini açıklayan kavramsal bir modeldir. Fiziksel sonuçların arkasındaki yapısal dinamikleri anlamayı amaçlar.</p>
-    
-    <p>Beden, dışarıdan etki alarak içeriden şekillenir. Dış dünya yükü getirir ve bu yükün oluşturacağı şeyler bedenin mimarisine göre belirlenir. Bu matematiğin sonucu olarak beden, yıkım veya inşa süreçlerine girer.</p>
+    <div class="content">
+        <p>Beden, dışarıdan etki alarak içeriden şekillenir. Dış dünya süreçlerin başlamasını tetikleyen olaylar bütünüdür. Dış dünya yükü getirir ve bu yükün oluşturacağı şeyler bedenin mimarisine göre belirlenir. Bu matematiğin sonucu olarak beden, yıkım veya inşa süreçlerine girer.</p>
 
-    <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersizdir. Köken ise sonuçların ötesinde mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir. Yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Yapının ayakta kalması için modern tıp müdahale edip yapıyı ayakta tutarken; Köken ise yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
-    <blockquote>
-        Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.
-    </blockquote>
+        <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
-    <a href="koken-core.html" class="btn-continue">Bedenin Mimarisi Denklemini Oku →</a>
+        <div class="formula">ΔBM = (A · Y) · Z!</div>
+
+        <a href="koken-systems.md" class="core-link">→ Sistem Mantığı ve Formüllerin Tamamına Ulaşın</a>
+
+        <p style="text-align: center; font-style: italic; color: #bfaea2; margin-top: 25px;">
+            "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir."
+        </p>
+    </div>
 
     <div class="footer">
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
+
 </div>
 
 </body>
