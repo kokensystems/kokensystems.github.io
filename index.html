@@ -10,10 +10,10 @@
 
     <style>
         body {
-            background-color: #3d2f26; /* Figma Koyu Espresso */
+            background-color: #382C24; /* Ana Sayfa ile Birebir Aynı Orta Kahve (Linyit) */
             color: #F4EFEA;            /* Asil Kemik Rengi */
             font-family: 'Georgia', serif;
-            line-height: 1.9;
+            line-height: 1.95;
             margin: 0;
             padding: 60px 24px;
             display: flex;
@@ -34,7 +34,7 @@
         }
         .tagline {
             font-style: italic;
-            color: #bfaea2; 
+            color: #C2B8B0; /* Göz almayan mat alt başlık tonu */
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -43,7 +43,7 @@
         .section-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #544337 20%, #544337 80%, transparent);
+            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
         .epigraph-main {
@@ -51,21 +51,21 @@
             font-weight: bold;
             text-align: center;
             color: #F4EFEA;            
-            font-size: 1.05rem;        /* İstediğin gibi biraz daha küçültüldü */
-            margin: 25px auto;
+            font-size: 1.05rem;        
+            margin: 30px auto;
             line-height: 1.7;
             max-width: 95%;
-            border-left: 2px solid #bfaea2;  
-            border-right: 2px solid #bfaea2; 
+            border-left: 2px solid #4F3F34;  
+            border-right: 2px solid #4F3F34; 
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
         .epigraph-final {
             font-style: italic;
             text-align: center;
-            color: #bfaea2; 
+            color: #C2B8B0; 
             font-size: 1.1rem;
-            margin: 40px auto 20px auto;
+            margin: 45px auto 25px auto;
             line-height: 1.7;
             max-width: 90%;
         }
@@ -73,9 +73,8 @@
             font-size: 1.08rem;
             text-align: left;
         }
-        /* Modern tıp ve köken kısmını çok az küçültmek için eklenen özel ayar */
         .medical-intro {
-            font-size: 1.02rem;        /* Çok az, tam kıvamında küçültüldü */
+            font-size: 1.02rem;        
             opacity: 0.95;
         }
         .content p {
@@ -83,36 +82,59 @@
             opacity: 0.95;
             letter-spacing: 0.2px;
         }
+        
+        /* Ana Denklem Kutusu - Açık Kahve Arka Plan ve Koyu Kahve Çerçeve */
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         /* İstediğin gibi denklemin boyutu azıcık küçültüldü */
+            font-size: 1.5rem;         
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: rgba(74, 58, 47, 0.35); 
+            background-color: #4F3F34; /* Açık Kahve (Kül) */
             padding: 18px;
             border-radius: 4px;
-            border: 1px solid rgba(191, 174, 162, 0.12);
+            border: 2px solid #251C17; /* Koyu Kahve Kenar Çizgisi */
             letter-spacing: 1.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        
+        /* Diğer Sayfadaki Yeni İstediğin Başlık Stili */
+        .loop-title {
+            text-align: center; 
+            font-weight: bold; 
+            margin-top: 40px;
+            margin-bottom: -10px; 
+            color: #F4EFEA; 
+            font-style: italic;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mimari Döngü Kutusu - Tam Uyumlu Açık Kahve ve Koyu Kahve Çerçeve */
         .loop-box {
             font-family: 'Georgia', serif;
-            font-size: 1.1rem;
+            font-size: 1.4rem; 
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: rgba(84, 67, 55, 0.2); 
-            padding: 15px;
+            background-color: #4F3F34; 
+            padding: 22px 15px;
             border-radius: 4px;
-            border-left: 3px solid #bfaea2;
+            border: 2px solid #251C17; 
             letter-spacing: 0.5px;
+            box-sizing: border-box;
+            max-width: 100%;
         }
+        
+        /* Geçiş Butonu - Açık Kahve ve Koyu Kahve Çerçeve */
         .core-link {
             display: block;
             text-align: center;
-            background-color: #544337; 
+            background-color: #4F3F34; 
             color: #F4EFEA;            
             padding: 16px 20px;
             text-decoration: none;
@@ -120,32 +142,53 @@
             font-weight: bold;
             font-size: 1.05rem;
             margin: 35px 0 15px 0;     
-            border: 1px solid #bfaea2; 
+            border: 2px solid #251C17; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .core-link:hover {
-            background-color: #635042;
+            background-color: #251C17;
             border-color: #F4EFEA;
         }
         .math-motto {
             text-align: center;
             font-style: italic;
             font-size: 0.95rem;
-            color: #bfaea2;
-            opacity: 0.85;
-            margin-top: 25px;          /* İsteğin üzerine butondan azıcık daha aşağı kaydırıldı */
+            color: #C2B8B0;
+            opacity: 0.9;
+            margin-top: 25px;          
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            color: #8c7a6e; 
+            color: #A69A90; 
             text-align: center;
-            border-top: 1px solid #544337;
+            border-top: 1px solid #251C17;
             padding-top: 25px;
             letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 40px 16px; 
+            }
+            .formula {
+                font-size: 1.2rem;
+                padding: 14px 8px;
+            }
+            .loop-title {
+                font-size: 1.05rem;
+            }
+            .loop-box {
+                font-size: 1.15rem; 
+                padding: 18px 8px;
+                border-width: 1.5px;
+            }
+            .loop-box .MathJax {
+                font-size: 90% !important;
+            }
         }
     </style>
 </head>
@@ -162,7 +205,7 @@
         "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
     </div>
 
-    <div class="formula">ΔBM = (A · Y) · Z!</div>
+    <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
 
     <hr class="section-divider">
 
@@ -173,8 +216,9 @@
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Elimizde bulunan mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
+        <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
         <div class="loop-box">
-            Mimari bir döngüdür:<br><strong>A → Eylem → ΔBM → Yeni Mimari → Yeni A</strong>
+            <strong>$$A \rightarrow \text{Eylem} \rightarrow \Delta BM \rightarrow \text{Yeni Mimari} \rightarrow \text{Yeni } A$$</strong>
         </div>
 
         <hr class="section-divider">
@@ -189,7 +233,7 @@
     </div>
 
     <div class="footer">
-        <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom: 10px; font-style: italic; color: #8c7a6e;">
+        <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
             Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
         </p>
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
