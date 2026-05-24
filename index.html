@@ -10,8 +10,8 @@
 
     <style>
         body {
-            background-color: #382C24; /* Ana Sayfa ile Birebir Aynı Orta Kahve (Linyit) */
-            color: #F4EFEA;            /* Asil Kemik Rengi */
+            background-color: #382C24; 
+            color: #F4EFEA;            
             font-family: 'Georgia', serif;
             line-height: 1.95;
             margin: 0;
@@ -34,7 +34,7 @@
         }
         .tagline {
             font-style: italic;
-            color: #C2B8B0; /* Göz almayan mat alt başlık tonu */
+            color: #C2B8B0; 
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -46,14 +46,14 @@
             background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
-        /* Yeni Eklenen Giriş Metni İçin Özel Okunabilirlik Stili */
         .epigraph-intro {
             font-style: italic;
             text-align: justify;
             color: #F4EFEA;
             font-size: 1.1rem;
             line-height: 1.85;
-            margin: 35px auto 15px auto;
+            margin: 35px auto 0 auto;
+            padding-bottom: 24px; /* İstediğin o net bir satırlık boşluk */
             opacity: 0.95;
             letter-spacing: 0.3px;
         }
@@ -63,11 +63,11 @@
             text-align: center;
             color: #F4EFEA;            
             font-size: 1.05rem;        
-            margin: 30px auto;
+            margin: 0 auto 30px auto;
             line-height: 1.7;
             max-width: 95%;
-            border-left: 2px solid #4F3F34;  
-            border-right: 2px solid #4F3F34; 
+            border-left: 2px solid #F4EFEA;  
+            border-right: 2px solid #F4EFEA; 
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
@@ -94,7 +94,7 @@
             letter-spacing: 0.2px;
         }
         
-        /* Ana Denklem Kutusu */
+        /* Yenilenen Kurallar: İçi Koyu, Çerçevesi En Açık Ton */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -102,14 +102,15 @@
             margin: 35px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #4F3F34; /* Açık Kahve (Kül) */
+            background-color: #382C24; /* Sayfa ile aynı koyu kahve */
             padding: 18px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Koyu Kahve Kenar Çizgisi */
+            border: 2px solid #F4EFEA; /* En açık ton kenarlık */
             letter-spacing: 1.5px;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 50px;
         }
         
         .loop-title {
@@ -123,7 +124,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Mimari Döngü Kutusu */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.4rem; 
@@ -131,20 +131,19 @@
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #4F3F34; 
+            background-color: #382C24; /* Koyu iç alan */
             padding: 22px 15px;
             border-radius: 4px;
-            border: 2px solid #251C17; 
+            border: 2px solid #F4EFEA; /* En açık ton çerçeve */
             letter-spacing: 0.5px;
             box-sizing: border-box;
             max-width: 100%;
         }
         
-        /* Geçiş Butonu */
         .core-link {
             display: block;
             text-align: center;
-            background-color: #4F3F34; 
+            background-color: #382C24; 
             color: #F4EFEA;            
             padding: 16px 20px;
             text-decoration: none;
@@ -152,13 +151,12 @@
             font-weight: bold;
             font-size: 1.05rem;
             margin: 35px 0 15px 0;     
-            border: 2px solid #251C17; 
+            border: 2px solid #F4EFEA; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .core-link:hover {
             background-color: #251C17;
-            border-color: #F4EFEA;
         }
         .math-motto {
             text-align: center;
@@ -181,28 +179,12 @@
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 40px 16px; 
-            }
-            .formula {
-                font-size: 1.2rem;
-                padding: 14px 8px;
-            }
-            .epigraph-intro {
-                font-size: 1.05rem;
-                text-align: left;
-            }
-            .loop-title {
-                font-size: 1.05rem;
-            }
-            .loop-box {
-                font-size: 1.15rem; 
-                padding: 18px 8px;
-                border-width: 1.5px;
-            }
-            .loop-box .MathJax {
-                font-size: 90% !important;
-            }
+            body { padding: 40px 16px; }
+            .formula { font-size: 1.2rem; padding: 14px 8px; }
+            .epigraph-intro { font-size: 1.05rem; text-align: left; }
+            .loop-title { font-size: 1.05rem; }
+            .loop-box { font-size: 1.15rem; padding: 18px 8px; }
+            .loop-box .MathJax { font-size: 90% !important; }
         }
     </style>
 </head>
