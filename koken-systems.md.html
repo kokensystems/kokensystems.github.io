@@ -10,8 +10,8 @@
 
     <style>
         body {
-            background-color: #382C24; /* Orta Kahve (Linyit) - Ana Arka Plan */
-            color: #F4EFEA;            /* Asil Kemik Rengi */
+            background-color: #382C24; 
+            color: #F4EFEA;            
             font-family: 'Georgia', serif;
             line-height: 1.95;
             margin: 0;
@@ -34,7 +34,7 @@
         }
         .tagline {
             font-style: italic;
-            color: #C2B8B0; /* Göz almayan mat alt başlık tonu */
+            color: #C2B8B0; 
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -46,6 +46,31 @@
             background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
+        .epigraph-intro {
+            font-style: italic;
+            text-align: justify;
+            color: #F4EFEA;
+            font-size: 1.1rem;
+            line-height: 1.85;
+            margin: 35px auto 0 auto;
+            padding-bottom: 24px; /* Tam bir satırlık temiz boşluk */
+            opacity: 0.95;
+            letter-spacing: 0.3px;
+        }
+        .epigraph-main {
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            color: #F4EFEA;            
+            font-size: 1.05rem;        
+            margin: 0 auto 30px auto;
+            line-height: 1.7;
+            max-width: 95%;
+            border-left: 2px solid #F4EFEA;  
+            border-right: 2px solid #F4EFEA; 
+            padding: 0 15px;
+            letter-spacing: 0.5px;
+        }
         .sub-heading {
             font-size: 1.3rem;
             font-weight: bold;
@@ -53,7 +78,7 @@
             margin-top: 35px;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
-            border-bottom: 1px solid rgba(25, 28, 23, 0.4); /* Koyu Kahve Çizgi */
+            border-bottom: 1px solid rgba(244, 239, 234, 0.2); 
             padding-bottom: 5px;
         }
         .content {
@@ -66,11 +91,11 @@
             letter-spacing: 0.2px;
         }
         
-        /* Özelleştirilmiş Liste Tasarımı - Noktalar Koyu Kahve mühür renginde */
+        /* Liste Tasarımı - Bullet Points Mat ve Asil Kül Kahvesine uyarlandı */
         .content ul {
             margin-bottom: 24px;
             padding-left: 20px;
-            list-style-type: none; /* Varsayılan noktaları gizle */
+            list-style-type: none; 
         }
         .content li {
             margin-bottom: 16px;
@@ -80,7 +105,7 @@
         }
         .content li::before {
             content: "•"; 
-            color: #251C17; /* Koyu Kahve mühür tonu */
+            color: #C2B8B0; /* Yenilenen Mat Açık Ton */
             font-weight: bold;
             font-size: 1.2rem;
             display: inline-block;
@@ -90,7 +115,7 @@
             top: -2px;
         }
         
-        /* Tüm Denklemler için Açık Kahve Arka Plan ve Koyu Kahve Kenar Çizgisi */
+        /* Yenilenen Kurallar: İçi Koyu, Çerçevesi En Açık Ton */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -98,13 +123,12 @@
             margin: 35px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #4F3F34; /* Açık Kahve (Kül Kahvesi) */
+            background-color: #382C24; 
             padding: 18px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Koyu Kahve Kenar Çizgisi */
+            border: 2px solid #F4EFEA; 
             letter-spacing: 1.5px;
-            min-height: 50px; /* Yüklenirken sıçramayı önleyen koruma */
-            
+            min-height: 50px; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -112,19 +136,17 @@
             box-sizing: border-box;
         }
         
-        /* Yeni Belirlenen "Dönüşümün Geometrisi:" Başlık Alanı */
         .loop-title {
             text-align: center; 
             font-weight: bold; 
             margin-top: 40px;
             margin-bottom: -10px; 
-            color: #F4EFEA; /* Net Kemik rengi */
+            color: #F4EFEA; 
             font-style: italic;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
 
-        /* Mimari Döngü Kutusu - Açık Kahve ve Koyu Kahve Kenar Çizgisi */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.4rem; 
@@ -132,16 +154,15 @@
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #4F3F34; /* Açık Kahve */
+            background-color: #382C24; 
             padding: 22px 15px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Koyu Kahve Çerçeve */
+            border: 2px solid #F4EFEA; 
             letter-spacing: 0.5px;
             box-sizing: border-box;
             max-width: 100%;
         }
         
-        /* Zaman Alanı Mobil Koruma ve Kararlılık Ayarları */
         .time-align-container {
             max-width: 440px;
             margin: 0 auto 24px auto;
@@ -157,7 +178,7 @@
         .back-link {
             display: block;
             text-align: center;
-            background-color: #4F3F34; /* Açık Kahve */
+            background-color: #382C24; 
             color: #F4EFEA;            
             padding: 16px 20px;
             text-decoration: none;
@@ -165,13 +186,12 @@
             font-weight: bold;
             font-size: 1.05rem;
             margin: 35px 0 15px 0;     
-            border: 2px solid #251C17; 
+            border: 2px solid #F4EFEA; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
         .back-link:hover {
             background-color: #251C17;
-            border-color: #F4EFEA;
         }
         .math-motto {
             text-align: center;
@@ -186,7 +206,7 @@
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            color: #A69A90; /* Telif ve alt uyarı yazıları için mat ton */
+            color: #A69A90; 
             text-align: center;
             border-top: 1px solid #251C17;
             padding-top: 25px;
@@ -194,35 +214,14 @@
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 40px 16px; 
-            }
-            .formula {
-                font-size: 1.05rem; 
-                padding: 14px 8px;
-                letter-spacing: 0.5px;
-                border-width: 1.5px;
-            }
-            .formula .MathJax {
-                font-size: 92% !important; 
-            }
-            .loop-title {
-                font-size: 1.05rem;
-            }
-            .loop-box {
-                font-size: 1.15rem; 
-                padding: 18px 8px;
-                border-width: 1.5px;
-            }
-            .loop-box .MathJax {
-                font-size: 90% !important;
-            }
-            .time-align-row {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2px;
-                margin-bottom: 15px;
-            }
+            body { padding: 40px 16px; }
+            .formula { font-size: 1.05rem; padding: 14px 8px; border-width: 1.5px; }
+            .formula .MathJax { font-size: 92% !important; }
+            .epigraph-intro { font-size: 1.05rem; text-align: left; }
+            .loop-title { font-size: 1.05rem; }
+            .loop-box { font-size: 1.15rem; padding: 18px 8px; border-width: 1.5px; }
+            .loop-box .MathJax { font-size: 90% !important; }
+            .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 2px; margin-bottom: 15px; }
         }
     </style>
 </head>
@@ -232,6 +231,16 @@
 
     <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
     <div class="tagline">Bedenin Mimarisi Üzerine</div>
+
+    <hr class="section-divider">
+
+    <div class="epigraph-intro">
+        Beden, dışarıdan aldığı etkiyle içeriden şekillenir. Dış dünya, süreçleri başlatan olaylar bütünüdür. Yük dışarıdan gelir; bu yükün nasıl şekil alacağı ise mevcut mimariye göre belirlenir. Bu döngünün sonucu olarak beden, yıkım veya inşa süreçlerine girer.
+    </div>
+
+    <div class="epigraph-main">
+        "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
+    </div>
 
     <hr class="section-divider">
 
@@ -272,7 +281,7 @@
             <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
         </ul>
 
-        <p>İç sistem gerilimi üretir, dış sistem taşır; Y₁ &rightleftharpoons Y₂ ve Y₂ &rightleftharpoons Y₁ birbirlerinin yükünü zamanla artırır. Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. Formülize edilmiş hali:</p>
+        <p>İç sistem gerilimi üretir, dış sistem taşır; Y₁ &rightleftharpoons Y₂ ve Y₂ &rightleftharpoons Y₁ birbirlerinin yükünü zamanla artırır. This nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır. Formülize edilmiş hali:</p>
         <div class="formula">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
 
         <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. 0 &lt; Z &lt; 1 aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
@@ -303,7 +312,7 @@
 
         <p>Fiziki bedenimizdeki sorunlar anlayışımıza göre şekillenir. Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir.</p>
         
-        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yüku minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
+        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
         
         <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur ve yapı kararsız hâle gelir; bu durum, tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
         
