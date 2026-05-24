@@ -93,7 +93,7 @@
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
             font-weight: bold;
-            margin: 35px 0;
+            margin: 20px 0 35px 0; /* Formülize edilmiş hali yazısından sonra dengeli mesafe */
             text-align: center;
             color: #F4EFEA;            
             background-color: #5A483B; 
@@ -114,7 +114,6 @@
             padding: 22px;
         }
         
-        /* Metin içi formüllerin dikey hizasını sabitleyen ve satırı bozmayan özel blok */
         .inline-formula-block {
             display: block;
             text-align: center;
@@ -133,7 +132,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: Yazı boyutu küçültüldü, sağa sola kaydırma gereksinimi tamamen bitti */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.15rem; 
@@ -225,10 +223,10 @@
 
         <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
         <div class="loop-box">
-            $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
+            $$\Delta \mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
-        <div class="sub-heading">Bedenin Mimarisi Denklem and Bileşenleri</div>
+        <div class="sub-heading">Bedenin Mimarisi Denklem ve Bileşenleri</div>
         
         <p>Denklem en sade hâliyle şu şekildedir;</p>
         <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
@@ -250,7 +248,8 @@
             <span class="inline-formula-block">$$H \rightleftharpoons Y$$</span>
         </ul>
 
-        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.<br>Formülize edilmiş hali:</p>
+        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.</p>
+        <p>Formülize edilmiş hali:<br></p>
         <div class="formula">$$A = \pm F \cdot \left( \frac{G + H}{B} \right)$$</div>
 
         <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
@@ -263,7 +262,8 @@
 
         <p>İç sistem gerilimi üretir, dış sistem taşır. Bu iki sistem karşılıklı olarak birbirlerinin yükünü zamanla artırırlar:</p>
         <span class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2 \quad \text{ve} \quad Y_2 \rightleftharpoons Y_1$$</span>
-        <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.<br>Formülize edilmiş hali:</p>
+        <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.</p>
+        <p>Formülize edilmiş hali:<br></p>
         
         <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
 
