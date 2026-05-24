@@ -114,6 +114,14 @@
             padding: 22px;
         }
         
+        /* Metin içi formüllerin dikey hizasını sabitleyen ve satırı bozmayan özel blok */
+        .inline-formula-block {
+            display: block;
+            text-align: center;
+            margin: 12px 0;
+            font-size: 1.2rem;
+        }
+        
         .loop-title {
             text-align: center; 
             font-weight: bold; 
@@ -125,23 +133,21 @@
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: Dışarı taşmayı engelleyen esnek koruma eklendi */
+        /* Döngü Kutusu: Yazı boyutu küçültüldü, sağa sola kaydırma gereksinimi tamamen bitti */
         .loop-box {
             font-family: 'Georgia', serif;
-            font-size: 1.35rem; 
+            font-size: 1.15rem; 
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
             background-color: #5A483B; 
-            padding: 22px 12px;
+            padding: 20px 15px;
             border-radius: 4px;
             border: 2px solid #251C17; 
             letter-spacing: 0.5px;
             box-sizing: border-box;
             max-width: 100%;
-            overflow-x: auto; /* Taşma durumunda kutu içinde kaydırma sağlar, tasarımı bozmaz */
-            white-space: nowrap;
         }
         
         .time-align-container {
@@ -200,7 +206,7 @@
             .formula-large { font-size: 1.25rem; }
             .formula .MathJax, .formula-large .MathJax { font-size: 92% !important; }
             .loop-title { font-size: 1.05rem; }
-            .loop-box { font-size: 1.05rem; padding: 18px 6px; border-width: 1.5px; }
+            .loop-box { font-size: 0.95rem; padding: 16px 8px; border-width: 1.5px; }
             .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 2px; margin-bottom: 15px; }
         }
     </style>
@@ -222,22 +228,26 @@
             $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
-        <div class="sub-heading">Bedenin Mimarisi Denklem ve Bileşenleri</div>
+        <div class="sub-heading">Bedenin Mimarisi Denklem and Bileşenleri</div>
         
         <p>Denklem en sade hâliyle şu şekildedir;</p>
         <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
         
         <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
         
-        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $G \rightleftharpoons H$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.<br><br></p>
+        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler:</p>
+        <span class="inline-formula-block">$$G \rightleftharpoons H$$</span>
+        <p>Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.<br><br></p>
 
         <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
 
         <ul>
             <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
             <li><strong>(B)akış açısı:</strong> B, bağımsız bir değişken değil; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. Farkındalıktan uzaktaysak, bakış açımız olması gerekenden dar olacağı için, F = -1 ise B = (0,1) kabul edilir. Bakış açısı daraldıkça, sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. F = 1 ise o an mimari olabileceğin en uygun açıda olacağı için B = 1 olarak kabul edilir; bakış açısı sonucu etkilemeyecektir. B = 1 olduğunda ise inşa olması gerektiği gibi sürecektir. $$0 &lt; B \le 1$$</li>
-            <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir. $$G \rightleftharpoons H$$</li>
-            <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir. $$H \rightleftharpoons Y$$</li>
+            <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir.</li>
+            <span class="inline-formula-block">$$G \rightleftharpoons H$$</span>
+            <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir.</li>
+            <span class="inline-formula-block">$$H \rightleftharpoons Y$$</span>
         </ul>
 
         <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.<br>Formülize edilmiş hali:</p>
@@ -251,7 +261,9 @@
             <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
         </ul>
 
-        <p>İç sistem gerilimi üretir, dış sistem taşır; $Y_1 \rightleftharpoons Y_2$ ve $Y_2 \rightleftharpoons Y_1$ birbirlerinin yükünü zamanla artırır. Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.<br>Formülize edilmiş hali:</p>
+        <p>İç sistem gerilimi üretir, dış sistem taşır. Bu iki sistem karşılıklı olarak birbirlerinin yükünü zamanla artırırlar:</p>
+        <span class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2 \quad \text{ve} \quad Y_2 \rightleftharpoons Y_1$$</span>
+        <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.<br>Formülize edilmiş hali:</p>
         
         <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
 
