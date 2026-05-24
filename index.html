@@ -94,7 +94,7 @@
             letter-spacing: 0.2px;
         }
         
-        /* Denklem Kutusu: Yeni Ton Sür Ton Yapı */
+        /* Denklem Kutusu */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -124,16 +124,16 @@
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: Yeni Ton Sür Ton Yapı */
+        /* Döngü Kutusu: Yazı boyutu küçültüldü ve sağa sola çekiştirme problemi giderildi */
         .loop-box {
             font-family: 'Georgia', serif;
-            font-size: 1.4rem; 
+            font-size: 1.15rem; 
             font-weight: normal;
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
             background-color: #5A483B; /* Denklem Arka Planı */
-            padding: 22px 15px;
+            padding: 20px 15px;
             border-radius: 4px;
             border: 2px solid #251C17; /* Kenar Çizgisi */
             letter-spacing: 0.5px;
@@ -141,7 +141,7 @@
             max-width: 100%;
         }
         
-        /* Geçiş Butonu: Uyumlu Yeni Renkler */
+        /* Geçiş Butonu */
         .core-link {
             display: block;
             text-align: center;
@@ -182,11 +182,10 @@
 
         @media (max-width: 480px) {
             body { padding: 40px 16px; }
-            .formula { font-size: 1.2rem; padding: 14px 8px; }
-            .epigraph-intro { font-size: 1.05rem; text-align: left; }
+            .formula { font-size: 1.05rem; padding: 14px 8px; border-width: 1.5px; }
+            .formula .MathJax { font-size: 92% !important; }
             .loop-title { font-size: 1.05rem; }
-            .loop-box { font-size: 1.15rem; padding: 18px 8px; border-width: 1.5px; }
-            .loop-box .MathJax { font-size: 90% !important; }
+            .loop-box { font-size: 0.95rem; padding: 16px 8px; border-width: 1.5px; }
         }
     </style>
 </head>
@@ -207,26 +206,26 @@
         "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
     </div>
 
-    <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
+    <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
 
     <hr class="section-divider">
 
     <div class="content">
         <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır, yapıyı ayakta tutar. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir.</p>
 
-        <p class="medical-intro">Köken; sonuçların ötesinde mimarideki yıkımın kökenindeki hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p class="medical-intro">Köken; sonuçlerin ötesinde mimarideki yıkımın kökenindeki hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
         <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
         <div class="loop-box">
-            <strong>$$A \rightarrow \text{Eylem} \rightarrow \Delta BM \rightarrow \text{Yeni Mimari} \rightarrow \text{Yeni } A$$</strong>
+            $$\Delta \mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
         <hr class="section-divider">
 
         <div class="epigraph-final">
-            "Köken bir mucize değil, matematiktir."
+            "Sistem bir mucize değil, matematiktir."
         </div>
 
         <a href="koken-systems.md.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
