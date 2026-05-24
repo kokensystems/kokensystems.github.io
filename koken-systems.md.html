@@ -10,8 +10,8 @@
 
     <style>
         body {
-            background-color: #382C24; /* Arka Plan */
-            color: #F4EFEA;            /* Ana Yazı Rengi */
+            background-color: #382C24; 
+            color: #F4EFEA;            
             font-family: 'Georgia', serif;
             line-height: 1.95;
             margin: 0;
@@ -43,7 +43,7 @@
         .section-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent); /* Kenar Çizgisi Tonu */
+            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent); 
             margin: 40px 0;
         }
         .sub-heading {
@@ -53,7 +53,7 @@
             margin-top: 35px;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
-            border-bottom: 1px solid #251C17; /* Kenar Çizgisi Tonu */
+            border-bottom: 1px solid #251C17; 
             padding-bottom: 5px;
         }
         .content {
@@ -89,7 +89,6 @@
             top: -2px;
         }
         
-        /* Denklem Kutuları: Yeni Renk Yapısı */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -97,10 +96,10 @@
             margin: 35px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #5A483B; /* Denklem Arka Planı */
+            background-color: #5A483B; 
             padding: 18px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Kenar Çizgisi */
+            border: 2px solid #251C17; 
             letter-spacing: 1.5px;
             min-height: 50px; 
             display: flex;
@@ -126,7 +125,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: Yeni Renk Yapısı */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.4rem; 
@@ -134,10 +132,10 @@
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
-            background-color: #5A483B; /* Denklem Arka Planı */
+            background-color: #5A483B; 
             padding: 22px 15px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Kenar Çizgisi */
+            border: 2px solid #251C17; 
             letter-spacing: 0.5px;
             box-sizing: border-box;
             max-width: 100%;
@@ -158,7 +156,7 @@
         .back-link {
             display: block;
             text-align: center;
-            background-color: #5A483B; /* Denklem Arka Planı ile uyumlu buton */
+            background-color: #5A483B; 
             color: #F4EFEA;            
             padding: 16px 20px;
             text-decoration: none;
@@ -166,7 +164,7 @@
             font-weight: bold;
             font-size: 1.05rem;
             margin: 35px 0 15px 0;     
-            border: 2px solid #251C17; /* Kenar Çizgisi */
+            border: 2px solid #251C17; 
             letter-spacing: 1px;
             transition: all 0.2s ease;
         }
@@ -188,7 +186,7 @@
             font-size: 0.85rem;
             color: #A69A90; 
             text-align: center;
-            border-top: 1px solid #251C17; /* Kenar Çizgisi */
+            border-top: 1px solid #251C17; 
             padding-top: 25px;
             letter-spacing: 0.5px;
         }
@@ -219,17 +217,19 @@
 
         <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
         <div class="loop-box">
-            <strong>$$A \rightarrow \text{Eylem} \rightarrow \Delta BM \rightarrow \text{Yeni Mimari} \rightarrow \text{Yeni } A$$</strong>
+            $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
         <div class="sub-heading">Bedenin Mimarisi Denklem ve Bileşenleri</div>
         
         <p>Denklem en sade hâliyle şu şekildedir;</p>
-        <div class="formula">$$\Delta BM = (A \cdot Y) \cdot Z!$$</div>
+        <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
         
         <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
         
-        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $$G \rightleftharpoons H$$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.<br><br></p> <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
+        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler; $$G \rightleftharpoons H$$ Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.<br><br></p>
+
+        <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
 
         <ul>
             <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
@@ -274,24 +274,24 @@
 
         <p>Formülün açık hali şu şekildedir:</p>
         <div class="formula">
-            $$\Delta BM = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
+            $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
         </div>
 
         <div class="sub-heading">Yapısal Adaptasyon ve Algı Yönetimi</div>
 
         <p>Fiziki bedenimizdeki sorunlar anlayışımıza göre şekillenir. Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir.</p>
         
-        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
+        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü and bakış açısı belirler.</p>
         
         <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur ve yapı kararsız hâle gelir; bu durum, tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
         
-        <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükı anlamlandırma biçimi ölçüsünde şekillenir.</p>
+        <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
         
         <p>Köken, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Bununla birlikte, yoğunluğu taşıyabilmesi ve yeni mimarinin inşa süreci için iç yapıyı sağlamlaştırarak zaman değişkeni karşısında daha kararlı bir mimari hâline gelebiliriz.</p>
 
         <div class="sub-heading">Sistem Felsefesi</div>
 
-        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. Bu, sistemin felsefesidir. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
+        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir systemdir. Bu, sistemin felsefesidir. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
 
         <hr class="section-divider">
 
