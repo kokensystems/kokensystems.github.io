@@ -46,6 +46,17 @@
             background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
+        /* Yeni Eklenen Giriş Metni İçin Özel Okunabilirlik Stili */
+        .epigraph-intro {
+            font-style: italic;
+            text-align: justify;
+            color: #F4EFEA;
+            font-size: 1.1rem;
+            line-height: 1.85;
+            margin: 35px auto 15px auto;
+            opacity: 0.95;
+            letter-spacing: 0.3px;
+        }
         .epigraph-main {
             font-style: italic;
             font-weight: bold;
@@ -83,7 +94,7 @@
             letter-spacing: 0.2px;
         }
         
-        /* Ana Denklem Kutusu - Açık Kahve Arka Plan ve Koyu Kahve Çerçeve */
+        /* Ana Denklem Kutusu */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -101,7 +112,6 @@
             align-items: center;
         }
         
-        /* Diğer Sayfadaki Yeni İstediğin Başlık Stili */
         .loop-title {
             text-align: center; 
             font-weight: bold; 
@@ -113,7 +123,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Mimari Döngü Kutusu - Tam Uyumlu Açık Kahve ve Koyu Kahve Çerçeve */
+        /* Mimari Döngü Kutusu */
         .loop-box {
             font-family: 'Georgia', serif;
             font-size: 1.4rem; 
@@ -130,7 +140,7 @@
             max-width: 100%;
         }
         
-        /* Geçiş Butonu - Açık Kahve ve Koyu Kahve Çerçeve */
+        /* Geçiş Butonu */
         .core-link {
             display: block;
             text-align: center;
@@ -178,6 +188,10 @@
                 font-size: 1.2rem;
                 padding: 14px 8px;
             }
+            .epigraph-intro {
+                font-size: 1.05rem;
+                text-align: left;
+            }
             .loop-title {
                 font-size: 1.05rem;
             }
@@ -200,6 +214,10 @@
     <div class="tagline">Bedenin Mimarisi Üzerine</div>
 
     <hr class="section-divider">
+
+    <div class="epigraph-intro">
+        Beden, dışarıdan aldığı etkiyle içeriden şekillenir. Dış dünya, süreçleri başlatan olaylar bütünüdür. Yük dışarıdan gelir; bu yükün nasıl şekil alacağı ise mevcut mimariye göre belirlenir. Bu döngünün sonucu olarak beden, yıkım veya inşa süreçlerine girer.
+    </div>
 
     <div class="epigraph-main">
         "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
@@ -224,7 +242,7 @@
         <hr class="section-divider">
 
         <div class="epigraph-final">
-            "Sistem bir mucize değil, matematiktir."
+            "KÖKEN bir mucize değil, matematiktir."
         </div>
 
         <a href="koken-systems.md.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
