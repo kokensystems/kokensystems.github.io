@@ -9,6 +9,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        /* Ana Mizanpaj ve Masaüstü Kuralları */
         body {
             background-color: #382C24; /* Arka Plan */
             color: #F4EFEA;            /* Ana Yazı Rengi */
@@ -94,12 +95,12 @@
             letter-spacing: 0.2px;
         }
         
-        /* Denklem Kutusu */
+        /* Denklem Kutusu Base */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
             font-weight: bold;
-            margin: 20px 0 35px 0;
+            margin: 35px 0;
             text-align: center;
             color: #F4EFEA;            
             background-color: #5A483B; /* Denklem Arka Planı */
@@ -120,13 +121,13 @@
             font-weight: bold; 
             margin-top: 40px;
             margin-bottom: -10px; 
-            color: #F4EEA; 
+            color: #F4EFEA; 
             font-style: italic;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: İçeriğin sığması için esnek ölçeklendirme düzeltmeleri yapıldı */
+        /* Döngü Kutusu */
         .loop-box {
             font-family: 'Georgia', serif;
             margin: 30px 0;
@@ -143,32 +144,48 @@
             align-items: center;
             min-height: 50px;
         }
-        
-        /* Döngü içindeki MathJax ölçeğini koruyan özel kural */
         .loop-box .MathJax {
             font-size: 1.05rem !important;
             letter-spacing: 0.2px;
         }
         
-        /* Geçiş Butonu */
+        /* Yenilenmiş ve Belirginleştirilmiş Ana Metin Geçiş Butonu */
         .core-link {
             display: block;
             text-align: center;
-            background-color: #5A483B; /* Üst panelle tam uyumlu arka plan */
-            color: #F4EFEA;            
-            padding: 16px 20px;
+            background-color: #4E3D32; /* Daha yüksek kontrastlı kahve */
+            color: #FFFFFF;            /* Net okunurluk için saf beyaz */
+            padding: 18px 20px;        /* Dokunma dostu etli hacim */
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 1.05rem;
-            margin: 35px 0 15px 0;     
-            border: 2px solid #251C17; /* Kenar Çizgisi */
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
+            font-size: 1.1rem;         
+            margin: 45px 0 20px 0;     
+            border: 2px solid #251C17; /* Belirgin çerçeve çizgisi */
+            letter-spacing: 1.5px;     
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            -webkit-tap-highlight-color: transparent; /* Mobil dokunma rengini gizler */
         }
-        .core-link:hover {
+        
+        /* Masaüstü için Hover Efektleri */
+        @media (min-width: 481px) {
+            .core-link:hover {
+                background-color: #251C17;
+                color: #F4EFEA;
+                letter-spacing: 2px;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        /* Mobil Cihazlarda Dokunma Hissiyatı (Tıklanınca İçe Çökme) */
+        .core-link:active {
+            transform: scale(0.98);
             background-color: #251C17;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+
         .math-motto {
             text-align: center;
             font-style: italic;
@@ -177,7 +194,7 @@
             opacity: 0.9;
             margin-top: 25px;          
             margin-bottom: 40px;
-            letter-spacing: 1.2px;
+            letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
@@ -189,14 +206,69 @@
             letter-spacing: 0.5px;
         }
 
+        /* KUSURSUZ MOBİL OPTİMİZASYON MATRİSİ */
         @media (max-width: 480px) {
-            body { padding: 40px 16px; }
-            .formula { font-size: 1.05rem; padding: 14px 8px; border-width: 1.5px; }
-            .formula .MathJax { font-size: 92% !important; }
-            .loop-title { font-size: 1.05rem; }
-            /* Mobilde harflerin birbirine girerek taşmasını önleyen kritik daraltma ölçeği */
-            .loop-box { padding: 18px 6px; border-width: 1.5px; }
-            .loop-box .MathJax { font-size: 80% !important; }
+            body { 
+                padding: 45px 18px; /* Kenarlardan nefes alan boşluk */
+            }
+            .header-title {
+                font-size: 1.6rem; /* Mobilde taşmayan dengeli başlık */
+                letter-spacing: 1px;
+            }
+            .tagline {
+                font-size: 0.95rem;
+            }
+            .epigraph-intro {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+            .epigraph-main {
+                font-size: 0.95rem;
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            .content {
+                font-size: 1rem; /* Okuma kolaylığı için ideal mobil font boyutu */
+                line-height: 1.85;
+            }
+            .medical-intro {
+                font-size: 0.98rem;
+            }
+            
+            /* Formüllerin mobilde küçülerek ekrana sığma kuralları */
+            .formula { 
+                font-size: 1.1rem; 
+                padding: 14px 8px; 
+                border-width: 1.5px; 
+                margin: 25px 0;
+            }
+            .formula .MathJax { 
+                font-size: 90% !important; 
+            }
+            
+            .loop-title { 
+                font-size: 1.05rem; 
+            }
+            
+            /* Döngü kutusunun mobilde asla taşmamasını sağlayan hayati kural */
+            .loop-box { 
+                padding: 18px 6px; 
+                border-width: 1.5px; 
+                margin: 25px 0;
+            }
+            .loop-box .MathJax { 
+                font-size: 78% !important; /* Döngü karakterlerini sıkıştırmadan sığdırır */
+            }
+            
+            .core-link {
+                font-size: 1rem;
+                padding: 16px 15px;
+                margin: 40px 0 20px 0;
+            }
+            .epigraph-final {
+                font-size: 1rem;
+                margin: 35px auto 20px auto;
+            }
         }
     </style>
 </head>
@@ -214,7 +286,7 @@
     </div>
 
     <div class="epigraph-main">
-        "Sistem, yükü nasıl anlamlandırıyorsa o ölçüde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
+        "Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.<br>Beden sonuç üretmez; mimariyi yansıtır."
     </div>
 
     <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
@@ -222,11 +294,11 @@
     <hr class="section-divider">
 
     <div class="content">
-        <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Yapıyı ayakta tutar. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir.</p>
+        <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır, yapıyı ayakta tutar. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir.</p>
 
-        <p class="medical-intro">Köken ise sonuçların ötesinde, mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir; bu hatayı gidererek sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p class="medical-intro">Köken; sonuçlerin ötesinde mimarideki yıkımın kökenindeki hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
-        <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kuruludur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
+        <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
         <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
         <div class="loop-box">
@@ -236,7 +308,7 @@
         <hr class="section-divider">
 
         <div class="epigraph-final">
-            "Köken, bir mucize değil, matematiktir."
+            "Sistem bir mucize değil, matematiktir."
         </div>
 
         <a href="koken-systems.md.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
