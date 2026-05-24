@@ -9,6 +9,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        /* Ana Mizanpaj ve Masaüstü Kuralları */
         body {
             background-color: #382C24; 
             color: #F4EFEA;            
@@ -89,6 +90,7 @@
             top: -2px;
         }
         
+        /* Formül Kutuları Base */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
@@ -132,7 +134,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Döngü Kutusu: Esnek yerleşim sağlandı */
+        /* Döngü Kutusu */
         .loop-box {
             font-family: 'Georgia', serif;
             margin: 30px 0;
@@ -149,13 +151,12 @@
             align-items: center;
             min-height: 50px;
         }
-        
-        /* Döngü içindeki MathJax yazısının taşmasını önleyen kural */
         .loop-box .MathJax {
             font-size: 1.05rem !important;
             letter-spacing: 0.2px;
         }
         
+        /* Zaman Bileşeni Matrisi */
         .time-align-container {
             max-width: 440px;
             margin: 0 auto 24px auto;
@@ -169,25 +170,40 @@
             align-items: center;
         }
         
-        /* Geri Dönüş Linki: Renk tonu ve tasarım bütünlüğü sağlandı */
+        /* Yenilenmiş Geri Dönüş Link Butonu */
         .back-link {
             display: block;
             text-align: center;
-            background-color: #5A483B; 
-            color: #F4EFEA;            
-            padding: 16px 20px;
+            background-color: #4E3D32; /* index.html ile uyumlu kontrast ton */
+            color: #FFFFFF;            
+            padding: 18px 20px;        
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.05rem;
-            margin: 35px 0 15px 0;     
+            margin: 45px 0 15px 0;     
             border: 2px solid #251C17; 
             letter-spacing: 1px;
-            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            -webkit-tap-highlight-color: transparent;
         }
-        .back-link:hover {
+        
+        @media (min-width: 481px) {
+            .back-link:hover {
+                background-color: #251C17;
+                color: #F4EFEA;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            }
+        }
+        
+        .back-link:active {
+            transform: scale(0.98);
             background-color: #251C17;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+
         .math-motto {
             text-align: center;
             font-style: italic;
@@ -208,16 +224,74 @@
             letter-spacing: 0.5px;
         }
 
+        /* MOBIL DENGELENME MATRİSİ */
         @media (max-width: 480px) {
-            body { padding: 40px 16px; }
-            .formula { font-size: 1.05rem; padding: 14px 8px; border-width: 1.5px; }
-            .formula-large { font-size: 1.25rem; }
-            .formula .MathJax, .formula-large .MathJax { font-size: 92% !important; }
-            .loop-title { font-size: 1.05rem; }
-            /* Mobilde döngünün taşmasını önleyen esnek ölçek */
-            .loop-box { padding: 18px 6px; border-width: 1.5px; }
-            .loop-box .MathJax { font-size: 80% !important; }
-            .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 2px; margin-bottom: 15px; }
+            body { 
+                padding: 45px 18px; 
+            }
+            .header-title {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+            }
+            .tagline {
+                font-size: 0.95rem;
+            }
+            .sub-heading {
+                font-size: 1.15rem;
+                margin-top: 30px;
+            }
+            .content {
+                font-size: 1rem;
+                line-height: 1.85;
+            }
+            
+            /* Formüllerin mobilde sığma kuralları */
+            .formula { 
+                font-size: 1.1rem; 
+                padding: 14px 8px; 
+                border-width: 1.5px; 
+                margin: 25px 0 30px 0;
+            }
+            .formula .MathJax { 
+                font-size: 90% !important; 
+            }
+            .formula-large { 
+                font-size: 1.2rem; 
+                padding: 18px 8px;
+            }
+            .formula-large .MathJax { 
+                font-size: 85% !important; 
+            }
+            
+            .loop-title { 
+                font-size: 1.05rem; 
+            }
+            
+            /* Döngü kutusunun mobilde asla taşmamasını sağlayan esnek yapı */
+            .loop-box { 
+                padding: 18px 6px; 
+                border-width: 1.5px; 
+                margin: 25px 0;
+            }
+            .loop-box .MathJax { 
+                font-size: 78% !important; 
+            }
+            
+            .time-align-row { 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+                gap: 2px; 
+                margin-bottom: 18px; 
+            }
+            .time-align-row span .MathJax {
+                font-size: 95% !important;
+            }
+            
+            .back-link {
+                font-size: 1rem;
+                padding: 16px 15px;
+                margin: 40px 0 20px 0;
+            }
         }
     </style>
 </head>
@@ -253,9 +327,9 @@
             <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
             <li><strong>(B)akış açısı:</strong> B, bağımsız bir değişken değil; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. Farkındalıktan uzaktaysak, bakış açımız olması gerekenden dar olacağı için, F = -1 ise B = (0,1) kabul edilir. Bakış açısı daraldıkça, sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. F = 1 ise o an mimari olabileceğin en uygun açıda olacağı için B = 1 olarak kabul edilir; bakış açısı sonucu etkilemeyecektir. B = 1 olduğunda ise inşa olması gerektiği gibi sürecektir. $$0 &lt; B \le 1$$</li>
             <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir.</li>
-            <span class="inline-formula-block">$$G \rightleftharpoons H$$</span>
+            <li class="inline-formula-block">$$G \rightleftharpoons H$$</li>
             <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir.</li>
-            <span class="inline-formula-block">$$H \rightleftharpoons Y$$</span>
+            <li class="inline-formula-block">$$H \rightleftharpoons Y$$</li>
         </ul>
 
         <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.</p>
@@ -275,7 +349,7 @@
         <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.</p>
         <p>Formülize edilmiş hali:<br></p>
         
-        <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
+        <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)</div>
 
         <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. 0 &lt; Z &lt; 1 aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
         
@@ -315,7 +389,7 @@
 
         <div class="sub-heading">Sistem Felsefesi</div>
 
-        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. This is the philosophy of the system. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
+        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir systemdir. This is the philosophy of the system. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
 
         <hr class="section-divider">
 
@@ -326,7 +400,7 @@
 
     <div class="footer">
         <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
-            Bu bir tedavi yöntemi, egzersiz programı ellerine sağlık veya tıbbi öneri değildir; kavramsal bir modeldir.
+            Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
         </p>
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
