@@ -93,7 +93,7 @@
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;         
             font-weight: bold;
-            margin: 20px 0 35px 0; /* Formülize edilmiş hali yazısından sonra dengeli mesafe */
+            margin: 20px 0 35px 0; 
             text-align: center;
             color: #F4EFEA;            
             background-color: #5A483B; 
@@ -132,10 +132,9 @@
             letter-spacing: 0.5px;
         }
 
+        /* Döngü Kutusu: Esnek yerleşim sağlandı */
         .loop-box {
             font-family: 'Georgia', serif;
-            font-size: 1.15rem; 
-            font-weight: normal;
             margin: 30px 0;
             text-align: center;
             color: #F4EFEA;            
@@ -143,9 +142,18 @@
             padding: 20px 15px;
             border-radius: 4px;
             border: 2px solid #251C17; 
-            letter-spacing: 0.5px;
             box-sizing: border-box;
             max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+        }
+        
+        /* Döngü içindeki MathJax yazısının taşmasını önleyen kural */
+        .loop-box .MathJax {
+            font-size: 1.05rem !important;
+            letter-spacing: 0.2px;
         }
         
         .time-align-container {
@@ -160,6 +168,8 @@
             margin-bottom: 8px;
             align-items: center;
         }
+        
+        /* Geri Dönüş Linki: Renk tonu ve tasarım bütünlüğü sağlandı */
         .back-link {
             display: block;
             text-align: center;
@@ -204,7 +214,9 @@
             .formula-large { font-size: 1.25rem; }
             .formula .MathJax, .formula-large .MathJax { font-size: 92% !important; }
             .loop-title { font-size: 1.05rem; }
-            .loop-box { font-size: 0.95rem; padding: 16px 8px; border-width: 1.5px; }
+            /* Mobilde döngünün taşmasını önleyen esnek ölçek */
+            .loop-box { padding: 18px 6px; border-width: 1.5px; }
+            .loop-box .MathJax { font-size: 80% !important; }
             .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 2px; margin-bottom: 15px; }
         }
     </style>
@@ -233,8 +245,7 @@
         
         <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikimi sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
         
-        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir.<p>
-        </p> Birbirlerini beslerler: Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
+        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler: Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
         
         <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
 
@@ -300,11 +311,11 @@
         
         <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
         
-        <p>Köken, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Bununla birlikte, yoğunluğu taşıyabilmesi ve yeni mimarinin inşa süreci için iç yapıyı sağlamlaştırarak zaman değişkeni karşısında daha kararlı bir mimari hâline gelebiliriz.</p>
+        <p>Köken, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Bununla birlikte, yoğunluğu taşıyabilmesi ve yeni mimarinin inşa sürecini başarmak için iç yapıyı sağlamlaştırarak zaman değişkeni karşısında daha kararlı bir mimari hâline gelebiliriz.</p>
 
         <div class="sub-heading">Sistem Felsefesi</div>
 
-        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. Bu, sistemin felsefesidir. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
+        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. This is the philosophy of the system. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
 
         <hr class="section-divider">
 
@@ -315,7 +326,7 @@
 
     <div class="footer">
         <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
-            Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
+            Bu bir tedavi yöntemi, egzersiz programı ellerine sağlık veya tıbbi öneri değildir; kavramsal bir modeldir.
         </p>
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
