@@ -9,10 +9,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* Ana Mizanpaj ve Masaüstü Kuralları */
         body {
-            background-color: #382C24; 
-            color: #F4EFEA;            
+            background-color: #382C24;
+            color: #F4EFEA;
             font-family: 'Georgia', serif;
             line-height: 1.95;
             margin: 0;
@@ -21,10 +20,7 @@
             justify-content: center;
             -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 540px;
-            width: 100%;
-        }
+        .container { max-width: 540px; width: 100%; }
         .header-title {
             color: #F4EFEA;
             font-size: 1.9rem;
@@ -35,7 +31,7 @@
         }
         .tagline {
             font-style: italic;
-            color: #C2B8B0; 
+            color: #C2B8B0;
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -44,7 +40,7 @@
         .section-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent); 
+            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
         .sub-heading {
@@ -54,33 +50,16 @@
             margin-top: 35px;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
-            border-bottom: 1px solid #251C17; 
+            border-bottom: 1px solid #251C17;
             padding-bottom: 5px;
         }
-        .content {
-            font-size: 1.08rem;
-            text-align: left;
-        }
-        .content p {
-            margin-bottom: 24px;
-            opacity: 0.95;
-            letter-spacing: 0.2px;
-        }
-        
-        .content ul {
-            margin-bottom: 24px;
-            padding-left: 20px;
-            list-style-type: none; 
-        }
-        .content li {
-            margin-bottom: 16px;
-            letter-spacing: 0.2px;
-            position: relative;
-            opacity: 0.95;
-        }
+        .content { font-size: 1.08rem; text-align: left; }
+        .content p { margin-bottom: 24px; opacity: 0.95; letter-spacing: 0.2px; }
+        .content ul { margin-bottom: 24px; padding-left: 20px; list-style-type: none; }
+        .content li { margin-bottom: 16px; letter-spacing: 0.2px; position: relative; opacity: 0.95; }
         .content li::before {
-            content: "•"; 
-            color: #C2B8B0; 
+            content: "•";
+            color: #C2B8B0;
             font-weight: bold;
             font-size: 1.2rem;
             display: inline-block;
@@ -89,129 +68,98 @@
             position: absolute;
             top: -2px;
         }
-        
-        /* Formül Kutuları Base */
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         
+            font-size: 1.5rem;
             font-weight: bold;
-            margin: 20px 0 35px 0; 
+            margin: 20px 0 35px 0;
             text-align: center;
-            color: #F4EFEA;            
-            background-color: #5A483B; 
+            color: #F4EFEA;
+            background-color: #5A483B;
             padding: 18px;
             border-radius: 4px;
-            border: 2px solid #251C17; 
+            border: 2px solid #251C17;
             letter-spacing: 1.5px;
-            min-height: 50px; 
+            min-height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
             max-width: 100%;
             box-sizing: border-box;
         }
-        
-        /* Yenilenmiş Geri Dönüş Link Butonu */
-        .back-link {
+        .nav-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 45px 0 20px 0;
+        }
+        .nav-link {
             display: block;
             text-align: center;
             background-color: #4E3D32;
-            color: #FFFFFF;            
-            padding: 18px 20px;        
+            color: #FFFFFF;
+            padding: 18px 12px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 1.05rem;
-            margin: 45px 0 15px 0;     
-            border: 2px solid #251C17; 
+            font-size: 1rem;
+            border: 2px solid #251C17;
             letter-spacing: 1px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
             -webkit-tap-highlight-color: transparent;
         }
-        
         @media (min-width: 481px) {
-            .back-link:hover {
+            .nav-link:hover {
                 background-color: #251C17;
                 color: #F4EFEA;
                 transform: translateY(-2px);
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
             }
         }
-        
-        .back-link:active {
-            transform: scale(0.98);
-            background-color: #251C17;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        }
-
+        .nav-link:active { transform: scale(0.98); background-color: #251C17; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
         .math-motto {
             text-align: center;
             font-style: italic;
             font-size: 0.95rem;
-            color: #C2B8B0; 
+            color: #C2B8B0;
             opacity: 0.9;
-            margin-top: 25px;          
+            margin-top: 25px;
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            color: #A69A90; 
+            color: #A69A90;
             text-align: center;
-            border-top: 1px solid #251C17; 
+            border-top: 1px solid #251C17;
             padding-top: 25px;
             letter-spacing: 0.5px;
         }
-
-        /* MOBIL DENGELENME MATRİSİ */
         @media (max-width: 480px) {
-            body { 
-                padding: 45px 18px; 
-            }
-            .header-title {
-                font-size: 1.6rem;
-                letter-spacing: 1px;
-            }
-            .tagline {
-                font-size: 0.95rem;
-            }
-            .sub-heading {
-                font-size: 1.15rem;
-                margin-top: 30px;
-            }
-            .content {
-                font-size: 1rem;
-                line-height: 1.85;
-            }
-            .formula { 
-                font-size: 1.1rem; 
-                padding: 14px 8px; 
-                border-width: 1.5px; 
-                margin: 25px 0 30px 0;
-            }
-            .formula .MathJax { 
-                font-size: 90% !important; 
-            }
-            .back-link {
-                font-size: 1rem;
-                padding: 16px 15px;
-                margin: 40px 0 20px 0;
-            }
+            body { padding: 45px 18px; }
+            .header-title { font-size: 1.6rem; letter-spacing: 1px; }
+            .tagline { font-size: 0.95rem; }
+            .sub-heading { font-size: 1.15rem; margin-top: 30px; }
+            .content { font-size: 1rem; line-height: 1.85; }
+            .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0 30px 0; }
+            .formula .MathJax { font-size: 90% !important; }
+            .nav-row { grid-template-columns: 1fr; }
+            .nav-link { font-size: 0.95rem; padding: 16px 12px; }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
 
-    <div class="header-title">KÖKEN / Neden İyileşemiyoruz?</div>
-    <div class="tagline">Mimarinin Direnci ve Kararsızlık Spektrumu</div>
+    <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
+    <div class="tagline">Neden İyileşemiyoruz?</div>
 
     <hr class="section-divider">
 
     <div class="content">
+
         <p>Beden, dışarıdaki bir durumla karşılaştığında bir anlayışa varır ve bu anlayış doğrultusunda bir hizalanmaya girer. Bu anlayışı oluşturan iki ana hat vardır: Geçmiş \((G)\) ve Hâl \((H)\).</p>
 
         <p>Geçmiş, genetik aktarımı da kapsayan geniş bir edinim havuzudur. Hâl ise büyük ölçüde bu geçmiş tarafından şekillenir. Geçmişten getirdiğimiz ne varsa, hâlimiz ve bakışımız da o yöne doğru eğilim gösterir.</p>
@@ -220,7 +168,7 @@
 
         <p>Ancak bunun gerçekleşmesi için kritik bir koşul vardır: farkındalık \((F)\). Bir an bile farkında değilsek, ne o anı görebiliriz ne de onunla bağ kurabiliriz. Farkındalık yoksa sistem otomatik pilota geçer ve eylem, doğrudan geçmişten gelen reflekslere göre şekillenir.</p>
 
-        <p>Farkındalık ve hâl üzerinde dolaylı olarak çalışabileceğimiz en önemli yapı ise Köprü’dür \((K)\). Köprü, farkındalığı doğrudan üretmez; ancak oluşması için zemin hazırlar. Aynı zamanda Bakış Açısını \((B)\) genişletir. Kişi doğrudan en geniş açıya ulaşamasa bile, mevcut dar perspektifinden daha geniş bir görüş alanına geçebilir. Bu genişleme zamanla daha dengeli bir mimariye evrilir.</p>
+        <p>Farkındalık ve hâl üzerinde dolaylı olarak çalışabileceğimiz en önemli yapı ise Köprü'dür \((K)\). Köprü, farkındalığı doğrudan üretmez; ancak oluşması için zemin hazırlar. Aynı zamanda Bakış Açısını \((B)\) genişletir. Kişi doğrudan en geniş açıya ulaşamasa bile, mevcut dar perspektifinden daha geniş bir görüş alanına geçebilir. Bu genişleme zamanla daha dengeli bir mimariye evrilir.</p>
 
         <div class="sub-heading">Spektrum ve Eylem Ölçeği</div>
 
@@ -233,6 +181,8 @@
         </ul>
 
         <p>Farkındalık eksikliği tek başına yıkım üretmez. Ancak daralan bakış açısı \((B)\), biriken Yoğunluk \((Y)\) ve Zaman \((Z)\) ile birleştiğinde sistem yıkım yönünde ilerler. Sürecin hızı, açının darlığına bağlıdır.</p>
+
+        <div class="formula">$$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$</div>
 
         <p>Bu mekanizma basit bir davranışta bile gözlemlenebilir. Kişi, mevcut bakış açısına göre hareket eder: dişlerini fırçalayabilir, sadece ağzını çalkalayabilir ya da hiçbir şey yapmadan uyuyabilir. Bu tek başına belirleyici değildir; ancak zaman içinde birikerek sonucu etkiler.</p>
 
@@ -256,8 +206,11 @@
 
         <hr class="section-divider">
 
-        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
-        
+        <div class="nav-row">
+            <a href="koken-ana-metin.html" class="nav-link">&#8592; Ana Metin</a>
+            <a href="index.html" class="nav-link">Ana Sayfa &#8594;</a>
+        </div>
+
         <div class="math-motto">"Sadece ışık tutar."</div>
     </div>
 
@@ -269,6 +222,5 @@
     </div>
 
 </div>
-
 </body>
 </html>
