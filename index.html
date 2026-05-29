@@ -9,10 +9,9 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* Ana Mizanpaj ve Masaüstü Kuralları */
         body {
-            background-color: #382C24; /* Arka Plan */
-            color: #F4EFEA;            /* Ana Yazı Rengi */
+            background-color: #382C24;
+            color: #F4EFEA;
             font-family: 'Georgia', serif;
             line-height: 1.95;
             margin: 0;
@@ -35,7 +34,7 @@
         }
         .tagline {
             font-style: italic;
-            color: #C2B8B0; 
+            color: #C2B8B0;
             text-align: center;
             margin-bottom: 0;
             font-size: 1.05rem;
@@ -44,7 +43,7 @@
         .section-divider {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent); /* Kenar Çizgisi */
+            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
         .epigraph-intro {
@@ -54,7 +53,7 @@
             font-size: 1.1rem;
             line-height: 1.85;
             margin: 35px auto 0 auto;
-            padding-bottom: 24px; 
+            padding-bottom: 24px;
             opacity: 0.95;
             letter-spacing: 0.3px;
         }
@@ -62,20 +61,20 @@
             font-style: italic;
             font-weight: bold;
             text-align: center;
-            color: #F4EFEA;            
-            font-size: 1.05rem;        
+            color: #F4EFEA;
+            font-size: 1.05rem;
             margin: 0 auto 30px auto;
             line-height: 1.7;
             max-width: 95%;
-            border-left: 2px solid #251C17;  /* Kenar Çizgisi */
-            border-right: 2px solid #251C17; /* Kenar Çizgisi */
+            border-left: 2px solid #251C17;
+            border-right: 2px solid #251C17;
             padding: 0 15px;
             letter-spacing: 0.5px;
         }
         .epigraph-final {
             font-style: italic;
             text-align: center;
-            color: #C2B8B0; 
+            color: #C2B8B0;
             font-size: 1.1rem;
             margin: 45px auto 25px auto;
             line-height: 1.7;
@@ -86,7 +85,7 @@
             text-align: left;
         }
         .medical-intro {
-            font-size: 1.02rem;        
+            font-size: 1.02rem;
             opacity: 0.95;
         }
         .content p {
@@ -94,19 +93,17 @@
             opacity: 0.95;
             letter-spacing: 0.2px;
         }
-        
-        /* Denklem Kutusu Base */
         .formula {
             font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;         
+            font-size: 1.5rem;
             font-weight: bold;
             margin: 35px 0;
             text-align: center;
-            color: #F4EFEA;            
-            background-color: #5A483B; /* Denklem Arka Planı */
+            color: #F4EFEA;
+            background-color: #5A483B;
             padding: 18px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Kenar Çizgisi */
+            border: 2px solid #251C17;
             letter-spacing: 1.5px;
             display: flex;
             justify-content: center;
@@ -115,28 +112,25 @@
             box-sizing: border-box;
             max-width: 100%;
         }
-        
         .loop-title {
-            text-align: center; 
-            font-weight: bold; 
+            text-align: center;
+            font-weight: bold;
             margin-top: 40px;
-            margin-bottom: -10px; 
-            color: #F4EFEA; 
+            margin-bottom: -10px;
+            color: #F4EFEA;
             font-style: italic;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
-
-        /* Döngü Kutusu */
         .loop-box {
             font-family: 'Georgia', serif;
             margin: 30px 0;
             text-align: center;
-            color: #F4EFEA;            
-            background-color: #5A483B; /* Denklem Arka Planı */
+            color: #F4EFEA;
+            background-color: #5A483B;
             padding: 20px 15px;
             border-radius: 4px;
-            border: 2px solid #251C17; /* Kenar Çizgisi */
+            border: 2px solid #251C17;
             box-sizing: border-box;
             max-width: 100%;
             display: flex;
@@ -148,29 +142,25 @@
             font-size: 1.05rem !important;
             letter-spacing: 0.2px;
         }
-        
-    /* Yenilenmiş ve Belirginleştirilmiş Ana Metin Geçiş Butonu */
-        .core-link {
+        .nav-link {
             display: block;
             text-align: center;
-            background-color: #6E5647; /* Formüllerden farklı, daha açık ve davetkar bir ton (Eski hali: #4E3D32) */
-            color: #FFFFFF;            /* Net okunurluk için saf beyaz */
-            padding: 18px 20px;        /* Dokunma dostu etli hacim */
+            background-color: #6E5647;
+            color: #FFFFFF;
+            padding: 18px 20px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 1.1rem;         
-            margin: 45px 0 20px 0;     
-            border: 2px solid #251C17; /* Belirgin çerçeve çizgisi */
-            letter-spacing: 1.5px;     
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Tıklanabilir katman hissi için gölge artırıldı */
+            font-size: 1.1rem;
+            margin: 45px 0 20px 0;
+            border: 2px solid #251C17;
+            letter-spacing: 1.5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
             transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-            -webkit-tap-highlight-color: transparent; /* Mobil dokunma rengini gizler */
+            -webkit-tap-highlight-color: transparent;
         }
-        
-        /* Masaüstü için Hover Efektleri */
         @media (min-width: 481px) {
-            .core-link:hover {
+            .nav-link:hover {
                 background-color: #251C17;
                 color: #F4EFEA;
                 letter-spacing: 2px;
@@ -178,97 +168,46 @@
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
             }
         }
-
-        /* Mobil Cihazlarda Dokunma Hissiyatı (Tıklanınca İçe Çökme) */
-        .core-link:active {
+        .nav-link:active {
             transform: scale(0.98);
             background-color: #251C17;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
-
         .math-motto {
             text-align: center;
             font-style: italic;
             font-size: 0.95rem;
             color: #C2B8B0;
             opacity: 0.9;
-            margin-top: 25px;          
+            margin-top: 25px;
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
-            color: #A69A90; 
+            color: #A69A90;
             text-align: center;
-            border-top: 1px solid #251C17; /* Kenar Çizgisi */
+            border-top: 1px solid #251C17;
             padding-top: 25px;
             letter-spacing: 0.5px;
         }
 
-        /* KUSURSUZ MOBİL OPTİMİZASYON MATRİSİ */
         @media (max-width: 480px) {
-            body { 
-                padding: 45px 18px; /* Kenarlardan nefes alan boşluk */
-            }
-            .header-title {
-                font-size: 1.6rem; /* Mobilde taşmayan dengeli başlık */
-                letter-spacing: 1px;
-            }
-            .tagline {
-                font-size: 0.95rem;
-            }
-            .epigraph-intro {
-                font-size: 1rem;
-                line-height: 1.8;
-            }
-            .epigraph-main {
-                font-size: 0.95rem;
-                max-width: 100%;
-                padding: 0 10px;
-            }
-            .content {
-                font-size: 1rem; /* Okuma kolaylığı için ideal mobil font boyutu */
-                line-height: 1.85;
-            }
-            .medical-intro {
-                font-size: 0.98rem;
-            }
-            
-            /* Formüllerin mobilde küçülerek ekrana sığma kuralları */
-            .formula { 
-                font-size: 1.1rem; 
-                padding: 14px 8px; 
-                border-width: 1.5px; 
-                margin: 25px 0;
-            }
-            .formula .MathJax { 
-                font-size: 90% !important; 
-            }
-            
-            .loop-title { 
-                font-size: 1.05rem; 
-            }
-            
-            /* Döngü kutusunun mobilde asla taşmamasını sağlayan hayati kural */
-            .loop-box { 
-                padding: 18px 6px; 
-                border-width: 1.5px; 
-                margin: 25px 0;
-            }
-            .loop-box .MathJax { 
-                font-size: 78% !important; /* Döngü karakterlerini sıkıştırmadan sığdırır */
-            }
-            
-            .core-link {
-                font-size: 1rem;
-                padding: 16px 15px;
-                margin: 40px 0 20px 0;
-            }
-            .epigraph-final {
-                font-size: 1rem;
-                margin: 35px auto 20px auto;
-            }
+            body { padding: 45px 18px; }
+            .header-title { font-size: 1.6rem; letter-spacing: 1px; }
+            .tagline { font-size: 0.95rem; }
+            .epigraph-intro { font-size: 1rem; line-height: 1.8; }
+            .epigraph-main { font-size: 0.95rem; max-width: 100%; padding: 0 10px; }
+            .content { font-size: 1rem; line-height: 1.85; }
+            .medical-intro { font-size: 0.98rem; }
+            .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0; }
+            .formula .MathJax { font-size: 90% !important; }
+            .loop-title { font-size: 1.05rem; }
+            .loop-box { padding: 18px 6px; border-width: 1.5px; margin: 25px 0; }
+            .loop-box .MathJax { font-size: 78% !important; }
+            .nav-link { font-size: 1rem; padding: 16px 15px; margin: 40px 0 20px 0; }
+            .epigraph-final { font-size: 1rem; margin: 35px auto 20px auto; }
         }
     </style>
 </head>
@@ -276,7 +215,7 @@
 
 <div class="container">
 
-    <div class="header-title">KÖKEN — Bedenin Geometrisi</div>
+    <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
     <div class="tagline">Bedenin Mimarisi Üzerine</div>
 
     <hr class="section-divider">
@@ -296,7 +235,7 @@
     <div class="content">
         <p class="medical-intro">Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır, yapıyı ayakta tutar. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir.</p>
 
-        <p class="medical-intro">Köken; sonuçlerin ötesinde mimarideki yıkımın kökenindeki hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+        <p class="medical-intro">KÖKEN; sonuçların ötesinde mimarideki yıkımın kökenindeki hatayla ilgilenir; yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
 
         <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
 
@@ -305,14 +244,12 @@
             $$\Delta \mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
-        <hr class="section-divider">
-
         <div class="epigraph-final">
-            "Köken bir mucize değil, matematiktir."
+            "KÖKEN bir mucize değil, matematiktir."
         </div>
 
-        <a href="koken-systems.md.html" class="core-link">KÖKEN Systems | Ana Metin →</a>
-        
+        <a href="koken-ana-metin.html" class="nav-link">Bedenin Mimarisi | Ana Metin →</a>
+
         <div class="math-motto">"Güneşin altında yeni bir şey yok; ben sadece karanlıkta kalan yerlere ışık tutuyorum."</div>
     </div>
 
