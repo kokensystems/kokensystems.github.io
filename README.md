@@ -3,7 +3,8 @@
 > **Beden sonuç üretmez; mimariyi yansıtır.**
 > Bu yüzden aynı sonuçlar tekrar eder.
 > 
-> Bu çalışma, bedenin nasıl çalıştığını değil, neden aynı şekilde çalışmaya devam ettiğini anlamaya çalışır. Fiziksel sonuçların arkasındaki yapısal dinamikleri görünür kılar.
+> Bu çalışma, bedenin nasıl çalıştığını değil, neden aynı şekilde çalışmaya devam ettiğini anlamaya çalışır.
+> Fiziksel sonuçların arkasındaki yapısal dinamikleri görünür kılar.
 
 ---
 
