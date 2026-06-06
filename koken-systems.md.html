@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN Systems | Bedenin Mimarisi</title>
+    <title>KÖKEN / Bedenin Geometrisi — Bedenin Mimarisi</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        :root {
+            --bg-color: #382C24;
+            --text-color: #F4EFEA;
+            --accent-yellow: #E5C583;
+            --threat-red: #C95A5A;
+            --safety-green: #C1CBB8;
+            --border-color: #42362E;
+            --blockquote-bg: #3A2E26;
+        }
+
         body {
-            background-color: #382C24;
-            color: #F4EFEA;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             font-family: 'Georgia', serif;
             line-height: 1.8;
             margin: 0;
@@ -20,19 +30,23 @@
             justify-content: center;
             -webkit-font-smoothing: antialiased;
         }
+
         .container {
             max-width: 540px;
             width: 100%;
         }
+
+        /* Başlık Alanı */
         .header-title {
             font-family: 'Cinzel', serif;
-            color: #F4EFEA;
+            color: var(--text-color);
             font-size: 1.9rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 8px;
             letter-spacing: 2px;
         }
+
         .tagline {
             font-style: italic;
             color: #C2B8B0;
@@ -41,42 +55,60 @@
             font-size: 1.05rem;
             letter-spacing: 1px;
         }
+
         .section-divider {
             border: 0;
             height: 1px;
             background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
             margin: 40px 0;
         }
-        .sub-heading {
+
+        /* Alt Başlıklar (Diğer Sayfalarla Tam Uyumlu) */
+        h2 {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #F4EFEA;
-            margin-top: 35px;
+            color: var(--accent-yellow);
+            margin-top: 40px;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
-            border-bottom: 1px solid #251C17;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
         }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-top: 30px;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
         .content {
             font-size: 1.08rem;
             text-align: left;
         }
+
         .content p {
             margin-bottom: 24px;
             opacity: 0.95;
             letter-spacing: 0.2px;
         }
+
+        /* Listeler */
         .content ul {
             margin-bottom: 24px;
             padding-left: 20px;
             list-style-type: none;
         }
+
         .content li {
             margin-bottom: 16px;
             letter-spacing: 0.2px;
             position: relative;
             opacity: 0.95;
         }
+
         .content li::before {
             content: "•";
             color: #C2B8B0;
@@ -88,13 +120,33 @@
             position: absolute;
             top: -2px;
         }
+
+        .content li strong {
+            color: var(--accent-yellow);
+        }
+
+        /* Vurgulu Blok Alıntıları */
+        blockquote {
+            background-color: var(--blockquote-bg);
+            border-left: 4px solid var(--accent-yellow);
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        /* Matematik Kutuları (Formüller) */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;
             font-weight: bold;
             margin: 20px 0 35px 0;
             text-align: center;
-            color: #F4EFEA;
+            color: var(--text-color);
             background-color: #5A483B;
             padding: 18px;
             border-radius: 4px;
@@ -107,31 +159,36 @@
             max-width: 100%;
             box-sizing: border-box;
         }
+
         .formula-large {
             font-size: 1.75rem;
             padding: 22px;
         }
+
         .inline-formula-block {
             display: block;
             text-align: center;
-            margin: 12px 0;
+            margin: 16px 0;
             font-size: 1.2rem;
         }
+
+        /* Döngü Kutusu */
         .loop-title {
             text-align: center;
             font-weight: bold;
             margin-top: 40px;
             margin-bottom: -10px;
-            color: #F4EFEA;
+            color: var(--text-color);
             font-style: italic;
             font-size: 1.15rem;
             letter-spacing: 0.5px;
         }
+
         .loop-box {
             font-family: 'Georgia', serif;
             margin: 30px 0;
             text-align: center;
-            color: #F4EFEA;
+            color: var(--text-color);
             background-color: #5A483B;
             padding: 20px 15px;
             border-radius: 4px;
@@ -143,28 +200,30 @@
             align-items: center;
             min-height: 50px;
         }
-        .loop-box .MathJax {
-            font-size: 1.05rem !important;
-            letter-spacing: 0.2px;
-        }
+
+        /* Zaman Değişkeni Hizalaması */
         .time-align-container {
             max-width: 440px;
             margin: 0 auto 24px auto;
             padding: 0 10px;
         }
+
         .time-align-row {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1.3fr 1fr;
             gap: 10px;
             margin-bottom: 8px;
             align-items: center;
         }
+
+        /* Navigasyon Elemanları (Systems1 ve 2 ile Birebir Aynı) */
         .nav-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
             margin: 45px 0 20px 0;
         }
+
         .nav-link {
             display: block;
             text-align: center;
@@ -181,6 +240,7 @@
             transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
             -webkit-tap-highlight-color: transparent;
         }
+
         @media (min-width: 481px) {
             .nav-link:hover {
                 background-color: #251C17;
@@ -189,11 +249,13 @@
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
             }
         }
+
         .nav-link:active {
             transform: scale(0.98);
             background-color: #251C17;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
+
         .math-motto {
             text-align: center;
             font-style: italic;
@@ -204,6 +266,7 @@
             margin-bottom: 40px;
             letter-spacing: 0.5px;
         }
+
         .footer {
             margin-top: 80px;
             font-size: 0.85rem;
@@ -214,11 +277,13 @@
             letter-spacing: 0.5px;
         }
 
+        /* Mobil Optimizasyonlar */
         @media (max-width: 480px) {
             body { padding: 45px 18px; }
             .header-title { font-size: 1.6rem; letter-spacing: 1px; }
             .tagline { font-size: 0.95rem; }
-            .sub-heading { font-size: 1.15rem; margin-top: 30px; }
+            h2 { font-size: 1.15rem; margin-top: 35px; }
+            h3 { font-size: 1.05rem; }
             .content { font-size: 1rem; line-height: 1.85; }
             .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0 30px 0; }
             .formula .MathJax { font-size: 90% !important; }
@@ -244,94 +309,124 @@
     <hr class="section-divider">
 
     <div class="content">
-        <p>Bu model, bedenin nasıl sonuç ürettiğini değil, nasıl yapılandığını açıklar. Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
+        <p>Beden, dışarıdan aldığı etkiyle içeriden şekillenir.</p>
 
-        <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
+        <blockquote>
+            <p>Sonuç değişmiyorsa, bak: mimari henüz değişmemiştir.</p>
+        </blockquote>
+
+        <p>Dış dünya, süreçleri başlatan olaylar bütünüdür. Yük dışarıdan gelir; bu yükün nasıl şekil alacağı ise mevcut mimariye göre belirlenir. Bu döngünün sonucundan dolayı beden, yıkım veya inşa süreçlerine girer.</p>
+
+        <h2>Ayrım</h2>
+        <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Modern tıp yapıyı ayakta tutar.</p>
+        <p>KÖKEN ise sonuçların ötesinde, mimarideki yıkımın kökenindeki yapısal hatayla ilgilenir. Yapısal hatayı giderip sistemin inşa sürecine geçmesini ve yıkımın yavaşlamasını sağlar.</p>
+
+        <h2>Döngü</h2>
+        <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
+
+        <div class="loop-title">Mimari bir döngüdür:</div>
         <div class="loop-box">
-            $$\Delta \mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }} A$$
+            $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
         </div>
 
-        <div class="sub-heading">Denklem ve Bileşenleri</div>
+        <p>Aynı anlayış, aynı eylemi üretir. Aynı eylem, aynı mimariyi inşa eder. Döngüyü kırmadan sonuç değişmez.</p>
 
-        <p>Denklem en sade hâliyle şu şekildedir;</p>
+        <h2>Denklem</h2>
+        <p>Denklem en sade hâliyle şu şekildedir:</p>
         <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
 
-        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikimi sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
+        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler — Anlayış (A), Yoğunluk (Y) ve Zaman (Z) — inşa veya yıkım sürecini ortaya koyar.</p>
 
-        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler: Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
+        <h2>(A) Anlayış</h2>
+        <p>Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış denklemde yön belirleyicidir; farkındalık \((F)\) ile bu durum gerçekleşir.</p>
+        <p>Anlayışın geometrisi, sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık, sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır \((B)\); eyleme geçiş biçimimizi doğrudan etkiler.</p>
+        <p>Eylemlerimiz ise Geçmiş \((G)\) ve Hâl \((H)\) ekseninde şekillenir. Birbirlerini beslerler:</p>
+        
+        <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
+        
+        <p>Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
 
-        <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
-
+        <h3>Kavramsal Ayrım</h3>
         <ul>
-            <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
-            <li><strong>(B)akış açısı:</strong> B, bağımsız bir değişken değil; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. Farkındalıktan uzaktaysak, bakış açımız olması gerekenden dar olacağı için, F = -1 ise B = (0,1) kabul edilir. Bakış açısı daraldıkça, sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. F = 1 ise o an mimari olabileceğin en uygun açıda olacağı için B = 1 olarak kabul edilir; bakış açısı sonucu etkilemeyecektir. B = 1 olduğunda ise inşa olması gerektiği gibi sürecektir. $$0 < B \le 1$$</li>
-            <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir.</li>
+            <li><strong>(F) Farkındalık:</strong> Farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz, bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
+            <li><strong>(B) Bakış Açısı:</strong> B, bağımsız bir değişken değildir; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. <br>
+                \(F = -1\) ise bakış açısı daralır: $$B \in (0,1)$$ 
+                Bakış açısı daraldıkça sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. <br>
+                \(F = +1\) ise mimari olabileceği en uygun açıdadır: $$B = 1$$
+                Bu durumda bakış açısı sonucu etkilemez; inşa olması gerektiği gibi sürer. $$0 < B \le 1$$</li>
+            <li><strong>(G) Geçmiş:</strong> Yüklediğimiz anlamlar, deneyimler, inançlar, öğrendiklerimiz. Geçmiş, hâl ile karşılıklı etkileşim halindedir.</li>
         </ul>
 
         <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
 
         <ul>
-            <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir.</li>
+            <li><strong>(H) Hâl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz. Hâl, yoğunlukla karşılıklı etkileşim halindedir.</li>
         </ul>
 
         <div class="inline-formula-block">$$H \rightleftharpoons Y$$</div>
 
-        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.</p>
+        <p>Denkeleme yön veren \(\pm(F)\)arkındalık, eyleme şekil veren ise \((B)\)akış açısıdır. \((G)\) ve \((H)\)'nin toplamı mimarinin zihinsel karşılığıdır; eylemin biçimini ve \(\Delta\text{BM}\) üzerindeki birikim etkisini belirler.</p>
 
         <div class="formula">$$A = \pm F \cdot \left( \frac{G + H}{B} \right)$$</div>
 
-        <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
+        <h2>(Y) Yoğunluk</h2>
+        <p>Döngünün sonucudur; şu an bulunduğumuz fiziksel durumun yansımasıdır. Yoğunluk, sürecin ilerleyiş boyutuna etki eder. Anlayış, yoğunluğu belirleyen en önemli bileşendir. İkisi birbirini olumlu veya olumsuz olarak besler.</p>
+        <p>Yoğunluk üç bileşenden oluşur:</p>
 
         <ul>
-            <li><strong>(Y₁) İç sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum vb.</li>
-            <li><strong>(K)öprü:</strong> Diyafram, pelvik taban, multifidus ve transversus</li>
-            <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
+            <li><strong>(Y₁) İç Sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum.</li>
+            <li><strong>(K) Köprü:</strong> Diyafram, pelvik taban, multifidus ve transversus.</li>
+            <li><strong>(Y₂) Dış Sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler.</li>
         </ul>
 
-        <p>İç sistem gerilimi üretir, dış sistem taşır. Bu iki sistem karşılıklı olarak birbirlerinin yükünü zamanla artırırlar:</p>
-        <span class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2$$</span>
-        <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.</p>
+        <p>İç sistem gerilimi üretir, dış sistem taşır:</p>
+        <div class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2$$</div>
+        <p>Birbirlerinin yükünü zamanla artırırlar. Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, \(K \ge 1\) olarak kabul edilir; \(K = 1\) olduğu zaman yük olduğu gibi aktarılır. Köprünün tamamen işlevsizleşmesi durumunda, \(K = 0\) olursa, sistem matematiksel olarak tanımsız olur; sistemden bahsedemeyiz. \(K\) arttıkça mimari daha dayanıklı hâle gelir.</p>
 
         <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
 
-        <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. 0 &lt; Z &lt; 1 aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
-<p          style="font-size: 0.92rem; opacity: 0.75; font-style: italic; margin-top: -16px;">* 0 &lt; Z &lt; 1 aralığında \(Z!\) ifadesinin matematiksel karşılığı Gamma fonksiyonudur: \(Z! = \Gamma(Z+1)\)</p>
-            <div class="time-align-container">
+        <h2>(Z) Zaman</h2>
+        <p>Döngünün kendisidir; süreci tanımlar. \(0 < Z < 1\) aralığında kabul edilir; \(0\) yokluğu, \(1\) tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
+        <p style="font-size: 0.92rem; opacity: 0.75; font-style: italic; margin-top: -16px;">* \(0 < Z < 1\) aralığında \(Z!\) ifadesinin matematiksel karşılığı Gamma fonksiyonudur: \(Z! = \Gamma(Z+1)\)</p>
+        
+        <div class="time-align-container">
             <div class="time-align-row">
-                <span>Başlangıçta etkileri yüksekken</span>
+                <span>Başlangıçta etkiler yüksektir</span>
                 <span>$$(0,1)! \approx 0{,}9514$$</span>
             </div>
             <div class="time-align-row">
-                <span>Ortaya doğru etkileri düşer</span>
+                <span>Ortaya doğru düşer</span>
                 <span>$$(0,5)! \approx 0{,}8862$$</span>
             </div>
             <div class="time-align-row">
-                <span>Sona doğru etkileri tekrar artar</span>
+                <span>Sona doğru tekrar artar</span>
                 <span>$$(0,9)! \approx 0{,}9618$$</span>
             </div>
         </div>
 
-        <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
+        <p>Bir sürecin başında daha çok inşa veya yıkım gerçekleşir. Zamanla sistem alışır, etki azalır. Nihayetinde birikim ile birlikte tekrar artar.</p>
 
+        <h2>Açık Form</h2>
         <div class="formula">
             $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
         </div>
 
-        <div class="sub-heading">Yapısal Adaptasyon ve Algı Yönetimi</div>
+        <h2>Fiziksel Yansıma</h2>
+        <p>Fiziki bedenimizdeki sonuçlar anlayışımıza göre şekillenir.</p>
+        <p>Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir. Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir.</p>
+        <p>Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda beden, olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
+        <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur, yapı kararsız hâle gelir. Bu durum tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
+        <p>Güven algısı oluştuğunda sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
 
-        <p>Fiziki bedenimizdeki sorunlar anlayışımıza göre şekillenir. Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir.</p>
-
-        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
-
-        <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur ve yapı kararsız hâle gelir; bu durum, tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
-
-        <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
-
-        <p>KÖKEN, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz.</p>
-
-        <div class="sub-heading">Sistem Felsefesi</div>
-
-        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
+        <h2>Ses & Sistem Felsefesi</h2>
+        <p>KÖKEN, sadece ışık tutar. Beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Köprüyü sağlamlaştırarak ise zaman değişkeni karşısında daha kararlı bir mimari hâline gelebiliriz.</p>
+        <p>KÖKEN, geçici veya dış müdahaleyle çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası, bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen; Anlayış \((A)\) değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir.</p>
+        
+        <blockquote>
+            <p>Anlayışın yönü değişmezse yıkım devam eder; sistem hizalanamaz.</p>
+        </blockquote>
+        
+        <p>KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
 
         <hr class="section-divider">
 
