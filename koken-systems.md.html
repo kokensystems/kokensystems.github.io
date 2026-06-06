@@ -1,356 +1,237 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN Systems | Bedenin Mimarisi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KÖKEN Systems | Bedenin Mimarisi</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <style>
-        body {
-            background-color: #382C24;
-            color: #F4EFEA;
-            font-family: 'Georgia', serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 60px 24px;
-            display: flex;
-            justify-content: center;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container {
-            max-width: 540px;
-            width: 100%;
-        }
-        .header-title {
-            font-family: 'Cinzel', serif;
-            color: #F4EFEA;
-            font-size: 1.9rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 8px;
-            letter-spacing: 2px;
-        }
-        .tagline {
-            font-style: italic;
-            color: #C2B8B0;
-            text-align: center;
-            margin-bottom: 0;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
-        }
-        .section-divider {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
-            margin: 40px 0;
-        }
-        .sub-heading {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #F4EFEA;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid #251C17;
-            padding-bottom: 5px;
-        }
-        .content {
-            font-size: 1.08rem;
-            text-align: left;
-        }
-        .content p {
-            margin-bottom: 24px;
-            opacity: 0.95;
-            letter-spacing: 0.2px;
-        }
-        .content ul {
-            margin-bottom: 24px;
-            padding-left: 20px;
-            list-style-type: none;
-        }
-        .content li {
-            margin-bottom: 16px;
-            letter-spacing: 0.2px;
-            position: relative;
-            opacity: 0.95;
-        }
-        .content li::before {
-            content: "•";
-            color: #C2B8B0;
-            font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            top: -2px;
-        }
-        .formula {
-            font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 20px 0 35px 0;
-            text-align: center;
-            color: #F4EFEA;
-            background-color: #5A483B;
-            padding: 18px;
-            border-radius: 4px;
-            border: 2px solid #251C17;
-            letter-spacing: 1.5px;
-            min-height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-        .formula-large {
-            font-size: 1.75rem;
-            padding: 22px;
-        }
-        .inline-formula-block {
-            display: block;
-            text-align: center;
-            margin: 12px 0;
-            font-size: 1.2rem;
-        }
-        .loop-title {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 40px;
-            margin-bottom: -10px;
-            color: #F4EFEA;
-            font-style: italic;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-        }
-        .loop-box {
-            font-family: 'Georgia', serif;
-            margin: 30px 0;
-            text-align: center;
-            color: #F4EFEA;
-            background-color: #5A483B;
-            padding: 20px 15px;
-            border-radius: 4px;
-            border: 2px solid #251C17;
-            box-sizing: border-box;
-            max-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 50px;
-        }
-        .loop-box .MathJax {
-            font-size: 1.05rem !important;
-            letter-spacing: 0.2px;
-        }
-        .time-align-container {
-            max-width: 440px;
-            margin: 0 auto 24px auto;
-            padding: 0 10px;
-        }
-        .time-align-row {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 10px;
-            margin-bottom: 8px;
-            align-items: center;
-        }
-        .nav-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 45px 0 20px 0;
-        }
-        .nav-link {
-            display: block;
-            text-align: center;
-            background-color: #4E3D32;
-            color: #FFFFFF;
-            padding: 18px 12px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1rem;
-            border: 2px solid #251C17;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-            -webkit-tap-highlight-color: transparent;
-        }
-        @media (min-width: 481px) {
-            .nav-link:hover {
-                background-color: #251C17;
-                color: #F4EFEA;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-            }
-        }
-        .nav-link:active {
-            transform: scale(0.98);
-            background-color: #251C17;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        }
-        .math-motto {
-            text-align: center;
-            font-style: italic;
-            font-size: 0.95rem;
-            color: #C2B8B0;
-            opacity: 0.9;
-            margin-top: 25px;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
-        }
-        .footer {
-            margin-top: 80px;
-            font-size: 0.85rem;
-            color: #A69A90;
-            text-align: center;
-            border-top: 1px solid #251C17;
-            padding-top: 25px;
-            letter-spacing: 0.5px;
-        }
+<style>
+body {
+    background-color: #382C24;
+    color: #F4EFEA;
+    font-family: 'Georgia', serif;
+    line-height: 1.85;
+    margin: 0;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
 
-        @media (max-width: 480px) {
-            body { padding: 45px 18px; }
-            .header-title { font-size: 1.6rem; letter-spacing: 1px; }
-            .tagline { font-size: 0.95rem; }
-            .sub-heading { font-size: 1.15rem; margin-top: 30px; }
-            .content { font-size: 1rem; line-height: 1.85; }
-            .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0 30px 0; }
-            .formula .MathJax { font-size: 90% !important; }
-            .formula-large { font-size: 1.2rem; padding: 18px 8px; }
-            .formula-large .MathJax { font-size: 85% !important; }
-            .loop-title { font-size: 1.05rem; }
-            .loop-box { padding: 18px 6px; border-width: 1.5px; margin: 25px 0; }
-            .loop-box .MathJax { font-size: 78% !important; }
-            .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 2px; margin-bottom: 18px; }
-            .time-align-row span .MathJax { font-size: 95% !important; }
-            .nav-row { grid-template-columns: 1fr; }
-            .nav-link { font-size: 0.95rem; padding: 16px 12px; }
-        }
-    </style>
+.container {
+    max-width: 680px;
+    width: 100%;
+}
+
+.header-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.9rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: #C2B8B0;
+    margin-bottom: 30px;
+}
+
+.section-divider {
+    height: 1px;
+    background: #251C17;
+    margin: 40px 0;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+.highlight {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.formula {
+    text-align: center;
+    background: #4E3D31;
+    padding: 16px;
+    margin: 25px 0;
+    border: 1px solid #251C17;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #251C17;
+}
+
+.loop-box {
+    text-align: center;
+    background: #6B5444;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.footer {
+    margin-top: 60px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #A69A90;
+}
+</style>
+
 </head>
-<body>
 
+<body>
 <div class="container">
 
-    <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
-    <div class="tagline">Bedenin Mimarisi Üzerine</div>
+<div class="header-title">KÖKEN / Bedenin Geometrisi</div>
+<div class="tagline">Bedenin Mimarisi Üzerine</div>
 
-    <hr class="section-divider">
+<hr class="section-divider">
 
-    <div class="content">
-        <p>Bu model, bedenin nasıl sonuç ürettiğini değil, nasıl yapılandığını açıklar. Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
+<p>
+Bu model, bedenin nasıl sonuç ürettiğini değil,
+nasıl yapılandığını açıklar.
+</p>
 
-        <div class="loop-title">Mimari, bir döngü içinde çalışır:</div>
-        <div class="loop-box">
-            $$\Delta \mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }} A$$
-        </div>
+<p>
+Bedenin mimarisi bir döngüdür.
+</p>
 
-        <div class="sub-heading">Denklem ve Bileşenleri</div>
-
-        <p>Denklem en sade hâliyle şu şekildedir;</p>
-        <div class="formula">$$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$</div>
-
-        <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikimi sembolik olarak temsil eder. Buradaki değişkenler, (A)nlayış, (Y)oğunluk ve (Z)aman; inşa veya yıkım sürecini ortaya koyar.</p>
-
-        <p><strong>(A)nlayış:</strong> Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış, denklemde yön belirleyicidir; Farkındalık ile bu durum gerçekleşir. Anlayışın geometrisi ise sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır, eyleme geçiş biçimimizi doğrudan etkiler. Eylemlerimiz ise (G)eçmiş ve (H)âl ekseninde şekillenir. Birbirlerini beslerler: Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
-
-        <p>Burada kavramların çerçevesini netleştirmek adına şu unsurları ayırt etmeliyiz:</p>
-
-        <ul>
-            <li><strong>(F)arkındalık:</strong> 1 veya -1 olarak ele alınabilir çünkü farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
-            <li><strong>(B)akış açısı:</strong> B, bağımsız bir değişken değil; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. Farkındalıktan uzaktaysak, bakış açımız olması gerekenden dar olacağı için, F = -1 ise B = (0,1) kabul edilir. Bakış açısı daraldıkça, sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. F = 1 ise o an mimari olabileceğin en uygun açıda olacağı için B = 1 olarak kabul edilir; bakış açısı sonucu etkilemeyecektir. B = 1 olduğunda ise inşa olması gerektiği gibi sürecektir. $$0 < B \le 1$$</li>
-            <li><strong>(G)eçmiş:</strong> Yüklediğimiz anlam, deneyimlerimiz, inançlarımız, öğrendiğimiz şeyler, vb. Geçmiş, hâlimiz ile karşılıklı etkileşim halindedir.</li>
-        </ul>
-
-        <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
-
-        <ul>
-            <li><strong>(H)âl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz, vb. Hâl, yoğunluk ile karşılıklı etkileşim halindedir.</li>
-        </ul>
-
-        <div class="inline-formula-block">$$H \rightleftharpoons Y$$</div>
-
-        <p>Denkleme yön veren ±(F)arkındalık, eyleme şekil veren ise (B)akış açımızdır. (G) ve (H)'nin toplamı ise mimarinin zihinsel karşılığıdır; eylemin biçimini ve dolayısıyla ΔBM üzerindeki birikim etkisini belirler.</p>
-
-        <div class="formula">$$A = \pm F \cdot \left( \frac{G + H}{B} \right)$$</div>
-
-        <p><strong>(Y)oğunluk:</strong> Denklemdeki döngünün sonucudur; şu an bulduğumuz fiziksel durumun yansımasıdır. Yoğunluk sürecin ilerleyiş boyutuna etki eden bir değişkendir. Anlayış ise yoğunluğu belirleyen en önemli bileşendir. Birbirlerini olumlu veya olumsuz olarak beslerler. Yoğunluk, 3 değişkene sahiptir; İç sistem, köprü ve dış sistem:</p>
-
-        <ul>
-            <li><strong>(Y₁) İç sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum vb.</li>
-            <li><strong>(K)öprü:</strong> Diyafram, pelvik taban, multifidus ve transversus</li>
-            <li><strong>(Y₂) Dış sistem:</strong> Postür durumu, kas tonusu, fasyal ton, eklemler vb.</li>
-        </ul>
-
-        <p>İç sistem gerilimi üretir, dış sistem taşır. Bu iki sistem karşılıklı olarak birbirlerinin yükünü zamanla artırırlar:</p>
-        <span class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2$$</span>
-        <p>Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, K ≥ 1 olarak kabul edilir, K = 1 olduğu zaman yük olduğu gibi aktarılacaktır. Köprünün tamamen işlevsizleşmesi durumunda, K = 0 olursa, sistem matematiksel olarak tanımsız olur ve sistemden bahsedemeyiz. 1'in üzeri ise sonuç azalır. Aradaki köprü ne kadar sağlam ise mimari o kadar dayanıklıdır.</p>
-
-        <div class="formula formula-large">$$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$</div>
-
-        <p><strong>(Z)aman:</strong> Döngünün kendisidir; süreci tanımlar. 0 &lt; Z &lt; 1 aralığında kabul edilir; 0 yokluğu, 1 tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
-<p          style="font-size: 0.92rem; opacity: 0.75; font-style: italic; margin-top: -16px;">* 0 &lt; Z &lt; 1 aralığında \(Z!\) ifadesinin matematiksel karşılığı Gamma fonksiyonudur: \(Z! = \Gamma(Z+1)\)</p>
-            <div class="time-align-container">
-            <div class="time-align-row">
-                <span>Başlangıçta etkileri yüksekken</span>
-                <span>$$(0,1)! \approx 0{,}9514$$</span>
-            </div>
-            <div class="time-align-row">
-                <span>Ortaya doğru etkileri düşer</span>
-                <span>$$(0,5)! \approx 0{,}8862$$</span>
-            </div>
-            <div class="time-align-row">
-                <span>Sona doğru etkileri tekrar artar</span>
-                <span>$$(0,9)! \approx 0{,}9618$$</span>
-            </div>
-        </div>
-
-        <p>Bir sürecin başında daha çok inşa veya daha çok yıkım gerçekleşir, zamanla sistem alışır etki azalmaya başlar. Nihayetinde ise birikimle beraber tekrar artmaya başlar.</p>
-
-        <div class="formula">
-            $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
-        </div>
-
-        <div class="sub-heading">Yapısal Adaptasyon ve Algı Yönetimi</div>
-
-        <p>Fiziki bedenimizdeki sorunlar anlayışımıza göre şekillenir. Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir.</p>
-
-        <p>Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir. Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda, bedenin fiziksel karşılığı olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı belirler.</p>
-
-        <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur ve yapı kararsız hâle gelir; bu durum, tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
-
-        <p>Güven algısı oluştuğunda ise sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
-
-        <p>KÖKEN, sadece ışık tutar. Bu, beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme ve değiştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz.</p>
-
-        <div class="sub-heading">Sistem Felsefesi</div>
-
-        <p>KÖKEN, geçici veya dış müdahale ile bir çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen, (A)nlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir. <strong>Anlayışın yönü değişmezse yıkım devam eder; beden mimarisi hizalanamaz.</strong> KÖKEN bir mucize değil, matematiktir. İnşa, kişinin kendi sorumluluğundadır.</p>
-
-        <hr class="section-divider">
-
-        <div class="nav-row">
-            <a href="index.html" class="nav-link">← Ana Sayfa</a>
-            <a href="koken-systems1.html" class="nav-link">Neden İyileşemiyoruz? →</a>
-        </div>
-
-        <div class="math-motto">"Sadece ışık tutar."</div>
-    </div>
-
-    <div class="footer">
-        <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
-            Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
-        </p>
-        © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
-    </div>
-
+<div class="loop-box">
+$$A \rightarrow \mathbf{Eylem} \rightarrow \Delta BM \rightarrow Yeni Mimari \rightarrow Yeni A$$
 </div>
 
+<p>
+Anlayış eylemi üretir.<br>
+Eylem mimariyi değiştirir.<br>
+Yeni mimari yeni bir anlayış oluşturur.
+</p>
+
+<span class="highlight">
+Anlayış değişmeden sonuç değişmez.
+</span>
+
+<hr class="section-divider">
+
+<div class="sub-heading">Denklem</div>
+
+<div class="formula">
+$$\Delta BM = (A \cdot Y) \cdot Z!$$
+</div>
+
+<p>
+Bu denklem hesaplama yapmaz.
+Süreci temsil eder.
+</p>
+
+<hr class="section-divider">
+
+<div class="sub-heading">(A) Anlayış</div>
+
+<p>
+Sistemin yönünü belirler.
+</p>
+
+<p>
+Farkındalık varsa yön oluşur.
+Yoksa sistem otomatik çalışır.
+</p>
+
+<div class="formula">
+$$A = \pm F \cdot \frac{G + H}{B}$$
+</div>
+
+<p>
+Küçük bir açı farkı,
+zaman içinde büyük sonuç üretir.
+</p>
+
+<hr class="section-divider">
+
+<div class="sub-heading">(Y) Yoğunluk</div>
+
+<p>
+Mevcut fiziksel durumun yansımasıdır.
+</p>
+
+<div class="formula">
+$$Y = \frac{Y_1 \cdot Y_2}{K}$$
+</div>
+
+<p>
+İç sistem üretir.<br>
+Dış sistem taşır.<br>
+Köprü dağıtır.
+</p>
+
+<hr class="section-divider">
+
+<div class="sub-heading">(Z) Zaman</div>
+
+<p>
+Zaman doğrusal değildir.
+</p>
+
+<p>
+Başta yüksek,<br>
+ortada düşer,<br>
+sonda tekrar artar.
+</p>
+
+<hr class="section-divider">
+
+<div class="sub-heading">Sonuç</div>
+
+<p>
+Beden sonuç üretmez.
+Mimariyi yansıtır.
+</p>
+
+<p>
+Kilo, ağrı, postür…
+bunların hepsi sonuçtur.
+</p>
+
+<span class="highlight">
+Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.
+</span>
+
+<p>
+Tehdit varsa sistem korur.<br>
+Güven varsa sistem düzenler.
+</p>
+
+<hr class="section-divider">
+
+<p>
+KÖKEN müdahale etmez.<br>
+Görünür kılar.
+</p>
+
+<p>
+Bir çözüm sunmaz.<br>
+Ne yaptığını gösterir.
+</p>
+
+<span class="highlight">
+KÖKEN bir mucize değil, matematiktir.
+</span>
+
+<div class="footer">
+Bu bir tedavi yöntemi değildir.<br>
+Kavramsal bir modeldir.
+</div>
+
+</div>
 </body>
 </html>
