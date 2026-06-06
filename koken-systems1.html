@@ -88,11 +88,34 @@
             max-width: 100%;
             box-sizing: border-box;
         }
+        
+        /* Bölüm 2 İlerleme Butonu Alanı */
+        .nav-row-next {
+            margin: 45px 0 12px 0;
+        }
+        .nav-link-next {
+            display: block;
+            text-align: center;
+            background-color: #5A483B;
+            color: #F4EFEA;
+            padding: 18px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            border: 2px solid #251C17;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Alt Navigasyon (Ana Metin / Ana Sayfa) */
         .nav-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin: 45px 0 20px 0;
+            margin: 0 0 20px 0; /* Üstteki butonla hizalanması için margin optimize edildi */
         }
         .nav-link {
             display: block;
@@ -111,14 +134,15 @@
             -webkit-tap-highlight-color: transparent;
         }
         @media (min-width: 481px) {
-            .nav-link:hover {
+            .nav-link:hover, .nav-link-next:hover {
                 background-color: #251C17;
                 color: #F4EFEA;
                 transform: translateY(-2px);
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
             }
         }
-        .nav-link:active { transform: scale(0.98); background-color: #251C17; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .nav-link:active, .nav-link-next:active { transform: scale(0.98); background-color: #251C17; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        
         .math-motto {
             text-align: center;
             font-style: italic;
@@ -147,7 +171,7 @@
             .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0 30px 0; }
             .formula .MathJax { font-size: 90% !important; }
             .nav-row { grid-template-columns: 1fr; }
-            .nav-link { font-size: 0.95rem; padding: 16px 12px; }
+            .nav-link, .nav-link-next { font-size: 0.95rem; padding: 16px 12px; }
         }
     </style>
 </head>
@@ -206,6 +230,10 @@
         <p>Mimari her an güncellenir. Bu güncellenme, Zaman \((Z)\) içinde hangi yönde ilerleyeceğimizi belirler. Dış müdahale bir kapı açar; o kapıdan geçmek içerideki mimariye bağlıdır.</p>
 
         <hr class="section-divider">
+
+        <div class="nav-row-next">
+            <a href="koken-systems2.md.html" class="nav-link-next">Bölüm 2: Sistemler Üzerine &rarr;</a>
+        </div>
 
         <div class="nav-row">
             <a href="koken-systems.md.html" class="nav-link">&#8592; Ana Metin</a>
