@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN Systems | Neden İyileşemiyoruz?</title>
-
+    <title>KÖKEN — Neden İyileşemiyoruz?</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    
     <style>
+        :root {
+            --bg-color: #382C24;
+            --text-color: #F4EFEA;
+            --accent-yellow: #E5C583;
+            --threat-red: #C95A5A;
+            --safety-green: #C1CBB8;
+            --border-color: #42362E;
+            --blockquote-bg: #3A2E26;
+        }
+
         body {
-            background-color: #382C24;
-            color: #F4EFEA;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             font-family: 'Georgia', serif;
             line-height: 1.8;
             margin: 0;
@@ -20,80 +30,29 @@
             justify-content: center;
             -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 540px; width: 100%; }
-        .header-title {
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            color: #F4EFEA;
-            font-size: 1.9rem;
-            text-align: center;
-            margin-bottom: 8px;
-            letter-spacing: 2px;
+
+        .container {
+            max-width: 540px;
+            width: 100%;
         }
-        .tagline {
-            font-style: italic;
-            color: #C2B8B0;
-            text-align: center;
-            margin-bottom: 0;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
-        }
-        .section-divider {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
-            margin: 40px 0;
-        }
-        .sub-heading {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #F4EFEA;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            border-bottom: 1px solid #251C17;
-            padding-bottom: 5px;
-        }
-        .content { font-size: 1.08rem; text-align: left; }
-        .content p { margin-bottom: 24px; opacity: 0.95; letter-spacing: 0.2px; }
-        .content ul { margin-bottom: 24px; padding-left: 20px; list-style-type: none; }
-        .content li { margin-bottom: 16px; letter-spacing: 0.2px; position: relative; opacity: 0.95; }
-        .content li::before {
-            content: "•";
-            color: #C2B8B0;
-            font-weight: bold;
-            font-size: 1.2rem;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            top: -2px;
-        }
-        .formula {
-            font-family: 'Times New Roman', serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 20px 0 35px 0;
-            text-align: center;
-            color: #F4EFEA;
-            background-color: #5A483B;
-            padding: 18px;
-            border-radius: 4px;
-            border: 2px solid #251C17;
-            letter-spacing: 1.5px;
-            min-height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 100%;
-            box-sizing: border-box;
+
+        /* Navigasyon Alanları (Systems2 ile Birebir Aynı) */
+        .nav-row-prev {
+            margin: 20px 0 45px 0;
         }
         
-        /* Bölüm 2 İlerleme Butonu Alanı */
         .nav-row-next {
             margin: 45px 0 12px 0;
         }
-        .nav-link-next {
+
+        .nav-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 0 0 20px 0;
+        }
+
+        .nav-link-main {
             display: block;
             text-align: center;
             background-color: #5A483B;
@@ -109,14 +68,7 @@
             transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
             -webkit-tap-highlight-color: transparent;
         }
-
-        /* Alt Navigasyon (Ana Metin / Ana Sayfa) */
-        .nav-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 0 0 20px 0; /* Üstteki butonla hizalanması için margin optimize edildi */
-        }
+        
         .nav-link {
             display: block;
             text-align: center;
@@ -133,123 +85,215 @@
             transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
             -webkit-tap-highlight-color: transparent;
         }
+
         @media (min-width: 481px) {
-            .nav-link:hover, .nav-link-next:hover {
+            .nav-link:hover, .nav-link-main:hover {
                 background-color: #251C17;
                 color: #F4EFEA;
                 transform: translateY(-2px);
                 box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
             }
         }
-        .nav-link:active, .nav-link-next:active { transform: scale(0.98); background-color: #251C17; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
         
-        .math-motto {
+        .nav-link:active, .nav-link-main:active { 
+            transform: scale(0.98); 
+            background-color: #251C17; 
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+        }
+
+        /* Tipografi & Başlıklar */
+        h1 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-top: 0;
             text-align: center;
-            font-style: italic;
-            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-yellow);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            opacity: 0.95;
+            letter-spacing: 0.2px;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 24px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 16px;
+            letter-spacing: 0.2px;
+            position: relative;
+            opacity: 0.95;
+        }
+
+        li::before {
+            content: "•";
             color: #C2B8B0;
-            opacity: 0.9;
-            margin-top: 25px;
-            margin-bottom: 40px;
-            letter-spacing: 0.5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            top: -2px;
         }
-        .footer {
-            margin-top: 80px;
-            font-size: 0.85rem;
-            color: #A69A90;
+
+        li strong {
+            color: var(--accent-yellow);
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #251C17 20%, #251C17 80%, transparent);
+            margin: 40px 0;
+        }
+
+        blockquote {
+            background-color: var(--blockquote-bg);
+            border-left: 4px solid var(--accent-yellow);
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        /* Matematiksel Formül Alanı */
+        .formula {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0;
             text-align: center;
-            border-top: 1px solid #251C17;
-            padding-top: 25px;
-            letter-spacing: 0.5px;
+            color: #F4EFEA;
+            background-color: #5A483B;
+            padding: 18px;
+            border-radius: 4px;
+            border: 2px solid #251C17;
+            letter-spacing: 1.5px;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            box-sizing: border-box;
         }
+
+        .math-note {
+            background-color: #251e19;
+            border: 1px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+        
         @media (max-width: 480px) {
             body { padding: 45px 18px; }
-            .header-title { font-size: 1.6rem; letter-spacing: 1px; }
-            .tagline { font-size: 0.95rem; }
-            .sub-heading { font-size: 1.15rem; margin-top: 30px; }
-            .content { font-size: 1rem; line-height: 1.85; }
-            .formula { font-size: 1.1rem; padding: 14px 8px; border-width: 1.5px; margin: 25px 0 30px 0; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.15rem; }
+            p { font-size: 1rem; }
+            .formula { font-size: 1.1rem; padding: 14px 8px; }
             .formula .MathJax { font-size: 90% !important; }
             .nav-row { grid-template-columns: 1fr; }
-            .nav-link, .nav-link-next { font-size: 0.95rem; padding: 16px 12px; }
+            .nav-link, .nav-link-main { font-size: 0.95rem; padding: 16px 12px; }
         }
     </style>
 </head>
 <body>
+
 <div class="container">
 
-    <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
-    <div class="tagline">Neden İyileşemiyoruz?</div>
+    <div class="nav-row-prev">
+        <a href="koken-systems.md.html" class="nav-link-main">&larr; Ana Metin</a>
+    </div>
+
+    <h1>Neden İyileşemiyoruz?</h1>
+
+    <h2>Başlangıç: Anlayış ve Hizalanma</h2>
+    <p>Beden, dışarıdaki bir durumla karşılaştığında bir anlayışa varır ve bu anlayış doğrultusunda bir hizalanmaya girer. Bu anlayışı oluşturan iki ana hat vardır: <strong>Geçmiş \((G)\)</strong> ve <strong>Hâl \((H)\)</strong>.</p>
+    <p>Geçmiş, genetik aktarımı da kapsayan geniş bir edinim havuzudur. Hâl ise büyük ölçüde bu geçmiş tarafından şekillenir. Geçmişten getirdiğimiz ne varsa, hâlimiz ve bakışımız da o yöne doğru eğilim gösterir.</p>
+    <p>Burada geçmiş ile hâl arasındaki ilişkiyi öncelikle anlamak gerekir. Geçmiş edinimlerimizin şu anki hâlimizi büyük ölçüde belirlemesi sebebiyle, geçmişten getirdiğimiz şey ne ise hâlimiz de tam olarak oraya doğru bakar.</p>
+
+    <h2>Hâlin Değişebilirliği</h2>
+    <p>Bununla birlikte hâl sabit değildir. Yine geçmişin etkisiyle de olsa, anlık bir temasla farklı bir duruma evrilebilir. Örneğin bir gün batımına denk geldiğimizde, o anla kurduğumuz bağ içsel durumumuzu değiştirebilir — tabi bu yine geçmişteki o renklerle veya gün batımıyla kurduğumuz bir bağ aracılığıyla mümkün olur. Bu an, sistemdeki yükü kısa süreliğine hafifletebilir ve bir sonraki andaki hâli daha dengeli hâle getirebilir.</p>
+    <p>Ancak bunun gerçekleşmesi için kritik bir koşul vardır: <strong>farkındalık \((F)\)</strong>. Kısacık bir an bile olsa farkındalık gerekmektedir. Aksi durumda zaten ne gün batımını görebiliriz ne renkleri, ne de onlarla bağ kurabiliriz. Farkındalık yoksa sistem otomatik pilota geçer ve eylem, doğrudan geçmişten gelen reflekse göre şekillenir.</p>
+
+    <h2>Köprü ve Farkındalık</h2>
+    <p>Farkındalık ve hâl üzerinde dolaylı olarak çalışabileceğimiz en önemli yapı ise <strong>Köprü'dür \((K)\)</strong>. Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Farkındalığı doğrudan üretmez; ancak oluşması için zemin hazırlar. Aynı zamanda <strong>Bakış Açısını \((B)\)</strong> genişletir. Kişi doğrudan en geniş açıya ulaşamasa bile, mevcut dar perspektifinden daha geniş bir görüş alanına geçebilir. Bu genişleme zamanla daha dengeli bir mimariye evrilir.</p>
+
+    <h2>Spektrum ve Eylem Ölçeği</h2>
+    <p>Dışarıdaki bir tetikleyici karşısındaki <strong>Anlayış \((A)\)</strong>, sistemin tehdit mi yoksa güven modunda mı çalışacağını belirler. Bunun sonucunda eylem şekillenir.</p>
+
+    <ul>
+        <li><strong>Tam Farkındalık:</strong> Sistem açıktır. Eylem doğrudan ve nettir.</li>
+        <li><strong>Kısmi Uzaklaşma:</strong> Bakış açısı \((B)\) daralır. Eylem mümkündür, ancak sınırlıdır.</li>
+        <li><strong>Tam Otomatik Pilot:</strong> Bakış açısı minimumdadır. Seçenek üretilemez; eylem reflekslere indirgenir.</li>
+    </ul>
+
+    <p>Farkındalık eksikliği tek başına yıkım üretmez. Ancak daralan bakış açısı \((B)\), biriken <strong>Yoğunluk \((Y)\)</strong> ve <strong>Zaman \((Z)\)</strong> ile birleştiğinde sistem yıkım yönünde ilerler. Sürecin hızı, açının darlığına bağlıdır.</p>
+
+    <div class="formula">$$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$</div>
+
+    <h2>Günlük Davranış Üzerinden Mekanizma</h2>
+    <p>Bu mekanizma basit bir davranışta bile gözlemlenebilir. Farkındalıktaki biri uyumadan dişlerini doğrudan fırçalayacaktır. Farkındalıktan uzakta biri ise bakış açısı ölçüsünde eyleme geçecektir — en iyi ihtimalle ağzını suyla çalkalar ve uykuya geçer; ya da fırçalamadan uyur; en dar bakıştaki kişinin ise aklına bile gelmeyecektir herhangi bir ihtimal.</p>
+    <p>Bu tek başına belirleyici değildir; ancak zaman içinde birikerek sonucu etkiler. Bakış açısı \((B)\) kritik rol oynar. Aynı durumda farklı bakış açılarına sahip bireyler farklı eylemler üretir. Bakış açısı daraldıkça seçenekler azalır ve sistem tek bir yol üzerinde sıkışır. Genişledikçe alternatif yollar oluşur và yapı daha dengeli yanıtlar üretir.</p>
+    <p>Köprü \((K)\) üzerine çalışmak, sistemi doğrudan en geniş bakış açısına taşımayabilir; ancak minimum eylem kapasitesini mümkün kılar — en azından ağzını suyla çalkalayacak enerjiye ve bilince ulaşmayı, nihayetinde de dişini fırçalamaya kadar gitmeyi sağlar. Bu küçük farklar, zaman içinde birikerek mimariyi dönüştürür.</p>
+
+    <blockquote>
+        <p>Bedenin mimarisi yıkıma bir anda geçmez; inşa da bir anda tamamlanmaz.</p>
+    </blockquote>
+
+    <h2>Mimarinin Direnci</h2>
+    <p>Mimari, anlayış doğrultusunda kendini korumaya çalışır. Tehdit algısı altında şekillenen yapı, başlangıçta bir adaptasyondur — sistemin o koşullarda ayakta kalma stratejisidir. Ancak zaman içinde bu adaptasyon, çözülmesi gereken problemin kendisine dönüşür.</p>
+    <p>Anlayış \((A)\) değişmediği sürece iyileşme gerçekleşmez. Ancak bazı durumlarda anlayış değişse bile sistem hemen karşılık vermez. Bunun nedeni, mimarinin alışılmış yapıyı koruma eğilimidir.</p>
+    <p>Örneğin yıllarca tehdit altında kalan ve postürü buna göre şekillenen bir sistemde, anlayış değiştiği an postür düzelmeyebilir. Doku hafızası belirli bir formu korumaya devam eder. Uzun süre tehdit altında kalan sistemde Yoğunluk \((Y)\) bu duruma göre organize olur. <strong>İç sistem \((Y_1)\)</strong> gerilim üretir; <strong>dış sistem \((Y_2)\)</strong> bunu taşımak üzere şekillenir. Bu yapı yalnızca zihinsel bir değişimle anında çözülmeyebilir.</p>
+
+    <h2>Dış Müdahalenin Yeri</h2>
+    <p>Bu noktada dış müdahale devreye girer. KÖKEN, dış müdahaleyi reddetmez; ancak yalnızca dış müdahaleye bağlı bir iyileşmenin kalıcı olmayacağını savunur. Yapıya uygulanan dış müdahale, içerideki yapıya müdahaleyi kolaylaştırması açısından önemli bir yere sahiptir.</p>
+    
+    <blockquote>
+        <p>Dış müdahale, bir anlık nefes aldırır ama nefesin kalıcı olması için iç yapının düzene girmesi şarttır.</p>
+    </blockquote>
+    
+    <p>Mimari her an güncellenir. Bu birikim, hangi yönde ilerleyeceğimizi belirler. Dış müdahale bir kapı açar; o kapıdan geçmek içerideki mimariye bağlıdır. Bu yüzden bedenden çalışmak, zihinden çalışmaktan daha doğrudan olabilir.</p>
 
     <hr class="section-divider">
 
-    <div class="content">
-
-        <p>Beden, dışarıdaki bir durumla karşılaştığında bir anlayışa varır ve bu anlayış doğrultusunda bir hizalanmaya girer. Bu anlayışı oluşturan iki ana hat vardır: Geçmiş \((G)\) ve Hâl \((H)\).</p>
-
-        <p>Geçmiş, genetik aktarımı da kapsayan geniş bir edinim havuzudur. Hâl ise büyük ölçüde bu geçmiş tarafından şekillenir. Geçmişten getirdiğimiz ne varsa, hâlimiz ve bakışımız da o yöne doğru eğilim gösterir.</p>
-
-        <p>Bununla birlikte hâl sabit değildir. Yine geçmişin etkisiyle de olsa, anlık bir temasla farklı bir duruma evrilebilir. Örneğin bir gün batımına denk geldiğimizde, o anla kurduğumuz bağ içsel durumumuzu değiştirebilir. Bu an, sistemdeki yükü kısa süreliğine hafifletebilir ve bir sonraki andaki hâli daha dengeli hâle getirebilir.</p>
-
-        <p>Ancak bunun gerçekleşmesi için kritik bir koşul vardır: farkındalık \((F)\). Bir an bile farkında değilsek, ne o anı görebiliriz ne de onunla bağ kurabiliriz. Farkındalık yoksa sistem otomatik pilota geçer ve eylem, doğrudan geçmişten gelen reflekslere göre şekillenir.</p>
-
-        <p>Farkındalık ve hâl üzerinde dolaylı olarak çalışabileceğimiz en önemli yapı ise Köprü'dür \((K)\). Köprü, farkındalığı doğrudan üretmez; ancak oluşması için zemin hazırlar. Aynı zamanda Bakış Açısını \((B)\) genişletir. Kişi doğrudan en geniş açıya ulaşamasa bile, mevcut dar perspektifinden daha geniş bir görüş alanına geçebilir. Bu genişleme zamanla daha dengeli bir mimariye evrilir.</p>
-
-        <div class="sub-heading">Spektrum ve Eylem Ölçeği</div>
-
-        <p>Dışarıdaki bir tetikleyici karşısındaki anlayış \((A)\), sistemin tehdit mi yoksa güven modunda mı çalışacağını belirler. Bunun sonucunda eylem şekillenir.</p>
-
-        <ul>
-            <li><strong>Tam Farkındalık:</strong> Sistem açıktır. Eylem doğrudan ve nettir.</li>
-            <li><strong>Kısmi Uzaklaşma:</strong> Bakış açısı \((B)\) daralır. Eylem mümkündür, ancak sınırlıdır.</li>
-            <li><strong>Tam Otomatik Pilot:</strong> Bakış açısı minimumdadır. Seçenek üretilemez; eylem reflekslere indirgenir.</li>
-        </ul>
-
-        <p>Farkındalık eksikliği tek başına yıkım üretmez. Ancak daralan bakış açısı \((B)\), biriken Yoğunluk \((Y)\) ve Zaman \((Z)\) ile birleştiğinde sistem yıkım yönünde ilerler. Sürecin hızı, açının darlığına bağlıdır.</p>
-
-        <div class="formula">$$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$</div>
-
-        <p>Bu mekanizma basit bir davranışta bile gözlemlenebilir. Kişi, mevcut bakış açısına göre hareket eder: dişlerini fırçalayabilir, sadece ağzını çalkalayabilir ya da hiçbir şey yapmadan uyuyabilir. Bu tek başına belirleyici değildir; ancak zaman içinde birikerek sonucu etkiler.</p>
-
-        <p>Bakış açısı \((B)\) kritik rol oynar. Aynı durumda farklı bakış açılarına sahip bireyler farklı eylemler üretir. Bakış açısı daraldıkça seçenekler azalır ve sistem tek bir hatta sıkışır. Genişledikçe alternatifler oluşur ve yapı daha dengeli yanıtlar üretir.</p>
-
-        <p>Köprü \((K)\) üzerine çalışmak, sistemi doğrudan en geniş bakış açısına taşımayabilir; ancak minimum eylem kapasitesini mümkün kılar. Bu küçük farklar, zaman içinde birikerek mimariyi dönüştürür.</p>
-
-        <p>Bedenin mimarisi yıkıma bir anda geçmez; inşa da bir anda tamamlanmaz.</p>
-
-        <div class="sub-heading">Mimarinin Direnci ve Dış Müdahale</div>
-
-        <p>Mimari, anlayış doğrultusunda kendini korumaya çalışır. Tehdit algısı altında şekillenen yapı, başlangıçta bir adaptasyondur — sistemin o koşullarda ayakta kalma stratejisidir. Ancak zaman içinde bu adaptasyon, çözülmesi gereken problemin kendisine dönüşür. Anlayış \((A)\) değişmediği sürece iyileşme gerçekleşmez. Ve bazı durumlarda anlayış değişse bile sistem hemen karşılık vermez. Bunun nedeni, mimarinin alışılmış yapıyı koruma eğilimidir.</p>
-
-        <p>Uzun süre tehdit altında kalan bir sistemde Yoğunluk \((Y)\) bu duruma göre organize olur. İç sistem \((Y_1)\) gerilim üretir; dış sistem \((Y_2)\) bunu taşımak üzere şekillenir. Bu yapı yalnızca zihinsel bir değişimle anında çözülmeyebilir. Doku hafızası belirli bir formu korumaya devam eder.</p>
-
-        <p>Bu noktada dış müdahale devreye girer.</p>
-
-        <p>KÖKEN, dış müdahaleyi reddetmez; ancak yalnızca dış müdahaleye bağlı bir iyileşmenin kalıcı olmayacağını savunur. Dış müdahale sistemi rahatlatır; kalıcı dönüşüm ise iç yapının yeniden düzenlenmesiyle mümkündür.</p>
-
-        <p>Mimari her an güncellenir. Bu güncellenme, Zaman \((Z)\) içinde hangi yönde ilerleyeceğimizi belirler. Dış müdahale bir kapı açar; o kapıdan geçmek içerideki mimariye bağlıdır.</p>
-
-        <hr class="section-divider">
-
-        <div class="nav-row-next">
-            <a href="koken-systems2.md.html" class="nav-link-next">Bölüm 2: Sistemler Üzerine &rarr;</a>
-        </div>
-
-        <div class="nav-row">
-            <a href="koken-systems.md.html" class="nav-link">&#8592; Ana Metin</a>
-            <a href="index.html" class="nav-link">Ana Sayfa &#8594;</a>
-        </div>
-
-        <div class="math-motto">"Sadece ışık tutar."</div>
+    <div class="nav-row-next">
+        <a href="koken-systems2.md.html" class="nav-link-main">Bölüm 2: Sistemler Üzerine &rarr;</a>
     </div>
 
-    <div class="footer">
-        <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
-            Bu bir tedavi yöntemi, egzersiz programı veya tıbbi öneri değildir; kavramsal bir modeldir.
-        </p>
-        © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
+    <div class="nav-row">
+        <a href="koken-systems.md.html" class="nav-link">&#8592; Ana Metin</a>
+        <a href="index.html" class="nav-link">Ana Sayfa &#8594;</a>
     </div>
 
 </div>
+
 </body>
 </html>
