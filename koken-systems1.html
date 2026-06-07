@@ -35,11 +35,6 @@
             max-width: 540px;
             width: 100%;
         }
-
-        /* Navigasyon Alanları (Systems2 ile Birebir Aynı) */
-        .nav-row-prev {
-            margin: 20px 0 45px 0;
-        }
         
         .nav-row-next {
             margin: 45px 0 12px 0;
@@ -101,7 +96,6 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
         }
 
-        /* Tipografi & Başlıklar */
         h1 {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 1.9rem;
@@ -180,7 +174,6 @@
             margin: 0;
         }
 
-        /* Matematiksel Formül Alanı */
         .formula {
             font-family: 'Times New Roman', serif;
             font-size: 1.5rem;
@@ -211,6 +204,27 @@
             line-height: 1.6;
             margin-top: 30px;
         }
+
+        /* Alt Alan Tasarımları */
+        .math-motto {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--accent-yellow);
+            margin: 50px 0 25px 0;
+            letter-spacing: 2px;
+            opacity: 0.85;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
         
         @media (max-width: 480px) {
             body { padding: 45px 18px; }
@@ -221,6 +235,7 @@
             .formula .MathJax { font-size: 90% !important; }
             .nav-row { grid-template-columns: 1fr; }
             .nav-link, .nav-link-main { font-size: 0.95rem; padding: 16px 12px; }
+            .math-motto { font-size: 0.95rem; margin: 40px 0 20px 0; }
         }
     </style>
 </head>
@@ -228,14 +243,10 @@
 
 <div class="container">
 
-    <div class="nav-row-prev">
-        <a href="koken-systems.md.html" class="nav-link-main">&larr; Ana Metin</a>
-    </div>
-
     <h1>Neden İyileşemiyoruz?</h1>
 
     <h2>Başlangıç: Anlayış ve Hizalanma</h2>
-    <p>Beden, dışarıdaki bir durumla karşılaştığında bir anlayışa varır ve bu anlayış doğrultusunda bir hizalanmaya girer. Bu anlayışı oluşturan iki ana hat vardır: <strong>Geçmiş \((G)\)</strong> ve <strong>Hâl \((H)\)</strong>.</p>
+    <p>Beden, dışarıdaki bir durumla karşılaştığında bir anlayışa varırและ bu anlayış doğrultusunda bir hizalanmaya girer. Bu anlayışı oluşturan iki ana hat vardır: <strong>Geçmiş \((G)\)</strong> ve <strong>Hâl \((H)\)</strong>.</p>
     <p>Geçmiş, genetik aktarımı da kapsayan geniş bir edinim havuzudur. Hâl ise büyük ölçüde bu geçmiş tarafından şekillenir. Geçmişten getirdiğimiz ne varsa, hâlimiz ve bakışımız da o yöne doğru eğilim gösterir.</p>
     <p>Burada geçmiş ile hâl arasındaki ilişkiyi öncelikle anlamak gerekir. Geçmiş edinimlerimizin şu anki hâlimizi büyük ölçüde belirlemesi sebebiyle, geçmişten getirdiğimiz şey ne ise hâlimiz de tam olarak oraya doğru bakar.</p>
 
@@ -280,11 +291,12 @@
         <p>Dış müdahale, bir anlık nefes aldırır ama nefesin kalıcı olması için iç yapının düzene girmesi şarttır.</p>
     </blockquote>
     
-    <p>Mimari her an güncellenir. Bu birikim, hangi yönde ilerleyeceğimizi belirler. Dış müdahale bir kapı açar; o kapıdan geçmek içerideki mimariye bağlıdır.</p>
+    <p>Mimari her an güncellenir. This birikim, hangi yönde ilerleyeceğimizi belirler. Dış müdahale bir kapı açar; o kapıdan geçmek içerideki mimariye bağlıdır.</p>
     <p><strong>Anlayış \((A)\)</strong> sistemin yönünü belirleyen en baskın değişken olsa da, <strong>otomatik pilottaki bir zihne</strong> doğrudan müdahale etmek imkansıza yakındır. <strong>Beden ve Köprü \((K)\)</strong> ise sistemdeki <strong>tek somut kaldıraçtır</strong>. Dokunun hafızasındaki <strong>Yoğunluk \((Y)\)</strong> çözülmeden, zihindeki anlayışın kalıcı olarak değişmesi güçtür. Bu yüzden zihni ikna etmeye çalışmaktansa, <strong>beden üzerine çalışmak</strong> anlayışı dönüştürmenin <strong>en doğrudan ve kararlı yoludur</strong>.</p>
 
     <hr class="section-divider">
 
+    <!-- Alt Menü Navigasyon Alanı -->
     <div class="nav-row-next">
         <a href="koken-systems2.md.html" class="nav-link-main">Bölüm 2: Sistemler Üzerine &rarr;</a>
     </div>
@@ -294,8 +306,9 @@
         <a href="index.html" class="nav-link">Ana Sayfa &#8594;</a>
     </div>
 
-        <div class="math-motto">"Sadece ışık tutar."</div>
-    </div>
+    <!-- Motto ve Footer (Hizalanmış Alanlar) -->
+    <div class="math-motto">"Sadece ışık tutar."</div>
+    
     <div class="footer">
         <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
             Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
@@ -303,7 +316,7 @@
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
 
-</div>
+</div> <!-- .container Sonu -->
 
 </body>
 </html>
