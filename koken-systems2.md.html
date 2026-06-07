@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KÖKEN — Sistemler Üzerine</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-color: #382C24;
@@ -18,7 +21,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Georgia', serif; /* Bölüm 1 ile tipografi uyumu */
+            font-family: 'Georgia', serif;
             line-height: 1.8;
             margin: 0;
             padding: 60px 24px;
@@ -28,15 +31,11 @@
         }
 
         .container {
-            max-width: 540px; /* Bölüm 1 ile aynı mükemmel okuma genişliği */
+            max-width: 540px;
             width: 100%;
         }
 
         /* Navigasyon Alanları */
-        .nav-row-prev {
-            margin: 20px 0 45px 0;
-        }
-        
         .nav-row-next {
             margin: 45px 0 12px 0;
         }
@@ -229,6 +228,27 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
+
+        /* Alt Alan Tasarımları */
+        .math-motto {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--accent-yellow);
+            margin: 50px 0 25px 0;
+            letter-spacing: 2px;
+            opacity: 0.85;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
         
         @media (max-width: 480px) {
             body { padding: 45px 18px; }
@@ -237,16 +257,13 @@
             p { font-size: 1rem; }
             .nav-row { grid-template-columns: 1fr; }
             .nav-link, .nav-link-main { font-size: 0.95rem; padding: 16px 12px; }
+            .math-motto { font-size: 0.95rem; margin: 40px 0 20px 0; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-
-    <div class="nav-row-prev">
-        <a href="koken-systems1.html" class="nav-link-main">&larr; Bölüm 1: Neden İyileşemiyoruz?</a>
-    </div>
 
     <h1>Sistemler Üzerine</h1>
 
@@ -255,9 +272,9 @@
     <p>Mimariyi anlamak için parçalara ayırmak gereklidir. Ancak parçaları anlamak için bir arada nasıl çalıştıklarına, birbirleri üzerindeki etkilerine bakmak şarttır. Mimariyi anlamaya çalışırken çoğu zaman bu aradaki bağı göz ardı ederiz.</p>
 
     <h2>Sistem Bileşenleri</h2>
-    <p><strong>Anlayışı</strong> oluşturan en temel sistemler sinir ve endokrin sistemdir. 
-    <p>><strong>İç sistem (Y₁)</strong>; sindirim, bağışıklık, dolaşım, lenfatik, boşaltım ve üreme sistemlerinden oluşur. Y₁, dış sistemi (Y₂) doğrudan etkiler.</p>
-    <p><strong>Dış sistem (Y₂)</strong> ise kas, iskelet, fasya, tendon, eklemler ve deridir. Sistemdeki bir "çark", diğer bütün çarkları bir biçimde etkiler.</p>
+    <p><strong>Anlayışı</strong> oluşturan en temel sistemler sinir ve endokrin sistemdir.</p> 
+    <p><strong>İç sistem (Y₁)</strong>; sindirim, bağışıklık, dolaşım, lenfatik, boşaltım ve üreme sistemlerinden oluşur. Y₁, dış sistemi (Y₂) doğrudan etkiler.</p>
+    <p><strong>Dış sistem (Y₂)</strong> ise kas, iskelet, fasya, tendon, eklemler ve deri bir bütündür. Sistemdeki bir "çark", diğer bütün çarkları bir biçimde etkiler.</p>
     <p>Bunlara ek olarak — üzerinde en somut biçimde çalışabileceğimiz yapı olması nedeniyle — <strong>Köprü</strong> ayrı bir bütün olarak ele alınmalıdır.</p> 
     <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban, transversus ve multifidus.</p>
 
@@ -265,7 +282,7 @@
     <p>Anlayış tek bir noktadan oluşmaz; birden fazla sistemin kesişimidir.</p>
 
     <h3>Algı ve Yorum</h3>
-    <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. İnteroception, bir haritadır; farkındalık ise pusula gibidir.</p>
+    <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir bit iletim sağlıklı bir hâl alır. İnteroception, bir haritadır; farkındalık ise pusula gibidir.</p>
     <p>Bu yorumlama her zaman doğru değildir. Dışarıda bir sorun varsa sistem bunu tehdit olarak yorumlayabilir. Örneğin kürek kemiğindeki bir ağrı, yanlış yorumlanarak kalp problemi olarak değerlendirilebilir. Bu, alarmların çalmasına ve sistemin ona göre organize olmasına yol açar. Yorumlama süreci geçmiş ve hâlimiz çerçevesinde gerçekleşir; bu yüzden aynı durum farklı kişilerde farklı sonuçlar üretir.</p>
 
     <h3>Zihinsel Deneyim = Fiziksel Yanıt</h3>
@@ -349,7 +366,7 @@
 
     <h3>Köprü ve Döngünün Kırılması</h3>
     <p>Köprü merkezdir; çünkü köprü, tüm sistemler üzerinde etkisi olan ve doğrudan müdahale edebildiğimiz, kalıcı ve sürdürülebilirlik açısından, tek alandır. Hem Y₁'i hem Y₂'yi etkileyen, yukarıdan aşağıya ve aşağıdan yukarıya çift yönlü etkisiyle sistemin tamamına ulaşabilen tek noktadır.</p>
-    <p>Döngüden bilinçli olarak çıkabilmenin yolu köprü üzerine çalışmaktan geçer. Anlayışımızı doğrudan değiştiremiyorsaka — ki bu çoğu zaman zordur — köprüyü sağlamlaştırmak en net çözümdür. Köprü iç ve dış sistem arasındaki baskıyı azaltır ve geri dönüşteki baskıyı hafifletir. Bu zamanla sistemin olması gereken hale gelmesine yardımcı olur.</p>
+    <p>Döngüden bilinçli olarak çıkabilmenin yolu köprü üzerine çalışmaktan geçer. Anlayışımızı doğrudan değiştiremiyorsak — ki bu çoğu zaman zordur — köprüyü sağlamlaştırmak en net çözümdür. Köprü iç ve dış sistem arasındaki baskıyı azaltır ve geri dönüşteki baskıyı hafifletir. Bu zamanla sistemin olması gereken hale gelmesine yardımcı olur.</p>
     <p>Dışarıdan müdahale, sistemi hazırlamak veya hazır olan sistemi bir adım öteye taşımak için önemli bir yere sahiptir. Ancak süreler ve yöntemler kişiden kişiye değişir — burada bir reçete sunmak mümkün değildir. İnsan belli sınırları olan bir varlık değil, karmaşık bir organizmadır. Süreklilik için köprü üzerine çalışmak gerekir. Kendi haline bırakılan sistem o döngüde kalmaya devam eder. Nadir kırılmalar yaşansa da bunlar istisnadır; temelinde yine anlayıştaki bir değişim yatar. Sistemde kalıcı bir değişim oluşabilmesi için anlayışın yönünün değişmesi gerekir. Anlayışın yönünü değiştirmenin en doğrudan yolu ise köprü üzerine çalışmaktan geçer.</p>
 
     <div class="footer-quote">
@@ -365,6 +382,7 @@
 
     <hr class="section-divider">
 
+    <!-- Alt Menü Navigasyon Alanı -->
     <div class="nav-row-next">
         <a href="koken-systems1.html" class="nav-link-main">&larr; Bölüm 1: Neden İyileşemiyoruz?</a>
     </div>
@@ -374,9 +392,8 @@
         <a href="index.html" class="nav-link">Ana Sayfa &#8594;</a>
     </div>
 
-        <div class="math-motto">"Sadece ışık tutar."</div>
-    </div>
-
+    <div class="math-motto">"Sadece ışık tutar."</div>
+    
     <div class="footer">
         <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
             Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
@@ -384,7 +401,7 @@
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
 
-</div>
+</div> <!-- .container Sonu -->
 
 </body>
 </html>
