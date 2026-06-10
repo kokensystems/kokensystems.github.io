@@ -27,15 +27,23 @@
         }
 
         body {
-            background: linear-gradient(180deg, #2D231C 0%, #382C24 100%);
-            background-attachment: fixed; /* Sayfa kaydıkça gradientin bozulmasını engeller, sabit tutar */
-            color: var(--text-color);
-            font-family: 'Georgia', serif;
-            line-height: 1.85;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
+    /* Dalgalı ve organik ışık katmanları (Mesh Gradient) */
+    background-color: #1A1310; /* En arka taban koyu renk */
+    background-image: 
+        radial-gradient(at 10% 20%, rgba(74, 59, 49, 0.6) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(45, 35, 28, 0.7) 0px, transparent 45%),
+        radial-gradient(at 40% 85%, rgba(61, 46, 38, 0.5) 0px, transparent 50%),
+        radial-gradient(at 80% 90%, rgba(74, 59, 49, 0.4) 0px, transparent 40%),
+        radial-gradient(at 0% 100%, rgba(29, 21, 17, 0.8) 0px, transparent 50%);
+    background-attachment: fixed; /* Sayfa kaysa da dalgalar ekranda sabit ve asil durur */
+    
+    /* Mevcut diğer body kodların aşağıda aynen devam etsin */
+    color: var(--text-color); [cite: 26]
+    font-family: 'Cinzel', serif; /* Eğer fontun buysa */
+    line-height: 1.6; [cite: 27]
+    margin: 0; [cite: 28]
+    padding: 0; [cite: 29]
+}
 
         /* Yenilenen Premium Cam Efektli Menü */
         .navbar {
@@ -93,25 +101,23 @@
             width: 100%;
         }
 
-        .header-title {
-            font-family: 'Cinzel', serif;
-            color: var(--text-color);
-            font-size: 2.2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 12px;
-            letter-spacing: 3px;
-            margin-top: 20px;
-        }
+     /* 1. En Üstteki Büyük KÖKEN Başlığı */
+.header-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem; /* Burayı büyüterek/küçülterek boyutu ayarlayabilirsin */
+    color: #E5C583;    /* Başlığın rengi (Şu an sitendeki altın tonu, değiştirebilirsin) */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
-        .tagline {
-            font-style: italic;
-            color: #A69A90;
-            text-align: center;
-            margin-bottom: 0;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-        }
+ /* 2. Logonun Altındaki Küçük Slogan (Bedenin Geometrisi...) */
+.tagline {
+    font-size: 1.1rem;  /* Slogan boyutu */
+    color: #D1C4B9;     /* Slogan rengi (Daha mat bir krem/gri) */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
         .section-divider {
             border: 0;
@@ -120,28 +126,23 @@
             margin: 60px 0;
         }
 
-        /* Başlık Renkleri ve Yapısı */
-        h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--accent-gold);
-            margin-top: 60px;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
+      /* 3. Yazı İçindeki Ana Bölüm Başlıkları (H2) */
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;  /* Bölüm başlığı boyutu */
+    color: #E5C583;     /* Bölüm başlığı rengi */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
 
-        h3 {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: var(--sub-heading);
-            margin-top: 35px;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-
+        /* 4. Alt Başlıklar (H3) */
+h3 {
+    font-size: 1.2rem;  /* Alt başlık boyutu */
+    color: #D1C4B9;     /* Alt başlık rengi */
+    margin-top: 30px;
+}
         .content {
             font-size: 1.1rem;
             text-align: left;
@@ -341,28 +342,29 @@
             .nav-item { font-size: 0.72rem; padding: 18px 6px; letter-spacing: 0.8px; }
             .main-wrapper { padding: 30px 16px 50px 16px; }
            /* En Üstteki Ana Başlık ve Slogan Arasındaki Fark */
-            .header-title { 
-            font-size: 1.8rem; /* [cite: 302] */
-            letter-spacing: 2px; /* [cite: 302] */
-            margin-bottom: 6px; /* Slogana olan mesafeyi mobilde daralttık */
-        }
-            .tagline { 
-        font-size: 0.95rem; /* [cite: 303] */
-        margin-top: 0px; 
-    margin-bottom: 10px;
-}
+        /* Mobil Üst Başlık Ayarları */
+    .header-title { 
+        font-size: 1.9rem; /* Mobildeki ana başlık boyutu */
+        color: #E5C583;    /* İstersen mobilde rengi değiştirebilirsin */
+        margin-bottom: 6px; 
+    }
+     .tagline { 
+        font-size: 0.9rem; /* Mobildeki slogan boyutu */
+        color: #D1C4B9;
+    }
 
 /* Yazı İçindeki H2 ve H3 Başlıklarının Arasındaki Fark ve Boşluklar */
 h2 { 
-    font-size: 1.3rem; /* Bölüm başlığı mobilde biraz daha baskın [cite: 304] */
-    margin-top: 40px; /* Üstteki metinle arasına ideal boşluk [cite: 304] */
-    margin-bottom: 12px; /* Altındaki metne veya H3'e olan mesafesi */
-}
+        font-size: 1.3rem; /* Mobildeki H2 boyutu (Masaüstünden daha küçük) */
+        color: #E5C583;
+        margin-top: 35px; 
+        margin-bottom: 12px;
+    }
 h3 { 
-    font-size: 1.05rem; /* Alt başlık boyutu [cite: 305] */
-    margin-top: 24px; /* Üstteki H2 veya paragrafla olan boşluğu */
-    margin-bottom: 10px; /* Altındaki metne olan yakınlığı */
-}
+        font-size: 1.05rem; /* Mobildeki H3 boyutu */
+        color: #D1C4B9;
+        margin-top: 22px;
+    }
             .content { font-size: 1.02rem; }
             .formula { padding: 16px 8px; margin: 25px 0 35px 0; }
             .formula .MathJax { font-size: 88% !important; }
