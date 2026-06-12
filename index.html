@@ -306,6 +306,41 @@
             .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 4px; margin-bottom: 20px; }
             .math-motto { font-size: 1rem; }
         }
+        /* Menünün dış kapsayıcısı */
+.nav-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Linklerin yan yana dizildiği ve kaydığı alan */
+.nav-links {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Mobilde akıcı kaydırma */
+    padding-right: 40px; /* Sağdaki efekt için boşluk */
+}
+
+/* Kaydırma çubuğunu gizle (görsel kirlilik olmasın) */
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+/* İŞTE O EFEKT: Menünün sağında daha fazla içerik olduğunu gösteren solma efekti */
+.nav-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    /* Arka plan rengin neyse rgba(0,0,0,1) olan yeri ona göre ayarla (Örn: Siyahsa siyah) */
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.9)); 
+    pointer-events: none; /* Tıklamayı engellemesin */
+    z-index: 2;
+}
     </style>
 </head>
 <body>
@@ -315,6 +350,9 @@
         <a href="#TehlikeVeGuven" class="nav-item">Tehdit ve Güven</a>
         <a href="#KopruVeVagus" class="nav-item">Köprü (Merkez)</a>
         <a href="#MatematikselModel" class="nav-item">Matematiksel Kanıt</a>
+        <a href="#kisirdongu" class="nav-item">Kısırdöngü</a>
+        <a href="#yeniden-insa" class="nav-item">Yeniden İnşa</a>
+        <a href="#beden-sozlugu" class="nav-item">Beden Sözlüğü</a>
     </div>
 </nav>
 <div class="main-wrapper">
@@ -557,7 +595,43 @@
                 <div class="formula">
                     $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
                 </div>
+<!-- 1. BÖLÜM: Kısırdöngü (Kısa Özet) -->
+<div id="kisirdongu" class="content" style="margin-top: 60px;">
+    <h2>Kısırdöngü: Beden Nasıl Yıkılır?</h2>
+    <p>Beden, durup dururken arıza üreten bir organizma değildir; hastalık ve yıkım süreçleri doku mimarisi ile sinir sisteminin birbirini beslediği kapalı bir döngü üzerinden yürür. Sistemdeki tek bir sapma, zamanla patolojik bir denge kurarak bardağın mevcut potansiyelini ve hacmini daraltır. Bu kısırdöngünün biyolojik ve geometrik mekanizması çok yakında burada açılacaktır.</p>
+</div>
 
+<hr>
+
+<!-- 2. BÖLÜM: Yeniden İnşa (YAKINDA - BLUR) -->
+<div id="yeniden-insa" class="content" style="margin-top: 60px; position: relative;">
+    <h2>Yeniden İnşa: Çıkış Yolu ve Merkez</h2>
+    <p>Mevcut kısırdöngüyü tersine çevirecek pratik uygulama adımları, Köprü organizasyonu ve merkez yapının (IAP) mekanik olarak nasıl devreye alınacağı...</p>
+    
+    <div style="filter: blur(4px); opacity: 0.2; user-select: none; pointer-events: none; margin-top: 15px;">
+        <p>Diyafram mekaniği, nefes kilitlerinin açılması ve otonom sistemin aşağıdan yukarıya yeniden programlanması.</p>
+    </div>
+    
+    <p style="text-align: center; font-style: italic; color: #d4af37; font-weight: bold; margin-top: 15px; font-size: 0.9em;">
+        &mdash; Merkez mimarisi üzerinde çalışılıyor. Çok yakında. &mdash;
+    </p>
+</div>
+
+<hr>
+
+<!-- 3. BÖLÜM: Beden Sözlüğü (YAKINDA - BLUR) -->
+<div id="beden-sozlugu" class="content" style="margin-top: 60px; position: relative; margin-bottom: 80px;">
+    <h2>Beden Sözlüğü: Arızaların Kökeni</h2>
+    <p>Bel fıtığı, çene sıkma, fibromiyalji ve kronik yorgunluk gibi sistemik kilitlenmelerin KÖKEN modelindeki gerçek geometrik sebepleri...</p>
+    
+    <div style="filter: blur(4px); opacity: 0.2; user-select: none; pointer-events: none; margin-top: 15px;">
+        <p>Omurga segmentlerindeki basınç kaçakları, fasyal kilitlenmeler ve kronik yük birikimlerinin anatomik haritası.</p>
+    </div>
+    
+    <p style="text-align: center; font-style: italic; color: #d4af37; font-weight: bold; margin-top: 15px; font-size: 0.9em;">
+        &mdash; Beden sözlüğü üzerinde çalışılıyor. Çok yakında. &mdash;
+    </p>
+</div>
                 <h2>Sistem Felsefesi</h2>
                 <p>KÖKEN, sadece ışık tutar. Beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Köprüyü sağlamlaştırmak ise mimariyi zaman değişkeni karşısında daha kararlı bir hâle getirir.</p>
                 <p>KÖKEN, geçici veya dış müdahaleyle çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası, bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen; Anlayış \((A)\) değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir.</p>
