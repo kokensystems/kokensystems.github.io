@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KÖKEN / Bedenin Geometrisi — Bedenin Mimarisi ve Sistemler</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    <title>KÖKEN / Bedenin Geometrisi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         :root {
-            --bg-color: #382C24;
+            --bg-color: #1A1310;
             --text-color: #F4EFEA;
             --accent-gold: #E5C583;
             --sub-heading: #D1C4B9;
@@ -16,14 +16,16 @@
             --safety-green: #C1CBB8;
             --border-color: #4A3B31;
             --box-bg: #2D231C;
-            --nav-bg: rgba(37, 28, 23, 0.9);
+            --nav-bg: rgba(37, 28, 23, 0.93);
         }
+
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 100px;
         }
+
         body {
-            background-color: #1A1310;
+            background-color: var(--bg-color);
             background-image:
                 radial-gradient(at 10% 20%, rgba(74, 59, 49, 0.6) 0px, transparent 50%),
                 radial-gradient(at 90% 40%, rgba(45, 35, 28, 0.7) 0px, transparent 45%),
@@ -32,10 +34,12 @@
                 radial-gradient(at 0% 100%, rgba(29, 21, 17, 0.8) 0px, transparent 50%);
             color: var(--text-color);
             font-family: Georgia, 'Times New Roman', Times, serif;
-            line-height: 1.7;
+            line-height: 1.78;
             margin: 0;
             padding: 0;
         }
+
+        /* ── NAV ── */
         .navbar {
             position: sticky;
             top: 0;
@@ -48,8 +52,9 @@
             display: flex;
             justify-content: center;
         }
+
         .nav-container {
-            max-width: 720px;
+            max-width: 760px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -57,94 +62,132 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
-        .nav-container::-webkit-scrollbar {
-            display: none;
-        }
+
+        .nav-container::-webkit-scrollbar { display: none; }
+
         .nav-item {
-            font-family: 'Cinzel', serif;
-            color: var(--sub-heading);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: rgba(209, 196, 185, 0.65);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.73rem;
             font-weight: 600;
-            padding: 24px 12px;
-            letter-spacing: 1.5px;
+            padding: 24px 10px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
             transition: color 0.3s ease;
         }
-        .nav-item:hover {
-            color: var(--accent-gold);
+
+        .nav-item:hover { color: var(--accent-gold); }
+
+        .nav-item.yakinda {
+            opacity: 0.45;
+            font-style: italic;
         }
+
+        /* ── LAYOUT ── */
         .main-wrapper {
             display: flex;
             justify-content: center;
             padding: 60px 24px 80px 24px;
         }
+
         .container {
             max-width: 640px;
             width: 100%;
         }
+
+        /* ── HEADER ── */
         .header-title {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
             color: var(--accent-gold);
             letter-spacing: 3px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
+
         .tagline {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
+            font-family: Georgia, serif;
+            font-size: 0.95rem;
             color: var(--sub-heading);
-            letter-spacing: 2px;
+            letter-spacing: 0.5px;
+            font-style: italic;
+            opacity: 0.7;
+            margin-bottom: 0;
         }
+
         .section-divider {
             border: 0;
             height: 1px;
             background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent);
             margin: 60px 0;
         }
+
+        /* ── BAŞLIKLAR ── */
         h2 {
             font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
+            font-size: 0.88rem;
+            font-weight: 600;
             color: var(--accent-gold);
-            letter-spacing: 1.5px;
-            margin-top: 55px;
-            margin-bottom: 22px;
-            font-weight: 700;
-            border-bottom: 1px solid rgba(229, 197, 131, 0.15);
-            padding-bottom: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 64px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-bottom: none;
+            padding-bottom: 0;
         }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--border-color), transparent);
+        }
+
         h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-size: 0.76rem;
+            font-weight: 600;
             color: var(--sub-heading);
-            margin-top: 35px;
-            margin-bottom: 14px;
-            font-weight: 500;
-            font-style: italic;
-            letter-spacing: 0.5px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-top: 44px;
+            margin-bottom: 18px;
+            font-style: normal;
+            border-left: 2px solid var(--border-color);
+            padding-left: 14px;
         }
+
+        /* ── İÇERİK ── */
         .content {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             text-align: left;
         }
+
         .content p {
             margin-bottom: 28px;
             opacity: 0.95;
             letter-spacing: 0.25px;
         }
+
         .content ul {
             margin-bottom: 28px;
             padding-left: 20px;
             list-style-type: none;
         }
+
         .content li {
             margin-bottom: 18px;
             position: relative;
             opacity: 0.95;
         }
+
         .content li::before {
             content: "•";
-            color: var(--accent-gold);
+            color: rgba(140, 118, 95, 0.55);
             font-weight: bold;
             font-size: 1.2rem;
             display: inline-block;
@@ -153,10 +196,13 @@
             position: absolute;
             top: -1px;
         }
+
         .content li strong {
             color: var(--accent-gold);
             font-weight: 600;
         }
+
+        /* ── BLOCKQUOTE ── */
         blockquote {
             background-color: var(--box-bg);
             border-left: 3px solid var(--accent-gold);
@@ -166,11 +212,14 @@
             font-style: italic;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
         }
+
         blockquote p {
             margin: 0;
             opacity: 1;
             letter-spacing: 0.3px;
         }
+
+        /* ── KARTLAR ── */
         .highlight-threat {
             border-left: 4px solid var(--threat-red);
             background: linear-gradient(90deg, #3A2A22 0%, var(--box-bg) 100%);
@@ -180,12 +229,16 @@
             border: 1px solid var(--border-color);
             border-left-width: 4px;
         }
+
         .highlight-threat h3 {
             color: var(--threat-red);
             margin-top: 0;
-            font-family: 'Cinzel', serif;
+            border-left: none;
+            padding-left: 0;
             font-style: normal;
+            letter-spacing: 2.5px;
         }
+
         .highlight-safety {
             border-left: 4px solid var(--safety-green);
             background: linear-gradient(90deg, #2E342B 0%, var(--box-bg) 100%);
@@ -195,43 +248,51 @@
             border: 1px solid var(--border-color);
             border-left-width: 4px;
         }
+
         .highlight-safety h3 {
             color: var(--safety-green);
             margin-top: 0;
-            font-family: 'Cinzel', serif;
+            border-left: none;
+            padding-left: 0;
             font-style: normal;
+            letter-spacing: 2.5px;
         }
+
+        /* ── FORMÜLLER ── */
         .formula {
             margin: 35px 0 45px 0;
             background-color: var(--box-bg);
             padding: 24px;
             border-radius: 6px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             display: flex;
             justify-content: center;
             align-items: center;
             max-width: 100%;
             box-sizing: border-box;
+            overflow-x: auto;
         }
-        .formula-large {
-            padding: 28px;
-        }
+
+        .formula-large { padding: 28px; }
+
         .inline-formula-block {
             display: block;
             text-align: center;
             margin: 20px 0;
         }
+
         .loop-title {
             font-family: 'Cinzel', serif;
             text-align: center;
-            font-weight: bold;
+            font-weight: 500;
             margin-top: 45px;
             margin-bottom: -15px;
             color: var(--sub-heading);
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
+
         .loop-box {
             margin: 35px 0;
             background-color: var(--box-bg);
@@ -243,8 +304,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            overflow-x: auto;
         }
+
         .time-align-container {
             max-width: 460px;
             margin: 0 auto 28px auto;
@@ -253,6 +316,7 @@
             border-radius: 6px;
             border: 1px solid rgba(255,255,255,0.03);
         }
+
         .time-align-row {
             display: grid;
             grid-template-columns: 1.4fr 1fr;
@@ -260,321 +324,431 @@
             margin-bottom: 10px;
             align-items: center;
         }
-        .time-align-row:last-child {
-            margin-bottom: 0;
+
+        .time-align-row:last-child { margin-bottom: 0; }
+
+        /* ── LİNKLER ── */
+        .content a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(229, 197, 131, 0.3);
+            transition: border-color 0.25s ease;
         }
+
+        .content a:hover {
+            border-color: var(--accent-gold);
+        }
+
+        /* ── YAKINDA BÖLÜMLER ── */
+        .coming-soon-preview {
+            filter: blur(4px);
+            opacity: 0.18;
+            user-select: none;
+            pointer-events: none;
+            margin-top: 15px;
+        }
+
+        .coming-soon-badge {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            opacity: 0.55;
+            margin-top: 28px;
+            text-transform: uppercase;
+        }
+
+        /* ── FOOTER ALANI ── */
+        .footer-area {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
         .footer-quote {
             text-align: center;
             font-style: italic;
             color: var(--accent-gold);
             margin: 60px 0;
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1.05rem;
+            line-height: 1.75;
             letter-spacing: 0.5px;
+            opacity: 0.85;
         }
+
         .math-motto {
             text-align: center;
             font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
+            font-size: 0.72rem;
             color: var(--accent-gold);
             margin: 60px 0 30px 0;
-            letter-spacing: 3px;
-            opacity: 0.8;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0.55;
         }
+
         .footer {
-            margin-top: 80px;
-            font-size: 0.85rem;
+            margin-top: 40px;
+            font-size: 0.83rem;
             color: #8C7A6B;
             text-align: center;
             border-top: 1px solid var(--border-color);
             padding-top: 30px;
             letter-spacing: 0.5px;
         }
+
+        @media (max-width: 768px) {
+            .nav-item { font-size: 0.68rem; padding: 20px 8px; }
+            .header-title { font-size: 2rem; }
+            .footer-area { padding: 0 20px 60px; }
+        }
+
         @media (max-width: 480px) {
-            .nav-item { font-size: 0.75rem; padding: 18px 6px; letter-spacing: 0.8px; }
-            .main-wrapper { padding: 30px 16px 50px 16px; }
-            .header-title { font-size: 1.9rem; margin-bottom: 6px; }
-            .tagline { font-size: 0.9rem; }
-            h2 { font-size: 1.3rem; margin-top: 35px; margin-bottom: 12px; }
-            h3 { font-size: 1.1rem; margin-top: 22px; }
-            .content { font-size: 1.02rem; }
-            .formula { padding: 16px 8px; margin: 25px 0 35px 0; }
+            .nav-item { font-size: 0.64rem; padding: 20px 7px; letter-spacing: 0.8px; }
+            .main-wrapper { padding: 30px 18px 50px 18px; }
+            .footer-area { padding: 0 18px 50px; }
+            .header-title { font-size: 1.8rem; letter-spacing: 2px; margin-bottom: 8px; }
+            .tagline { font-size: 0.88rem; }
+            h2 { font-size: 0.78rem; margin-top: 52px; margin-bottom: 22px; letter-spacing: 3px; }
+            h3 { font-size: 0.68rem; margin-top: 36px; letter-spacing: 2px; }
+            .content { font-size: 1.02rem; line-height: 1.82; }
+            .content p { margin-bottom: 24px; }
+            blockquote { padding: 20px 20px; }
+            .highlight-threat, .highlight-safety { padding: 20px; }
+            .formula { padding: 16px 8px; margin: 25px 0 35px 0; justify-content: flex-start; }
             .formula .MathJax { font-size: 88% !important; }
             .formula-large .MathJax { font-size: 82% !important; }
             .loop-box { padding: 20px 6px; margin: 25px 0; }
             .loop-box .MathJax { font-size: 75% !important; }
             .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 4px; margin-bottom: 20px; }
-            .math-motto { font-size: 1rem; }
+            .math-motto { font-size: 0.65rem; }
+            .footer-quote { font-size: 0.95rem; }
         }
-        /* Menünün dış kapsayıcısı */
-.nav-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* Linklerin yan yana dizildiği ve kaydığı alan */
-.nav-links {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Mobilde akıcı kaydırma */
-    padding-right: 40px; /* Sağdaki efekt için boşluk */
-}
-
-/* Kaydırma çubuğunu gizle (görsel kirlilik olmasın) */
-.nav-links::-webkit-scrollbar {
-    display: none;
-}
-
-/* İŞTE O EFEKT: Menünün sağında daha fazla içerik olduğunu gösteren solma efekti */
-.nav-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    /* Arka plan rengin neyse rgba(0,0,0,1) olan yeri ona göre ayarla (Örn: Siyahsa siyah) */
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.9)); 
-    pointer-events: none; /* Tıklamayı engellemesin */
-    z-index: 2;
-}
     </style>
 </head>
 <body>
+
 <nav class="navbar">
     <div class="nav-container">
         <a href="#Giris" class="nav-item">Giriş</a>
         <a href="#TehlikeVeGuven" class="nav-item">Tehdit ve Güven</a>
-        <a href="#KopruVeVagus" class="nav-item">Köprü (Merkez)</a>
+        <a href="#KopruVeVagus" class="nav-item">Köprü</a>
         <a href="#MatematikselModel" class="nav-item">Matematiksel Kanıt</a>
         <a href="#kisirdongu" class="nav-item">Kısırdöngü</a>
-        <a href="#yeniden-insa" class="nav-item">Yeniden İnşa</a>
-        <a href="#beden-sozlugu" class="nav-item">Beden Sözlüğü</a>
+        <a href="#yeniden-insa" class="nav-item yakinda">Yeniden İnşa</a>
+        <a href="#beden-sozlugu" class="nav-item yakinda">Beden Sözlüğü</a>
     </div>
 </nav>
+
 <div class="main-wrapper">
     <div class="container">
-        
-        <!-- BASAMAK 1: GİRİŞ VE FELSEFİ AYRIM -->
+
+        <!-- ═══════════════════════════════════════
+             GİRİŞ
+        ════════════════════════════════════════ -->
         <div id="Giris">
             <div class="header-title">KÖKEN / Bedenin Geometrisi</div>
-            <div class="tagline">Bedenin Mimarisi Üzerine</div>
+            <div class="tagline">Anlayış değişmeden, hiçbir şey gerçekten değişmez.</div>
             <hr class="section-divider">
             <div class="content">
-                <p>Beden, dışarıdan aldığı etkiyle içeriden şekillenir.</p>
+
+                <p>Bir noktada duraksarsın. Belki kronik bir ağrı, süregelen bir yorgunluk ya da yıllardır çözemediğin bir denge sorunu. Belki sadece bir his — bir şeylerin temelden yanlış olduğunu biliyorsun, ama tam olarak neyin yanlış olduğunu kavrayamıyorsun.</p>
+
+                <p>Dışarıdan aldığın yardımlar işe yarar; ama sonuç kalıcı olmaz. Değişim başlar, sonra geri döner. Döngü kırılmaz.</p>
+
                 <blockquote>
                     <p>Sonuç değişmiyorsa; mimari henüz değişmemiştir.</p>
                 </blockquote>
-                <p>Dış dünya, süreçleri başlatan olaylar bütünüdür. Yük dışarıdan gelir; bu yükün nasıl şekil alacağı ise mevcut mimariye göre belirlenir. Bu döngünün sonucunda beden, yıkım veya inşa süreçlerine girer.</p>
-                
-                <h2>Yapısal Müdahale ve Mimari Müdahale</h2>
+
+                <p>KÖKEN bu noktadan başlar. Semptomlara değil, o semptomları üreten yapıya — mimariye — bakar. Çünkü mimari değişmeden hiçbir şey gerçekten değişmez.</p>
+
+                <h2>İki Farklı Yaklaşım</h2>
+
                 <p>Modern tıp; semptom kontrolünde, acil ve cerrahi müdahalede benzersiz ve yeri tartışılmazdır. Kan şekeri 500 ise önce kontrol altına alınır. Bir kırık varsa önce müdahale edilir. Modern tıp yapıyı ayakta tutar.</p>
+
                 <p>Alışılagelmiş yaklaşımlar, ortaya çıkan semptomları bastırmaya ve dışarıdan müdahalelerle anlık konfor sağlamaya odaklanır. Bu süreçte beden pasiftir; sorumluluk dış etkenlere devredilir.</p>
+
                 <p>KÖKEN ise sonuca değil, sonuca götüren geometrinin kendisine odaklanır. Geçici çözümler sunmaz. Kişiyi sürecin aktif mimarı yapar ve anlayış değişkenini kökten değiştirerek inşayı başlatır.</p>
+
                 <p>Her iki dinamik de insan bedeninin mimarisini koruyan ve yeniden inşa eden tek bir bütünün iki temel katmanıdır.</p>
+
                 <blockquote>
                     <p>Modern tıp yaşamı korur ve krizi çözer; KÖKEN ise o yaşamın içindeki yapısal yıkımı durdurup sistemi kendi doğal matematiğine ve kararlı ritmine kavuşturur.</p>
                 </blockquote>
 
                 <h2>Bütünlük ve Mimari</h2>
+
                 <p>Beden ayrılmaz parçalardan oluşan karmaşık bir organizmadır. Her parça, diğeriyle ayrılmaz bir bağla bağlıdır. Hepsi birbirini etkiler; bu etkinin boyutu değişse bile etkinin kendisi göz ardı edilemez. Parçaları tek tek ele alarak iyileşmek bu yüzden zordur. Her parçanın, bir diğerinin işleyişi üzerinde etkisi vardır. Bu ilişki çift yönlüdür; birbirini sürekli olarak olumlu ya da olumsuz besler.</p>
+
                 <p>Mimariyi anlamak için parçalara ayırmak gereklidir. Ancak parçaları anlamak için bir arada nasıl çalıştıklarına, birbirleri üzerindeki etkilerine bakmak şarttır. Mimariyi anlamaya çalışırken çoğu zaman bu aradaki bağı göz ardı ederiz.</p>
-                
+
                 <h2>Sistem Bileşenleri</h2>
+
                 <p><strong>Anlayışı</strong> oluşturan en temel sistemler sinir ve endokrin sistemleridir.</p>
+
                 <p><strong>İç sistem (Y₁)</strong>; sindirim, bağışıklık, dolaşım, lenfatik, boşaltım ve üreme sistemlerinden oluşur. Y₁, dış sistemi (Y₂) doğrudan etkiler.</p>
+
                 <p><strong>Dış sistem (Y₂)</strong> ise kas, iskelet, fasya, tendon, eklemler ve deriden oluşan bir bütündür. Sistemdeki bir "çark", diğer bütün çarkları bir biçimde etkiler.</p>
+
                 <p>Bunlara ek olarak — üzerinde en somut biçimde çalışabileceğimiz yapı olması nedeniyle — <strong>Köprü</strong> ayrı bir bütün olarak ele alınmalıdır.</p>
+
                 <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban, transversus ve multifidus.</p>
-                
+
                 <h2>Anlayışı Etkileyen Sistemler</h2>
+
                 <p>Anlayış tek bir noktadan oluşmaz; birden fazla sistemin kesişimidir.</p>
-                
+
                 <h3>Algı ve Yorum</h3>
-                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. Interoception, bir haritadır; farkındalık ise pusula gibidir.</p>
+
+                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. İnteroception bir haritadır; farkındalık ise pusula gibidir.</p>
+
                 <p>Bu yorumlama her zaman doğru değildir. Dışarıda bir sorun varsa sistem bunu tehdit olarak yorumlayabilir. Örneğin kürek kemiğindeki bir ağrı, yanlış yorumlanarak kalp problemi olarak değerlendirilebilir. Bu, alarmların çalmasına ve sistemin ona göre organize olmasına yol açar. Yorumlama süreci geçmiş ve hâl çerçevesinde gerçekleşir; bu yüzden aynı durum farklı kişilerde farklı sonuçlar üretir.</p>
-                
+
                 <h3>Zihinsel Deneyim = Fiziksel Yanıt</h3>
+
                 <p>Beyin, gerçek deneyimle zihinsel deneyim arasında tam bir ayrım yapmaz — özellikle duygusal yüklü içeriklerde. Bu yüzden çalıştığın yerin sorumluluklarını veya evinin sorumluluklarını yine omzuna alırsın. Somut olarak almıyorsundur aslında — ama mimari bu anlayışına fiziki boyutta yanıt verir. Düşünce ile gerçeklik arasındaki bu ayrımın yapılamaması, tehdit algısının neden bu kadar kolay kronikleştiğini açıklar.</p>
-                
+
                 <h3>Ağrı: Hasar Değil, Sinyaldir</h3>
+
                 <p>Ağrı, bedenin verdiği bir sinyaldir — ama bu sinyal her zaman gerçek bir hasarı göstermez. Aynı fiziksel durumda iki kişi tamamen farklı ağrı deneyimleyebilir. Çünkü ağrı, hasarın büyüklüğüyle değil; sistemin o sinyali nasıl yorumladığıyla doğru orantılıdır. Bu yorum ise geçmiş ve hâl ekseninde şekillenir.</p>
-                <p>Bu yüzden ağrı bir sonuç değil, bir iletişimdir. Sistem bir şeye işaret ediyordur — bu bazen gerçek bir doku hasarı, bazen kronik tehdit algısının yarattığı yanlış alarm, bazen de sistemin dikkat çekmek istediği başka bir yerdeki dengesizliktir. Ağrıyı susturmak bu yüzden çoğu zaman çözüm değildir. Sinyal kesilir ama işaret ettiği şey kalmaya devam eder. Alarmı sessize almak uyanman gerektiği gerçeğini değiştirmez.</p>
+
+                <p>Bu yüzden ağrı bir sonuç değil, bir iletişimdir. Sistem bir şeye işaret ediyordur — bu bazen gerçek bir doku hasarı, bazen kronik tehdit algısının yarattığı yanlış alarm, bazen de sistemin dikkat çekmek istediği başka bir yerdeki dengesizliktir. Ağrıyı susturmak bu yüzden çoğu zaman çözüm değildir. Sinyal kesilir ama işaret ettiği şey kalmaya devam eder. Alarmı sessize almak, uyanman gerektiği gerçeğini değiştirmez.</p>
+
             </div>
         </div>
-        
+
         <hr class="section-divider">
-        
-        <!-- BASAMAK 2: TEŞHİS (TEHDİT, GÜVEN VE SOMATİK KISIRDÖNGÜ) -->
+
+        <!-- ═══════════════════════════════════════
+             TEHDİT VE GÜVEN
+        ════════════════════════════════════════ -->
         <div id="TehlikeVeGuven">
             <h2>Sistemin İki Kutbu: Tehdit ve Güven</h2>
             <div class="content">
+
                 <p>Tüm bu süreç iki temel çatı altında toplanabilir: tehdit ve güven.</p>
-                
+
                 <div class="highlight-threat">
                     <h3>Tehdit Durumu</h3>
                     <p>Sempatik sistem (savaş veya kaç) devreye girer. Kortizol ve adrenalin yükselir, insülin salınımı artar, glikojen depoları devreye girer, sindirim askıya alınır, kan akışı hayati organlara yönelir, bağışıklık baskılanır. Beden hayatta kalmaya öncelik verir. Sempatik sistemde kalınması, tehlike alarmının sürekli çalması anlamına gelir; bu durum zihinsel meşguliyeti de beraberinde getirir — zihin sağlıklı düşünemez, doğru yanıt veremez, kararlar refleksif ve hayatta kalmaya yönelik olur.</p>
                     <p><em>Bu durum kısa vadede hayatta kalmak için doğrudur; uzun vadede yıkım üretir.</em></p>
                 </div>
-                
+
                 <div class="highlight-safety">
                     <h3>Güven Durumu</h3>
                     <p>Parasempatik sistem (dinlen / onar / sosyal bağ kur) devreye girer. Oksitosin, dopamin, serotonin ve büyüme hormonu gibi hormonlar salgılanır. Sindirim olması gerektiği gibi ilerler, kan dolaşımı tüm hücrelere erişir. Refleksif düşünce yerini analitik düşünceye bırakır. Sistem bu sefer gelecek inşası ve en iyi haline ulaşma üzerine enerjisini harcar.</p>
                 </div>
-                
-                <p>Mesele hiç tehdit yaşamamak değildir. Sistem zaten tehdit ve güven arasında sürekli geçiş yapar. Asıl soru şudur: Sistem tehditten çıkabiliyor mu? Bu geçiş kapasitesi, farkındalık ve köprünün sağlamlığıyla doğru orantılıdır. Psikoloji bedeni etkilediği gibi, bedenin psikolojiyi etkilemesi de kaçınılmazdır. Bu yüzden KÖKEN modelinde anlayış en temel değişkendir.</p>
-                
+
+                <p>Mesele hiç tehdit yaşamamak değildir. Sistem zaten tehdit ve güven arasında sürekli geçiş yapar. Asıl soru şudur: sistem tehditten çıkabiliyor mu? Bu geçiş kapasitesi, farkındalık ve köprünün sağlamlığıyla doğru orantılıdır. Psikoloji bedeni etkilediği gibi, bedenin psikolojiyi etkilemesi de kaçınılmazdır. Bu yüzden KÖKEN modelinde anlayış en temel değişkendir.</p>
+
                 <h3>HPA Ekseni ve Kronik Stres</h3>
+
                 <p>Bu döngüyü yöneten yapı hipotalamus-hipofiz-adrenal (HPA) eksenidir. Tehdit algılandığında hipotalamus sinyal üretir, hipofiz bu sinyali adrenal bezlere iletir ve kortizol salgılanır. Normalde kortizol yükselince sistem geri bildirim alır ve döngü durur. Ancak tehdit algısı kronikleşirse bu geri bildirim mekanizması bozulur; sistem sürekli kortizol üretmeye devam eder.</p>
-                <p>Sürekli kortizol salınımı, bitmeyen bir tetikte olma hâli yaratır. Tetikte kalınınca bağışıklık ve sindirim üzerine harcanan efor azalır — çünkü öncelik her zaman hayatta kalmaktır. Yani sistem, durması gereken yerde duramaz hale gelir.</p>
+
+                <p>Sürekli kortizol salınımı, bitmeyen bir tetikte olma hâli yaratır. Tetikte kalınırsa bağışıklık ve sindirim üzerine harcanan efor azalır — çünkü öncelik her zaman hayatta kalmaktır. Yani sistem, durması gereken yerde duramaz hale gelir.</p>
+
                 <p>Kronik yüksek insülin seviyesi bu sürecin önemli bir parçasıdır. Hücreler sürekli yüksek insülin düzeyine maruz kaldığında reseptörler duyarsızlaşır. Kan şekeri hücreye giremez, enerji üretilemez; ama kanda şeker birikmeye devam eder. Sistem enerji üretemez hale gelirken kronik yorgunluk ve hücresel birikim kaçınılmaz olur.</p>
-                
+
                 <blockquote>
                     <p>Sistem aslında kusursuz bir matematikte işler. O kadar kusursuz ki bu kusursuzluk hatalara yol açar. Çünkü sistem doğru olanı değil, hayatta kalmayı seçer. Net bir akıldır bu — hayatta kalmak için kendine zarar vermesi, hatta sistemin kendini kapatması bile aslında işini ne kadar kusursuz yaptığını gösterir.</p>
                 </blockquote>
-                
+
                 <h2>İç Sistem (Y₁): Metabolik Akıl</h2>
+
                 <p>Verilerin işlenmesi sonucu ortaya çıkan yanıt, iç sistem üzerinde doğrudan etkiye sahiptir. İç sistem, hayatta kalma ile sürdürülebilirlik arasında denge kurar.</p>
+
                 <p>Y₁'in temel sorusu şudur: <em>"Enerjiyi nereye harcamalıyım?"</em></p>
+
                 <ul>
                     <li><strong>Tehdit durumunda:</strong> Sindirim geri plana alınır, bağışıklık ve onarıma enerji harcanmaz. Enerji hızlı kullanıma yönlendirilir. Üreme o an için gerekli görünmez; hormonal denge tamamen değişir, testosteron ve östrojen baskılanır. Bu durum tehdit anı için vazgeçilmezdir. Problem, bu durumdan çıkılamamasında başlar. Sürekli tehditte kalınırsa sindirim zayıflar, bağışıklık olması gerektiği gibi çalışmaz, hormonal yapı bozulur. Y₁ denge kurma görevini bırakır; idare etmeye başlar. Beden çalışıyordur — ama kusursuz bir dengede değil, açıklarını kapatmaya çalışarak.</li>
                     <li><strong>Güven durumunda:</strong> Sindirim normaldir, enerji normal döngüsüne döner. Kortizol salınımı azalınca oksitosin, dopamin, serotonin ve büyüme hormonu olması gerektiği gibi salgılanmaya başlar. Sistem dinlen / onar / sosyal bağ kur çerçevesinde çalışır.</li>
                 </ul>
+
                 <p>Aynı yük farklı kişilerde farklı sonuçlar üretir. Bu kapasite ve tolerans farkı, geçmiş ve hâlin birlikte şekillendirdiği bir sonuçtur. Hâlin Y₁ üzerine etkisi, Y₁'in Y₂ üzerine etkisiyle birleşince sonuç kişiden kişiye değişir. İnsan belli sınırları olan bir varlık değil, karmaşık bir organizmadır — bu karmaşıklık da anlayış bileşeniyle doğrudan bağlantılıdır.</p>
-                
+
                 <h2>Dış Sistem (Y₂): Mekanik Yansıma</h2>
+
                 <p>Y₁'de olanların dışarıya yansıması Y₂'de görünür. Kas, eklem, fasya ve postür yalnızca hareketi sağlayan yapılar değildir; sistemin mevcut durumunu gösteren en belirgin faktörlerdir.</p>
+
                 <p>Y₂'nin temel sorusu şudur: <em>"Oluşan sonucu fiziksel olarak nasıl taşıyabilirim?"</em></p>
+
                 <ul>
                     <li><strong>Tehdit durumunda:</strong> Kas tonusu artar, fasya sertleşir, eklem hareketi daralır, postür kapanır. Nefes sığlaşır, bakış daralır — tehdide odaklanmayı kolaylaştırmak için. Beden savaşmaya veya kaçmaya hazır hale gelir. Zihin sağlıklı düşünemez, net yanıt veremez; kararlar refleksif ve hayatta kalmaya yönelik olur. Burada da başlangıçta problem yoktur. Ancak sürekli bu modda kalmak problemleri doğurur. Y₂ adapte olur ve zamanla bu "normal" haline gelir. Gerginlik fark edilmez, hareket daralması olağan kabul edilir, ağrı normalleşir. Çözüm için üretilen yanıt, zamanla problemin kaynağına dönüşür.</li>
                     <li><strong>Güven durumunda:</strong> Kaslar gevşer, savaşmak yerine uyum sağlar, akışkan ve elastik olur. Nefes derinleşir. Postür açılır. Hareket alanı genişler. Düşünce refleksif olmaktan çıkıp analitik hale gelir.</li>
                 </ul>
-                
+
                 <h2>Y₁ ve Y₂ Arasındaki Etkileşim</h2>
+
                 <p>Sinir sistemi iletiyi alır ve yorumlar, endokrin sistem bu yoruma göre yanıt oluşturur. Bu yanıt Y₁ ve Y₂ üzerinde doğrudan etkiye sahiptir. İletiyi alıp yorumlamak ise geçmiş ve hâlimiz çerçevesinde gerçekleşir. Y₁ üzerindeki etkiler hangi sisteme öncelik verileceğine göre değişir. Y₁'deki tepki sonucu Y₂'de bir sonuç doğar. Bu döngü kendini tekrar eder. Y₂'deki sonuç baştaki anlayışa geri döner.</p>
+
                 <p>Y₁ ve Y₂ ayrı sistemler değildir. Günü tanımlamak için nasıl ki gece ve gündüz diye isimlendiriyorsak, bunları da tanımlamak için ayrıymış gibi ele alıyoruz. Y₁ içeride organize olur, Y₂ bunu dışarıda görünür kılar. İki taraf birbirini besler ve bu döngüyü kısır hale getirir. Sürekli gergin bir kas, sinir sistemine tehdit olarak yansır. Kapanmış postür nefes düzenini bozar; nefes düzensizleşince bu yeniden tehdit olarak algılanır. Kısıtlı hareket dolaşımı ve lenf sisteminin çalışmasını bozar.</p>
+
                 <p>Y₁ ve Y₂ arasındaki iletişim fasyal ağ üzerinden gerçekleşir. Fasya vücudumuzu saran tek parça, bütünsel bir ağ gibidir; bütün iç iletim bu hat üzerinden gerçekleşir. Hücreler arası sıvının değişmesi fasyal ağın iletim yolunu değiştirir. Ayaktaki bir tıkanıklık çenedeki gerginliğe sebep olabilir. Bunun en net örneği çene sıkmasında görülür; ayaktaki hattan başlayıp yukarı çeneye kadar birkaç bölgede gerginlik görülür. Temeli strestir, yolu ise baldır, pelvik taban, sırt, boyun ve çene üzerindedir. Bütün bir parçanın bir tarafını çekiştirirseniz bütünün tamamında gerginlik oluşması kaçınılmazdır.</p>
 
                 <h2>Fiziksel Yansıma</h2>
+
                 <p>Fiziki bedenimizdeki sonuçlar anlayışımıza göre şekillenir.</p>
-                <p>Örneğin: Kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir. Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir.</p>
+
+                <p>Örneğin: kilo ile ilgili durumlar, mimarinin fiziki boyutta kapladığı alan stratejisidir. Sistem, algıladığı yüke bağlı olarak mekânsal organizasyonunu değiştirir. Tehdit algısı oluştuğunda sistem; araya mesafe koymak, daha katı bir yapı oluşturmak veya dış etkilere karşı dayanımı artırmak amacıyla kütle artırımına yönelebilir. Benzer şekilde sistem; görünürlüğü azaltmak, yükü minimize etmek veya dikkat çekmemek amacıyla kütleyi azaltma yönünde organize olabilir.</p>
+
                 <p>Bu bağlamda kilo, doğrudan metabolik bir problem değil; sistemin yükü nasıl anlamlandırdığına bağlı olarak geliştirdiği yapısal bir adaptasyondur. Mimari dengede olduğunda beden, olması gereken aralığa yerleşir. Beden sonuç üretmez; mimariyi yansıtır. Yıkım ve inşanın büyüklüğü bileşenlerden doğar; formunu ise köprü ve bakış açısı şekillendirir.</p>
+
                 <p>Tehdit algısı altında sistem stres üretir; iç ve dış sistem uyumu bozulur, yapı kararsız hâle gelir. Bu durum tehdit algısına verilen yapısal bir yanıttır. Zaman ve eylemlerle birlikte bu yanıt metabolik düzleme taşınır.</p>
+
                 <p>Güven algısı oluştuğunda sistem stres üretimini bırakır ve yeniden düzenlenme sürecine girer. İç ve dış sistem uyumlanır, yapı dengelenir. Bu süreç zorlamanın değil, güven temelli yapısal bir dönüşümün sonucudur. Sistem, yükü anlamlandırma biçimi ölçüsünde şekillenir.</p>
+
             </div>
         </div>
-        
+
         <hr class="section-divider">
-        
-        <!-- BASAMAK 3: ÇÖZÜM (KÖPRÜ VE VAGUS SİNİRİ) -->
+
+        <!-- ═══════════════════════════════════════
+             KÖPRÜ VE VAGUS
+        ════════════════════════════════════════ -->
         <div id="KopruVeVagus">
             <h2>Köprü: Sistemin Merkezi</h2>
             <div class="content">
-                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrusal değil, "Yukarıdan Aşağıya (Zihinden Bedene) ve Aşağıdan Yukarıya (Bedenden Zihne) Kesişim" prensibiyle işler. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
-                <p>Köprüyü oluşturan dört temel yapı: Diyafram, pelvik taban, transversus abdominis ve multifidus. Bu dört yapı ayrı parçalar olmakla birlikte tek bir mekanizma gibi hareket eder. Köprü yalnızca kaslardan oluşan bir yapı değildir; iç basıncı yöneten ve tüm sistemi organize eden merkezdir. Bu ifade yalnızca mecazi değildir; aynı zamanda fiziki olarak da bedenin merkezinde yer alır.</p>
-                
+
+                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrusal değil, "yukarıdan aşağıya (zihinden bedene) ve aşağıdan yukarıya (bedenden zihne) kesişim" prensibiyle işler. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
+
+                <p>Köprüyü oluşturan dört temel yapı: diyafram, pelvik taban, transversus abdominis ve multifidus. Bu dört yapı ayrı parçalar olmakla birlikte tek bir mekanizma gibi hareket eder. Köprü yalnızca kaslardan oluşan bir yapı değildir; iç basıncı yöneten ve tüm sistemi organize eden merkezdir. Bu ifade yalnızca mecazi değildir; aynı zamanda fiziki olarak da bedenin merkezinde yer alır.</p>
+
                 <h3>IAP: Köprünün Mekanizması</h3>
+
                 <p>Köprüyü oluşturan dört yapı birbirinden bağımsız çalışmaz; birlikte bir basınç sistemi oluşturur. Nefes alırken diyafram aşağı iner, pelvik taban buna eşlik eder. Bu sırada transversus ve multifidus devreye girerek karın içi basıncı (IAP) dengeler ve yapıyı stabil tutar. Nefes verirken diyafram yukarı çekilir, pelvik taban toparlanır; transversus ve multifidus yine bu hareketi kontrol eder.</p>
+
                 <p>Bu döngü karın içinde bir basınç dengesi oluşturur. Denge sağlandığında iç organlar yerinde tutulur, omurga desteklenir, yük tüm sisteme eşit dağılır. Köprü işlevini yitirdiğinde bu denge bozulur — yük belirli noktalara yığılır, iç organlar mekanik baskıya maruz kalır ve çalışmalarında aksamalar olur.</p>
-                
+
                 <h3>Diyaframın Sistem Üzerine Etkileri</h3>
-                <p>Diyafram hareketi iç organlara ritmik olarak masaj yapar. Vagus siniri üzerinde doğrudan etkiye sahiptir. Vagus sinirinin dikkat çekici bir özelliği vardır: Liflerinin yaklaşık %80'i bedenden beyne bilgi taşır. Bu, köprü üzerinden sistemi etkilemenin neden mümkün olduğunu açıklar — sinyal sadece yukarıdan aşağıya değil, aşağıdan yukarıya da iletilir.</p>
+
+                <p>Diyafram hareketi iç organlara ritmik olarak masaj yapar. Vagus siniri üzerinde doğrudan etkiye sahiptir. Vagus sinirinin dikkat çekici bir özelliği vardır: liflerinin yaklaşık %80'i bedenden beyne bilgi taşır. Bu, köprü üzerinden sistemi etkilemenin neden mümkün olduğunu açıklar — sinyal sadece yukarıdan aşağıya değil, aşağıdan yukarıya da iletilir.</p>
+
                 <p>Beyin tehdidi algıladığında sadece Vagus'un %20'lik kısıtlı çıkış hattını kullanmaz; çünkü sinirsel lokal emirler tüm mimariyi organize etmeye yetmez. Tehdit anında kan yoluyla tüm sisteme kimyasal bir bombardıman — kortizol ve adrenalin — gerçekleşir ve fasya sıvısal olarak kilitlenir. Bu kimyasal alarmı zihinle doğrudan kapatamayız; ancak köprü aracılığıyla, Vagus'un %80'lik mekanoreseptör hattı üzerinden beyne "Fiziksel olarak güvendeyiz" mekanik emrini göndererek döngüyü kırabiliriz.</p>
+
                 <p>Vagus bağırsakla doğrudan bağlantılıdır; diyaframın hareketi bağırsak hareketlerini de etkiler. Sindirim daha doğru çalışır, besinler daha verimli parçalanır, enflamasyon azalır. Diyafram, fasyal ağ üzerinde de doğrudan etkiye sahiptir. Kalbin çalışma biçimini etkiler, lenf sistemine katkı sağlar, böbrek üstü bezlerinin daha dengeli çalışmasına yardımcı olur. Vagus'un aktif olması parasempatik sisteme geçişin anahtarıdır. Vagus aracılığıyla amigdala sakinleşir ve frontal lob daha sağlıklı çalışır. <em>Bu yüzden beden üzerine çalışmak, zihin üzerine çalışmaktan daha kararlı ve doğrudan bir yoldur.</em></p>
-                
+
                 <h3>Nefes ve Sistem</h3>
+
                 <p>Nefes alış verişimiz, güvende mi tehdit modunda mı olduğumuzu gösteren en önemli dışsal göstergedir. Tehdit anında nefes düzensizleşir ve sığlaşır. Güvende olunduğunda derin ve düzenli nefes alınabilir. Sığ nefes sistem için tehdit sinyalidir. Derin nefes ise sistemin güvende olduğunun işaretidir. Bu ilişki iki yönlüdür: tehdit altındaysak nefesimiz sığlaşır; nefesimiz sığsa tehdit altında hissederiz. Döngünün kırılamamasının temel nedeni bu iki yönlülüktür. Nefes kan dolaşımı demektir. Dolaşım ise besinlerin ve diğer maddelerin hücrelere aktarılması, atıkların uzaklaştırılması anlamına gelir.</p>
-                
+
                 <h3>Köprü ve Döngünün Kırılması</h3>
-                <p>Köprü merkezdir; çünkü köprü, tüm sistemler üzerinde etkisi olan ve doğrudan müdahale edebildiğimiz, kalıcı ve sürdürülebilirlik açısından, tek alandır. Hem Y₁'i hem Y₂'yi etkileyen, yukarıdan aşağıya ve aşağıdan yukarıya çift yönlü etkisiyle sistemin tamamına ulaşabilen tek noktadır.</p>
+
+                <p>Köprü merkezdir; çünkü tüm sistemler üzerinde etkisi olan ve doğrudan müdahale edebildiğimiz, kalıcı ve sürdürülebilirlik açısından tek alandır. Hem Y₁'i hem Y₂'yi etkileyen, yukarıdan aşağıya ve aşağıdan yukarıya çift yönlü etkisiyle sistemin tamamına ulaşabilen tek noktadır.</p>
+
                 <p>Döngüden bilinçli olarak çıkabilmenin yolu köprü üzerine çalışmaktan geçer. Anlayışımızı doğrudan değiştiremiyorsak — ki bu çoğu zaman zordur — köprüyü sağlamlaştırmak en net çözümdür. Köprü iç ve dış sistem arasındaki baskıyı azaltır ve geri dönüşteki baskıyı hafifletir. Bu zamanla sistemin olması gereken hale gelmesine yardımcı olur.</p>
+
                 <p>Dışarıdan müdahale, sistemi hazırlamak veya hazır olan sistemi bir adım öteye taşımak için önemli bir yere sahiptir. Ancak süreler ve yöntemler kişiden kişiye değişir — burada bir reçete sunmak mümkün değildir. İnsan belli sınırları olan bir varlık değil, karmaşık bir organizmadır. Süreklilik için köprü üzerine çalışmak gerekir. Kendi haline bırakılan sistem o döngüde kalmaya devam eder. Nadir değişimler yaşansa da bunlar istisnadır; temelinde yine anlayıştaki bir kırılma yatar. Sistemde kalıcı bir değişim oluşabilmesi için anlayışın yönünün değişmesi gerekir. Anlayışın yönünü değiştirmenin en doğrudan yolu ise köprü üzerine çalışmaktan geçer.</p>
 
                 <h2>Anlayış Nasıl Değişir?</h2>
-                <p>Bu modelin kırılma noktası burasıdır: Anlayış bir anda değişmez. Anlayış aslında bir yöndür; farkındalık ise bu yönü belirleyen şeydir. Farkındalık köprünün sağlamlaşmasıyla zemin bulur ve zamanla yön değişir. Bu yüzden anlayışı doğrudan değiştirmeye çalışmak çoğu zaman işe yaramaz — köprü üzerine çalışmak, farkındalığın oluşabileceği zemini hazırlar ve anlayış buradan dönüşür.</p>
+
+                <p>Bu modelin kırılma noktası burasıdır: anlayış bir anda değişmez. Anlayış aslında bir yöndür; farkındalık ise bu yönü belirleyen şeydir. Farkındalık köprünün sağlamlaşmasıyla zemin bulur ve zamanla yön değişir. Bu yüzden anlayışı doğrudan değiştirmeye çalışmak çoğu zaman işe yaramaz — köprü üzerine çalışmak, farkındalığın oluşabileceği zemini hazırlar ve anlayış buradan dönüşür.</p>
+
                 <p>Özellikle tehdit durumundayken anlayış üzerine doğrudan çalışmak mümkün değildir. Çünkü amigdala hayatta kalmaya odaklanır; tehdidi merkeze alır ve geri kalan detayları göz ardı eder. Bu durumda anlayışı değiştirmeye çalışmak çoğu zaman sonuç vermez. Y₁ üzerine doğrudan müdahale sınırlıdır ve sürdürülebilirlik açısından sağlıklı olmayabilir. Y₂'ye yapılan müdahaleler ise tek başına kalıcı olmaz. Çünkü sistem, bilinmeyen yeni bir yoldansa, tanıdık olan eski yolu — yanlış dahi olsa — tercih eder.</p>
+
                 <blockquote>
                     <p>"Bildiğin cehennem, bilmediğin cennetten iyidir."</p>
                 </blockquote>
+
+                <p>Bu yüzden değişimi zorlamak çoğu zaman işe yaramaz. Sistem, yeni bir yolu ancak güvenli bir zemin üzerinde deneyimleyebilir. Bunun için önce tehdit algısının zemine oturtulması — yani köprünün sağlamlaşması — gerekir. Güven zemini kurulmadan anlayış kırılmaz; kırılmadan da yön değişmez.</p>
+
             </div>
         </div>
-        
+
         <hr class="section-divider">
-        
-        <!-- BASAMAK 4: KUSURSUZ KANIT (MATEMATİKSEL MODEL VE BİLEŞENLER) -->
+
+        <!-- ═══════════════════════════════════════
+             MATEMATİKSEL KANIT
+        ════════════════════════════════════════ -->
         <div id="MatematikselModel">
             <h2>Döngü</h2>
             <div class="content">
+
                 <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
-                
+
                 <div class="loop-title">Mimari bir döngüdür:</div>
                 <div class="loop-box">
                     $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
                 </div>
+
                 <p>Aynı anlayış, aynı eylemi üretir. Aynı eylem, aynı mimariyi inşa eder. Döngüyü kırmadan sonuç değişmez.</p>
-                
+
                 <h2>Modelin Matematiksel Yapısı</h2>
+
                 <p>Denklem en sade hâliyle şu şekildedir:</p>
+
                 <div class="formula">
                     $$\Delta \mathbf{\text{BM}} = (A \cdot Y) \cdot Z!$$
                 </div>
+
                 <p>Denklem, doğrudan hesaplama amacı taşımaz; doğrusal olmayan birikim etkisini sembolik olarak temsil eder. Buradaki değişkenler — Anlayış (A), Yoğunluk (Y) ve Zaman (Z) — inşa veya yıkım sürecini ortaya koyar.</p>
-                
+
                 <h2>(A) Anlayış</h2>
+
                 <p>Denklemdeki en belirleyici değişkendir. Süreç ilk olarak anlayış ile başlar ve diğer tüm değişkenleri doğrudan veya dolaylı yoldan etkiler. Anlayış denklemde yön belirleyicidir; farkındalık \((F)\) ile bu durum gerçekleşir.</p>
+
                 <p>Anlayışın geometrisi, sonucun büyüklüğünde önemli bir yere sahiptir. Küçük bir açısal farklılık, sonucu zaman içinde büyük ölçüde değiştirebilir. Anlayışımızın çapını etkileyen en temel bileşen bakış açısıdır \((B)\); eyleme geçiş biçimimizi doğrudan etkiler.</p>
+
                 <p>Eylemlerimiz ise Geçmiş \((G)\) ve Hâl \((H)\) ekseninde şekillenir. Birbirlerini beslerler:</p>
-                
+
                 <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
+
                 <p>Geçmiş hâli şekillendirir; hâl, geçmişin anlamını yeniden kurar.</p>
-                
+
                 <h3>Değişkenlerin Rolü</h3>
+
                 <ul>
                     <li><strong>(F) Farkındalık:</strong> Farkındalık anın içindedir; ya vardır ya yoktur. Az farkında veya çok farkında olamayız. Bir an farkında olabiliriz veya bir an farkındalıktan uzaklaşabiliriz. $$F \in \{-1, +1\}$$</li>
-                    <li><strong>(B) Bakış Açısı:</strong> Bağımsız bir değişken değildir; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir. <br>
+                    <li><strong>(B) Bakış Açısı:</strong> Bağımsız bir değişken değildir; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir.<br>
                     \(F = -1\) ise bakış açısı daralır: $$B \in (0,1)$$
-                    Bakış açısı daraldıkça sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir. <br>
+                    Bakış açısı daraldıkça sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir.<br>
                     \(F = +1\) ise mimari olabileceği en uygun açıdadır: $$B = 1$$
                     Bu durumda bakış açısı sonucu etkilemez; inşa olması gerektiği gibi sürer. $$0 < B \le 1$$</li>
                     <li><strong>(G) Geçmiş:</strong> Yüklediğimiz anlamlar, deneyimler, inançlar, öğrendiklerimiz. Geçmiş, hâl ile karşılıklı etkileşim halindedir.</li>
                 </ul>
-                
+
                 <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
+
                 <ul>
                     <li><strong>(H) Hâl:</strong> Algıdaki seçimimiz, bilişsel esnekliğimiz, tutumumuz, duygusal durumumuz. Hâl, yoğunlukla karşılıklı etkileşim halindedir.</li>
                 </ul>
-                
+
                 <div class="inline-formula-block">$$H \rightleftharpoons Y$$</div>
-                <p>Denkleme yön veren \(\pm(F)\)arkındalık, eyleme şekil veren ise \((B)\)akış açısıdır. \((G)\) ve \((H)\)'nin toplamı mimarinin zihinsel karşılığıdır; eylemin biçimini ve \(\Delta\text{BM}\) üzerindeki birikim etkisini belirler.</p>
-                
+
+                <p>Denkleme yön veren \(\pm F\) farkındalık, eyleme şekil veren ise \(B\) bakış açısıdır. \((G)\) ve \((H)\)'nin toplamı mimarinin zihinsel karşılığıdır; eylemin biçimini ve \(\Delta\text{BM}\) üzerindeki birikim etkisini belirler.</p>
+
                 <div class="formula">
                     $$A = \pm F \cdot \left( \frac{G + H}{B} \right)$$
                 </div>
-                
+
                 <h2>(Y) Yoğunluk</h2>
+
                 <p>Döngünün sonucudur; şu an bulunduğumuz fiziksel durumun yansımasıdır. Yoğunluk, sürecin ilerleyiş boyutuna etki eder. Anlayış, yoğunluğu belirleyen en önemli bileşendir. İkisi birbirini olumlu veya olumsuz olarak besler.</p>
+
                 <p>Yoğunluk üç bileşenden oluşur:</p>
+
                 <ul>
                     <li><strong>(Y₁) İç Sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum.</li>
                     <li><strong>(K) Köprü:</strong> Diyafram, pelvik taban, multifidus ve transversus.</li>
                     <li><strong>(Y₂) Dış Sistem:</strong> Postür, kas tonusu, fasyal yapı, eklem organizasyonu.</li>
                 </ul>
-                
+
                 <p>İç sistem gerilimi üretir, dış sistem taşır:</p>
+
                 <div class="inline-formula-block">$$Y_1 \rightleftharpoons Y_2$$</div>
+
                 <p>Birbirlerinin yükünü zamanla artırırlar. Bu nedenle formülde çarpan olarak yer alırlar. Köprü ise bu gerilimin nasıl dağılacağını belirler. Köprü, \(K \ge 1\) olarak kabul edilir; \(K = 1\) olduğu zaman yük olduğu gibi aktarılır. Köprünün tamamen işlevsizleşmesi durumunda, \(K = 0\) olursa, sistem matematiksel olarak tanımsız olur; sistemden bahsedemeyiz. \(K\) arttıkça mimari daha dayanıklı hâle gelir.</p>
-                
+
                 <div class="formula formula-large">
                     $$Y = \left( \frac{Y_1 \cdot Y_2}{K} \right)$$
                 </div>
-                
+
                 <h2>(Z) Zaman</h2>
+
                 <p>Döngünün kendisidir; süreci tanımlar. \(0 < Z < 1\) aralığında kabul edilir; \(0\) yokluğu, \(1\) tamamlanmayı ifade eder. Zamanın etkisi sabit değildir; evrelere göre değişir.</p>
+
                 <p style="font-size: 0.92rem; opacity: 0.75; font-style: italic; margin-top: -16px;">* \(0 < Z < 1\) aralığında \(Z!\) ifadesinin matematiksel karşılığı Gamma fonksiyonudur: \(Z! = \Gamma(Z+1)\)</p>
-                
+
                 <div class="time-align-container">
                     <div class="time-align-row">
                         <span>Başlangıçta etkiler yüksektir</span>
@@ -589,72 +763,142 @@
                         <span>$$(0,9)! \approx 0{,}9618$$</span>
                     </div>
                 </div>
+
                 <p>Bir sürecin başında daha çok inşa veya yıkım gerçekleşir. Zamanla sistem alışır, etki azalır. Nihayetinde birikim ile birlikte tekrar artar.</p>
-                
+
                 <h2>Açık Form</h2>
+
                 <div class="formula">
                     $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
                 </div>
-<!-- 1. BÖLÜM: Kısırdöngü (Kısa Özet) -->
-<div id="kisirdongu" class="content" style="margin-top: 60px;">
-    <h2>Kısırdöngü: Beden Nasıl Yıkılır?</h2>
-    <p>Beden, durup dururken arıza üreten bir organizma değildir; hastalık ve yıkım süreçleri doku mimarisi ile sinir sisteminin birbirini beslediği kapalı bir döngü üzerinden yürür. Sistemdeki tek bir sapma, zamanla patolojik bir denge kurarak bardağın mevcut potansiyelini ve hacmini daraltır. Bu kısırdöngünün biyolojik ve geometrik mekanizması çok yakında burada açılacaktır.</p>
-</div>
 
-<hr>
-
-<!-- 2. BÖLÜM: Yeniden İnşa (YAKINDA - BLUR) -->
-<div id="yeniden-insa" class="content" style="margin-top: 60px; position: relative;">
-    <h2>Yeniden İnşa: Çıkış Yolu ve Merkez</h2>
-    <p>Mevcut kısırdöngüyü tersine çevirecek pratik uygulama adımları, Köprü organizasyonu ve merkez yapının (IAP) mekanik olarak nasıl devreye alınacağı...</p>
-    
-    <div style="filter: blur(4px); opacity: 0.2; user-select: none; pointer-events: none; margin-top: 15px;">
-        <p>Diyafram mekaniği, nefes kilitlerinin açılması ve otonom sistemin aşağıdan yukarıya yeniden programlanması.</p>
-    </div>
-    
-    <p style="text-align: center; font-style: italic; color: #d4af37; font-weight: bold; margin-top: 15px; font-size: 0.9em;">
-        &mdash; Merkez mimarisi üzerinde çalışılıyor. Çok yakında. &mdash;
-    </p>
-</div>
-
-<hr>
-
-<!-- 3. BÖLÜM: Beden Sözlüğü (YAKINDA - BLUR) -->
-<div id="beden-sozlugu" class="content" style="margin-top: 60px; position: relative; margin-bottom: 80px;">
-    <h2>Beden Sözlüğü: Arızaların Kökeni</h2>
-    <p>Bel fıtığı, çene sıkma, fibromiyalji ve kronik yorgunluk gibi sistemik kilitlenmelerin KÖKEN modelindeki gerçek geometrik sebepleri...</p>
-    
-    <div style="filter: blur(4px); opacity: 0.2; user-select: none; pointer-events: none; margin-top: 15px;">
-        <p>Omurga segmentlerindeki basınç kaçakları, fasyal kilitlenmeler ve kronik yük birikimlerinin anatomik haritası.</p>
-    </div>
-    
-    <p style="text-align: center; font-style: italic; color: #d4af37; font-weight: bold; margin-top: 15px; font-size: 0.9em;">
-        &mdash; Beden sözlüğü üzerinde çalışılıyor. Çok yakında. &mdash;
-    </p>
-</div>
-                <h2>Sistem Felsefesi</h2>
-                <p>KÖKEN, sadece ışık tutar. Beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Köprüyü sağlamlaştırmak ise mimariyi zaman değişkeni karşısında daha kararlı bir hâle getirir.</p>
-                <p>KÖKEN, geçici veya dış müdahaleyle çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası, bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen; Anlayış \((A)\) değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir.</p>
-                <blockquote>
-                    <p>"Anlayışın yönü değişmezse yıkım devam eder; sistem hizalanamaz."</p>
-                </blockquote>
-                <p>KÖKEN bir mucize değil, matematiktir.</p>
-                <p>İnşa, kişinin kendi sorumluluğundadır.</p>
             </div>
         </div>
-        
+
+        <hr class="section-divider">
+
+        <!-- ═══════════════════════════════════════
+             KISIRDÖNGÜ
+        ════════════════════════════════════════ -->
+        <div id="kisirdongu">
+            <h2>Mimarinin Kısırdöngüsü</h2>
+            <div class="content">
+
+                <p>Beden; rastgele arızalar üreten, durup dururken yıkıma giden bir organizma değildir. Hastalık, sağlık, öğrenme veya öğrenememe gibi tüm yaşamsal süreçler; doku mimarisi, sinir sistemi ve farkındalık eşiğinin karşılıklı olarak birbirini beslediği kapalı bir nedensellik döngüsü üzerinden yürür. Sistemde tek bir noktada sapma meydana geldiğinde, tüm canlılık o sapmanın ekseninde yeniden organize olur ve nihayetinde o hatayı besleyen kararlı bir yapı inşa eder.</p>
+
+                <blockquote>
+                    <p>Hastalık, hata değil; bir sürecin sonucudur.</p>
+                </blockquote>
+
+                <h3>Kapalı Nedensellik Döngüsü ve Yanlışın "Rahatlığı"</h3>
+
+                <p>Mevcut mimarinin sinir sistemine gönderdiği sinyaller bir anlayış üretir; bu anlayış ise otonom yanıtlar üzerinden mimariyi anlık olarak yeniden şekillendirir.</p>
+
+                <p>Sistemin bilinçli bir müdahale olmadan kendi kendine iyileşememesinin ve problemlerin kronik hale gelmesinin kökeni, biyolojik <strong>Allostazi</strong> mekanizmasıdır. Allostazi; bedenin dış ve iç şartlara uyum sağlamak adına dinamik bir şekilde "değişim yoluyla istikrar" üretme çabasıdır.</p>
+
+                <p>Bu mekanizma sinirsel boyutta "doğru" veya "yanlış" ile ilgilenmez; tek bir hedefi vardır: tutarlı olmak. Beyin kronik bir tehdit algıladığında — ister zihinsel bir sorumluluk yükü, ister fiziksel bir problem — zamanla patolojik dengeyi yeni "normal" ilan eder ve sistemi bu yapıda kararlı tutmak için çalışır.</p>
+
+                <p>Yanlış duruşun sana rahat geliyor olmasının sebebi budur. Alışmış olduğun yol, yanlış da olsa senin doğrundur.</p>
+
+                <h3>Enerji Neden İnşaya Gitmiyor?</h3>
+
+                <p>Beden durup dururken kendi kendine yıkılmaz. Canlı sistemler, entropiye — dağılmaya — karşı sürekli dışarıdan enerji alarak iç dengesini korumak zorundadır. Yıkımın hiçbir çaba gerektirmeden kendiliğinden sürmesinin asıl sebebi, enerji bütçesinin yanlış yönetilmesidir.</p>
+
+                <p>Sistem kronik tehdit altındayken, hücrelerin ve dokuların kendini tamir etmek için harcayacağı enerji, sempatik sistem tarafından "savunma ve hayatta kalma" moduna aktarılır. İnşa bütçesi kısıldığı için yıkım, yokuşun tepesinden bırakılan bir taş gibi kendiliğinden ve zahmetsizce yoluna devam eder. Her döngüde ödenen bu biyolojik bedele <strong>Allostatik Yük</strong> denir.</p>
+
+                <p>Döngü, her tekrarda aynı yönde ilerler:</p>
+
+                <div class="formula">
+                    $$\text{Mevcut Yapı (%90)} \rightarrow \text{Mevcut Anlayış} \rightarrow \text{Mevcut Yankı} \rightarrow \text{Otomatik Reaksiyon} \rightarrow \text{Yeni Yapı (%89)}$$
+                </div>
+
+                <p>Bu süreç fark edilmeden her gün tekrar eder. Ve her tekrar, sistemi bir adım daha aynı yöne iter.</p>
+
+                <p>Bu doğrusal azalış, sistemin adaptasyon sınırını — eşik değerini — aşana kadar sessizce birikir ve nihayetinde semptomlar görünür olmaya başlar. İç algımız (interoception) ne kadar gelişmişse, erken fark edebilme ihtimali o kadar artar. Bu süreç herkeste işler; ama hızı ve şiddeti kişiden kişiye değişir — bu fark yoğunluk ve zaman bileşenlerinden gelir.</p>
+
+                <h3>Uyaran ile Tepki Arasındaki Boşluk</h3>
+
+                <p>Normalde yaptığın şeyleri yapmaya devam ederek yeni bir mimari inşa edemezsin. Çünkü seni buraya getiren şey, zaten yaptığın şeylerin toplamıdır. Süreç kendi haline bırakıldığında sistemin kendiliğinden değişememesinin sebebi, hücrelerin maruz kaldığı kronik kimyasal yankıyı zamanla kendi genetik ekspresyonu haline getirmesidir — buna <strong>Epigenetik Kilitleme</strong> denir. Kısaca: mevcut yapıyı koruma çabası.</p>
+
+                <p>Bu kısırdöngüyü kıracak tek güç, anın içine sızan farkındalıktır.</p>
+
+                <blockquote>
+                    <p>Farkındalık; uyaran ile otomatik tepki arasına yerleşen bilinçli duraklama anıdır. Üzerindeki bir karıncayı refleks olarak üfleyip atmak — tehdit odaklı otomatik tepki — yıkım döngüsünü besler. Elini karıncanın altına koyup ona bir zemin sunmak — farkındalık odaklı bilinçli yanıt — ise döngüyü kırar ve yeni bir mimari oluşmasına yol açar. Zamanla bu yol daha kalıcı olur. Artık refleksif olarak elini zemin yapmak için uzatırsın. Aynı uyaran, farklı bir sonuç üretmeye başlar.</p>
+                </blockquote>
+
+                <p>Farkındalık devreye girdiğinde, otonom sistemin "tehdit var, kasıl" emrine karşı bilinçli bir duruş sergilenir. Zihin ve beden, maruz kaldığı yükü panikle uzaklaştırmak yerine onunla yeni bir ilişki kurmayı öğrenir. Farkındalık her zaman devreye giremez — o anlarda bir es verebilmek için köprünün devrede olması gerekir. Tepkisellik ile yanıt vermenin arasındaki ufak boşluk farkındalıktır; ama bu kısa boşluk için es verebilecek bir köprüye ihtiyacımız vardır.</p>
+
+                <div class="formula">
+                    $$\text{Mevcut Yapı (%90)} \rightarrow \text{Farkındalık} \rightarrow \text{Gelişmiş Anlayış} \rightarrow \text{Yeni Yankı} \rightarrow \text{Farklı Eylem} \rightarrow \text{Yeni Yapı (%91)}$$
+                </div>
+
+                <p>Farkındalık otonom sistemi mekanik olarak çözdükçe — köprü ve karın içi basınç üzerinden — yeni eylem yeni bir dokusal yankı uyandırır, hücresel hafıza yeniden programlanır ve allostatik yükün yerini yapısal inşa almaya başlar.</p>
+
+                <blockquote>
+                    <p>Yıkım yokuş aşağı doğru inmekse, inşa yokuş yukarı çıkmaktır.</p>
+                </blockquote>
+
+                <p>Bu döngünün hangi hastalıkla sonuçlanacağı — migren, sindirim sorunu, eklem ağrısı — kişinin mevcut mimarisine ve anlayışına bağlıdır. Yansıma noktası kişiden kişiye değişir, ama mekanizma aynıdır. Sorun farklı hastalıklar değil; aynı mekanizmanın farklı yansımalarıdır.</p>
+
+                <p>Her yansımanın beden mimarisinde nerede ve nasıl göründüğü <a href="#beden-sozlugu">Beden Sözlüğü</a>'nde ele alınacaktır.</p>
+
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ═══════════════════════════════════════
+             YAKINDA — YENİDEN İNŞA
+        ════════════════════════════════════════ -->
+        <div id="yeniden-insa">
+            <h2>Yeniden İnşa: Çıkış Yolu ve Merkez</h2>
+            <div class="content">
+                <p>Mevcut kısırdöngüyü tersine çevirecek pratik uygulama adımları, köprü organizasyonu ve merkez yapının (IAP) mekanik olarak nasıl devreye alınacağı burada yer alacaktır.</p>
+                <div class="coming-soon-preview">
+                    <p>Diyafram mekaniği, nefes kilitlerinin açılması ve otonom sistemin aşağıdan yukarıya yeniden programlanması.</p>
+                </div>
+                <p class="coming-soon-badge">Çok yakında</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ═══════════════════════════════════════
+             YAKINDA — BEDEN SÖZLÜĞÜ
+        ════════════════════════════════════════ -->
+        <div id="beden-sozlugu">
+            <h2>Beden Sözlüğü: Arızaların Kökeni</h2>
+            <div class="content">
+                <p>Bel fıtığı, çene sıkma, fibromiyalji ve kronik yorgunluk gibi sistemik kilitlenmelerin KÖKEN modelindeki gerçek geometrik sebepleri burada incelenecektir.</p>
+                <div class="coming-soon-preview">
+                    <p>Omurga segmentlerindeki basınç kaçakları, fasyal kilitlenmeler ve kronik yük birikimlerinin anatomik haritası.</p>
+                </div>
+                <p class="coming-soon-badge">Çok yakında</p>
+            </div>
+        </div>
+
     </div>
 </div>
-<div class="footer-quote">
-    "Dışarıda ne varsa içeride o olur. Aşağıda ne oluyorsa yukarıda da olmaktadır.<br>Yön nereye bakarsa, beden oraya gider."
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<div class="footer-area">
+    <div class="footer-quote">
+        "Dışarıda ne varsa içeride o olur. Aşağıda ne oluyorsa yukarıda da olmaktadır.<br>Yön nereye bakarsa, beden oraya gider."
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="math-motto">Sadece ışık tutar.</div>
+
+    <div class="footer">
+        <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
+            Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
+        </p>
+        © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
+    </div>
 </div>
-<hr class="section-divider">
-<div class="math-motto">"Sadece ışık tutar."</div>
-<div class="footer">
-    <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
-        Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
-    </p>
-    © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
-</div>
+
 </body>
 </html>
