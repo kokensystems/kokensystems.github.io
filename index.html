@@ -327,6 +327,59 @@
 
         .time-align-row:last-child { margin-bottom: 0; }
 
+        /* ── MATHJax ORTALAMA FİX ── */
+        mjx-container[display="true"] {
+            display: block !important;
+            text-align: center !important;
+            margin: 0.5em auto !important;
+        }
+
+        /* ── VURGU SATIRI ── */
+        .emphasis-line {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            text-align: center;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        /* ── İKİNCİ TAGLİNE ── */
+        .tagline-secondary {
+            font-family: Georgia, serif;
+            font-size: 0.88rem;
+            color: var(--sub-heading);
+            letter-spacing: 0.5px;
+            font-style: italic;
+            opacity: 0.5;
+            margin-top: 6px;
+        }
+
+        /* ── DISCLAIMER ── */
+        .disclaimer {
+            font-size: 0.8rem;
+            color: var(--sub-heading);
+            opacity: 0.45;
+            font-style: italic;
+            text-align: center;
+            margin: 24px auto 0;
+            max-width: 500px;
+            line-height: 1.7;
+            letter-spacing: 0.2px;
+        }
+
+        /* ── MATEMATİK DİPNOT ── */
+        .math-footnote {
+            font-size: 0.85rem;
+            opacity: 0.55;
+            font-style: italic;
+            margin-top: -30px;
+            margin-bottom: 28px;
+            letter-spacing: 0.2px;
+        }
+
         /* ── LİNKLER ── */
         .content a {
             color: var(--accent-gold);
@@ -370,11 +423,13 @@
             text-align: center;
             font-style: italic;
             color: var(--accent-gold);
-            margin: 60px 0;
-            font-size: 1.05rem;
-            line-height: 1.75;
+            margin: 60px auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
             letter-spacing: 0.5px;
-            opacity: 0.85;
+            opacity: 0.92;
+            max-width: 520px;
+            padding: 0 16px;
         }
 
         .math-motto {
@@ -438,6 +493,7 @@
         <a href="#kisirdongu" class="nav-item">Kısırdöngü</a>
         <a href="#yeniden-insa" class="nav-item yakinda">Yeniden İnşa</a>
         <a href="#beden-sozlugu" class="nav-item yakinda">Beden Sözlüğü</a>
+        <a href="#kokenin-ozu" class="nav-item">Köken'in Özü</a>
     </div>
 </nav>
 
@@ -450,6 +506,8 @@
         <div id="Giris">
             <div class="header-title">KÖKEN / Bedenin Mimarisi</div>
             <div class="tagline">Anlayış değişmeden, hiçbir şey gerçekten değişmez.</div>
+            <div class="tagline-secondary">Beden sonuç üretmez; mimariyi yansıtır.</div>
+            <p class="disclaimer">Bu sistem, gözleme dayalı bir çerçevedir. Bilimsel literatürde henüz karşılığı olmayan yerler vardır — ama olmayan bir şey yanlış değildir; henüz doğru sorular sorulmamış, doğru yerlere bakılmamış demektir. Soru varsa yanıt hemen yanındadır. Her şey açıklanabilir; ancak gözlemimiz henüz yetmeyebilir.</p>
             <hr class="section-divider">
             <div class="content">
 
@@ -513,7 +571,7 @@
 
                 <h3>Algı ve Yorum</h3>
 
-                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. İç algı bir haritadır; farkındalık ise pusula gibidir.</p>
+                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. İnteroception bir haritadır; farkındalık ise pusula gibidir.</p>
 
                 <p>Bu yorumlama her zaman doğru değildir. Dışarıda bir sorun varsa sistem bunu tehdit olarak yorumlayabilir. Örneğin kürek kemiğindeki bir ağrı, yanlış yorumlanarak kalp problemi olarak değerlendirilebilir. Bu, alarmların çalmasına ve sistemin ona göre organize olmasına yol açar. Yorumlama süreci geçmiş ve hâl çerçevesinde gerçekleşir; bu yüzden aynı durum farklı kişilerde farklı sonuçlar üretir.</p>
 
@@ -784,6 +842,8 @@
                     $$\Delta \mathbf{\text{BM}} = \left[ \pm F \cdot \left( \frac{G + H}{B} \right) \cdot \left( \frac{Y_1 \cdot Y_2}{K} \right) \right] \cdot Z!$$
                 </div>
 
+                <p class="math-footnote">* Sistem, \(B = 0\) ve \(K = 0\) olduğu durumlarda matematiksel olarak da tanımsız hâle geldiği için işlevsizdir.</p>
+
             </div>
         </div>
 
@@ -881,11 +941,61 @@
         <div id="beden-sozlugu">
             <h2>Beden Sözlüğü: Arızaların Kökeni</h2>
             <div class="content">
-                <p>Bel fıtığı, çene sıkma, fibromiyalji ve kronik yorgunluk gibi sistemik kilitlenmelerin KÖKEN modelindeki gerçek geometrik sebepleri burada incelenecektir.</p>
+
+                <p style="opacity: 0.65; font-style: italic; font-size: 0.95rem;">Bu bölümü okurken şunlara dikkat etmeliyiz: anlayış herkeste aynı çalışmaz. Belli bir anlayış farklı kişilerde farklı sonuçlara sebep olabilir. Anlayış genellemesi yapılabilir, ama kişi özelinde çok fazla değişken vardır. Yoğunluk ve zamanla birlikte hastalığın yönü belli olur. Bu yüzden buradaki bağlantılar kesin teşhis değil, örüntüdür. Kendi hastalığına veya problemine bakabilirsen anlayışın görünür olacaktır.</p>
+
+                <h3>Anksiyete</h3>
+                <p><strong>Anlayış bağlantısı:</strong> Güvensizlik. Sürecin ve olayların bütününün kontrol dışı olduğu, her an tehlike gelebileceği anlayışı. Zihin sürekli tetikte bekler.</p>
+                <p><strong>Y₁ etkisi:</strong> Sempatik sistem kronik aktif kalır. HPA ekseni sürekli kortizol üretir. Bağışıklık baskılanır, sindirim geri plana alınır, uyku düzeni bozulur. Adrenalin kronik yüksek kalınca hücresel onarım durur.</p>
+                <p><strong>Y₂ yansıması:</strong> Kas tonusu sürekli yüksek, özellikle boyun, omuz, çene. Nefes sığlaşır. Postür kapanır, içe döner. Bakış daralır. Hareket kısıtlanır.</p>
+                <p><strong>Döngü:</strong> Beden gergin çünkü zihin tetikte — zihin tetikte çünkü beden gergin. İç algı (interoception) bu gerilimi tehdit olarak okur ve sisteme geri bildirir. Dışarıda gerçek bir tehdit olmasa bile döngü kendini besler. Allostazi bu gerilimi yeni normal ilan eder, sistem orada kararlı hale gelir.</p>
+
+                <h3>Kronik Boyun Ağrısı</h3>
+                <p><strong>Anlayış bağlantısı:</strong> <em>"Her şeyi ben tutmalıyım."</em> Taşıma yükü ve kontrol kaybı korkusu. Temelde değer görmediğini varsayan bir anlayış — kontrol ederse sorunlar olmayacak inancı. Kontrol bir savunma mekanizmasıdır.</p>
+                <p><strong>Y₁ etkisi:</strong> Kronik kortizol yüksekliği kas dokusunu etkiler. Servikal bölgedeki sinir kökleri sürekli uyarı altında kalır. Enflamasyon kronikleşir. Kan akışı bölgede kısıtlanır, onarım yavaşlar.</p>
+                <p><strong>Y₂ yansıması:</strong> Boyun ve omuz kasları sürekli yüksek tonusta. Baş öne düşer, omuzlar içe döner. Servikal lordoz bozulur. Fasya katılaşır, hareket aralığı daralır. Bazen çeneye, bazen başa yayılır.</p>
+                <p><strong>Döngü:</strong> Gergin kas sinir sistemine tehdit sinyali gönderir. Sinir sistemi tetikte kalır, kas daha da gerilir. Postür bozuldukça nefes sığlaşır, nefes sığlaştıkça sistem tehdit modunda kalır. Anlayış değişmeden yük taşınmaya devam ettiği için döngü kırılamaz.</p>
+
+                <h3>Tip 2 Diyabet</h3>
+                <p><strong>Anlayış bağlantısı:</strong> Tatlılık, yumuşaklık, güven arayışı. Hayatta tatlılık bulamayan zihin bedende tatlılık arar. Kronik stres altında teselli, rahatlama, güvenli bir yer arayışı.</p>
+                <p><strong>Y₁ etkisi:</strong> Kronik kortizol insülin salınımını artırır. Hücreler sürekli yüksek insüline maruz kalınca reseptörler duyarsızlaşır — insülin direnci gelişir. Kan şekeri hücreye giremez, kanda birikir. Enerji üretilemez, kronik yorgunluk başlar. Pankreas daha fazla insülin üretmek için zorlanır, zamanla yorulur.</p>
+                <p><strong>Y₂ yansıması:</strong> Kronik yorgunluk hareketi kısıtlar. Kas kütlesi azalır — kaslar insülin duyarlılığını artıran en önemli dokudur. Hareket azaldıkça insülin direnci artar. Periferik dolaşım bozulur, özellikle ekstremitelerde.</p>
+                <p><strong>Döngü:</strong> Stres → kortizol → insülin direnci → enerji düşüklüğü → hareketsizlik → daha fazla insülin direnci → daha fazla stres. Tatlılık arayışı devam ettiği sürece döngü beslenir. Anlayış değişmeden metabolik düzlem değişmez.</p>
+
+                <h3>Sindirim Sorunları</h3>
+                <p><strong>Anlayış bağlantısı:</strong> Sindirememek, hazmedememek. Olayları, duyguları, ilişkileri içinde tutmak — işleyememek, geçirememek. Bastırılmış duygular ve <em>"yutmak zorundayım"</em> anlayışı.</p>
+                <p><strong>Y₁ etkisi:</strong> Sempatik sistem aktifken sindirim geri plana alınır — bu akut tehdit için doğrudur. Kronikleşince bağırsak hareketleri düzensizleşir. Vagus siniri üzerinden beyin-bağırsak hattı bozulur. Bağırsak mikrobiyomu değişir, enflamasyon artar. Mide asidi dengesizleşir — reflüde yukarı kaçar, irritabl bağırsakta ritim bozulur.</p>
+                <p><strong>Y₂ yansıması:</strong> Karın bölgesinde kronik gerginlik. Diyafram kısıtlanır — nefes sığlaşır. Pelvik taban etkilenir. Postür öne kapanır, karın içi basınç artar. Bağırsak üzerindeki mekanik baskı sindirimi daha da zorlaştırır.</p>
+                <p><strong>Döngü:</strong> Bastırılan duygu → sindirim geri plana alınır → bağırsak düzensizleşir → karın gerginliği → diyafram kısıtlanır → nefes sığlaşır → sistem tehdit modunda kalır → daha fazla bastırma. Sindiremeyen zihin, sindiremeyen bağırsak üretir.</p>
+
                 <div class="coming-soon-preview">
-                    <p>Omurga segmentlerindeki basınç kaçakları, fasyal kilitlenmeler ve kronik yük birikimlerinin anatomik haritası.</p>
+                    <p>Migren, fibromiyalji, kronik yorgunluk sendromu, bel fıtığı, eklem ağrıları, otoimmün durumlar ve daha fazlası...</p>
                 </div>
-                <p class="coming-soon-badge">Çok yakında</p>
+                <p class="coming-soon-badge">Devamı çok yakında</p>
+
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ═══════════════════════════════════════
+             KÖKEN'İN ÖZÜ — KAPANIŞ
+        ════════════════════════════════════════ -->
+        <div id="kokenin-ozu">
+            <h2>KÖKEN'in Özü</h2>
+            <div class="content">
+
+                <p>KÖKEN, sadece ışık tutar. Beden mimarisini görmemizi ve elimizdeki verilerle anlayışımızı geliştirme imkânı sağlar. Bedenin mimarisindeki matematiğe bakarak anlayışımızın geometrisine ulaşabiliriz. Bedendeki sonuçlar, anlayışımızın şu anki yönünü gösterir. Bu yönü değiştirerek yıkım sürecini tersine çevirip inşaya başlayabiliriz. Köprüyü sağlamlaştırmak ise mimariyi zaman değişkeni karşısında daha kararlı bir hâle getirir.</p>
+
+                <p>KÖKEN, geçici veya dış müdahaleyle çözüm sunmaz. Bir egzersiz programı veya pasif bir tedavi sistemi değildir. Burası, bedenin mimarisini kökten değiştirip yeniden inşa etmek isteyen; Anlayış değişkeni üzerine çalışabilecek ve bununla yüzleşebilecek hazır bireyler için bir sistemdir.</p>
+
+                <blockquote>
+                    <p>Anlayışın yönü değişmezse yıkım devam eder; sistem hizalanamaz.</p>
+                </blockquote>
+
+                <p class="emphasis-line">KÖKEN bir mucize değil, matematiktir.</p>
+                <p class="emphasis-line">İnşa, kişinin kendi sorumluluğundadır.</p>
+
             </div>
         </div>
 
