@@ -238,14 +238,11 @@
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             max-width: 100%;
             box-sizing: border-box;
             overflow-x: auto;
-        }
-        @supports (justify-content: safe center) {
-            .formula { justify-content: safe center; }
         }
         .formula-large { padding: 28px; }
         .inline-formula-block {
@@ -432,44 +429,6 @@
             .math-motto { font-size: 0.65rem; }
             .footer-quote { font-size: 0.95rem; }
         }
-        /* ── MAİL BUTONU ── */
-        .mail-button {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 44px;
-            height: 44px;
-            background-color: var(--box-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-            transition: border-color 0.3s ease, transform 0.2s ease;
-            text-decoration: none;
-        }
-        .mail-button:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-        .mail-button svg {
-            width: 18px;
-            height: 18px;
-            stroke: rgba(209, 196, 185, 0.55);
-            fill: none;
-            stroke-width: 1.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            transition: stroke 0.3s ease;
-        }
-        .mail-button:hover svg {
-            stroke: var(--accent-gold);
-        }
-        @media (max-width: 480px) {
-            .mail-button { bottom: 16px; right: 16px; width: 40px; height: 40px; }
-            .mail-button svg { width: 16px; height: 16px; }
-        }
     </style>
 </head>
 <body>
@@ -526,17 +485,20 @@
                 <p><strong>İç sistem (Y₁)</strong>; sindirim, bağışıklık, dolaşım, lenfatik, boşaltım ve üreme sistemlerinden oluşur. Y₁, dış sistemi (Y₂) doğrudan etkiler.</p>
                 <p><strong>Dış sistem (Y₂)</strong> ise kas, iskelet, fasya, tendon, eklemler ve deriden oluşan bir bütündür. Sistemdeki bir "çark", diğer bütün çarkları bir biçimde etkiler.</p>
                 <p>Bunlara ek olarak — üzerinde en somut biçimde çalışabileceğimiz yapı olması nedeniyle — <strong>Köprü</strong> ayrı bir bütün olarak ele alınmalıdır.</p>
-                <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban, transversus abdominis ve multifidus.</p>
+                <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban,transversus abdominis ve multifidus.</p>
                 <h2>Anlayışı Etkileyen Sistemler</h2>
                 <p>Anlayış tek bir noktadan oluşmaz; birden fazla sistemin kesişimidir.</p>
                 <h3>Algı ve Yorum</h3>
-                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. Interoception bir haritadır; farkındalık ise pusula gibidir.</p>
+                <p>Duyular dışarıdan ham veriyi alır; sinir sistemi bu veriyi işler ve bir yoruma varır. Beden yalnızca dışarıdan değil, içeriden de veri toplar. Buna <em>interoception</em> — iç algı — denir; beynin bedene ait oluşturduğu haritadır. Dikkat etmediğimiz yollar bizim için bilinmez olur ve doğru iletim sağlanamaz. Yöneldikçe yollar netleşir ve iletim sağlıklı bir hâl alır. İnteroception bir haritadır; farkındalık ise pusula gibidir.</p>
                 <p>Bu yorumlama her zaman doğru değildir. Dışarıda bir sorun varsa sistem bunu tehdit olarak yorumlayabilir. Örneğin kürek kemiğindeki bir ağrı, yanlış yorumlanarak kalp problemi olarak değerlendirilebilir. Bu, alarmların çalmasına ve sistemin ona göre organize olmasına yol açar. Yorumlama süreci geçmiş ve hâl çerçevesinde gerçekleşir; bu yüzden aynı durum farklı kişilerde farklı sonuçlar üretir.</p>
                 <h3>Zihinsel Deneyim = Fiziksel Yanıt</h3>
                 <p>Beyin, gerçek deneyimle zihinsel deneyim arasında tam bir ayrım yapmaz — özellikle duygusal yüklü içeriklerde. Bu yüzden çalıştığın yerin sorumluluklarını veya evinin sorumluluklarını yine omzuna alırsın. Somut olarak almıyorsundur aslında — ama mimari bu anlayışına fiziki boyutta yanıt verir. Düşünce ile gerçeklik arasındaki bu ayrımın yapılamaması, tehdit algısının neden bu kadar kolay kronikleştiğini açıklar.</p>
                 <h3>Ağrı: Hasar Değil, Sinyaldir</h3>
                 <p>Ağrı, bedenin verdiği bir sinyaldir — ama bu sinyal her zaman gerçek bir hasarı göstermez. Aynı fiziksel durumda iki kişi tamamen farklı ağrı deneyimleyebilir. Çünkü ağrı, hasarın büyüklüğüyle değil; sistemin o sinyali nasıl yorumladığıyla doğru orantılıdır. Bu yorum ise geçmiş ve hâl ekseninde şekillenir.</p>
-                <p>Bu yüzden ağrı bir sonuç değil, bir iletişimdir. Sistem bir şeye işaret ediyordur — bu bazen gerçek bir doku hasarı, bazen kronik tehdit algısının yarattığı yanlış alarm, bazen de sistemin dikkat çekmek istediği başka bir yerdeki dengesizliktir. Ağrıyı susturmak bu yüzden çoğu zaman çözüm değildir. Sinyal kesilir ama işaret ettiği şey kalmaya devam eder. Alarmı sessize almak, uyanman gerektiği gerçeğini değiştirmez.</p>
+                <p>Bu yüzden ağrı bir sonuç değil, bir iletişimdir. Sistem bir şeye işaret ediyordur — bu bazen gerçek bir doku hasarı, bazen kronik tehdit algısının yarattığı yanlış alarm, bazen de sistemin dikkat çekmek istediği başka bir yerdeki dengesizliktir. Ağrıyı susturmak bu yüzden çoğu zaman çözüm değildir. Sinyal kesilir ama işaret ettiği şey kalmaya devam eder.</p>
+                <blockquote>
+                    <p>Alarmı sessize almak, uyanman gerektiği gerçeğini değiştirmez.</p>
+                </blockquote>
             </div>
         </div>
         <hr class="section-divider">
@@ -554,13 +516,13 @@
                 </div>
                 <div class="highlight-safety">
                     <h3>Güven Durumu</h3>
-                    <p>Parasempatik sistem (dinlen / onar / sosyal bağ kur) devreye girer. Oksitosin, dopamin, serotonin ve büyüme hormonu gibi hormonlar salgılanır. Sindirim olması gerektiği gibi ilerler, kan dolaşımı tüm hücrelere erişir. Refleksif düşünce yerini analitik düşünceye bırakır. Sistem bu sefer gelecek inşası ve en iyi haline ulaşma üzerine enerjisini harcar.</p>
+                    <p>Parasempatik sistem (dinlen / onar / sosyal bağ kur) devreye girer. Oksitosin, dopamin, serotonin ve büyüme hormonu gibi hormonlar salgılanır. Sindirim olması gerektiği gibi ilerler, kan dolaşımı tüm hücrelere erişir. Refleksif düşünce yerini analitik düşünceye bırakır. Sistem bu sefer gelecek inşası ve en iyi hâline ulaşma üzerine enerjisini harcar.</p>
                 </div>
                 <p>Mesele hiç tehdit yaşamamak değildir. Sistem zaten tehdit ve güven arasında sürekli geçiş yapar. Asıl soru şudur: sistem tehditten çıkabiliyor mu? Bu geçiş kapasitesi, farkındalık ve köprünün sağlamlığıyla doğru orantılıdır. Psikoloji bedeni etkilediği gibi, bedenin psikolojiyi etkilemesi de kaçınılmazdır. Bu yüzden KÖKEN modelinde anlayış en temel değişkendir.</p>
                 <h3>HPA Ekseni ve Kronik Stres</h3>
                 <p>Bu döngüyü yöneten yapı hipotalamus-hipofiz-adrenal (HPA) eksenidir. Tehdit algılandığında hipotalamus sinyal üretir, hipofiz bu sinyali adrenal bezlere iletir ve kortizol salgılanır. Normalde kortizol yükselince sistem geri bildirim alır ve döngü durur. Ancak tehdit algısı kronikleşirse bu geri bildirim mekanizması bozulur; sistem sürekli kortizol üretmeye devam eder.</p>
-                <p>Sürekli kortizol salınımı, bitmeyen bir tetikte olma hâli yaratır. Tetikte kalınırsa bağışıklık ve sindirim üzerine harcanan efor azalır — çünkü öncelik her zaman hayatta kalmaktır. Yani sistem, durması gereken yerde duramaz hale gelir.</p>
-                <p>Kronik yüksek insülin seviyesi bu sürecin önemli bir parçasıdır. Hücreler sürekli yüksek insülin düzeyine maruz kaldığında reseptörler duyarsızlaşır. Kan şekeri hücreye giremez, enerji üretilemez; ama kanda şeker birikmeye devam eder. Sistem enerji üretemez hale gelirken kronik yorgunluk ve hücresel birikim kaçınılmaz olur.</p>
+                <p>Sürekli kortizol salınımı, bitmeyen bir tetikte olma hâli yaratır. Tetikte kalınırsa bağışıklık ve sindirim üzerine harcanan efor azalır — çünkü öncelik her zaman hayatta kalmaktır. Yani sistem, durması gereken yerde duramaz hâle gelir.</p>
+                <p>Kronik yüksek insülin seviyesi bu sürecin önemli bir parçasıdır. Hücreler sürekli yüksek insülin düzeyine maruz kaldığında reseptörler duyarsızlaşır. Kan şekeri hücreye giremez, enerji üretilemez; ama kanda şeker birikmeye devam eder. Sistem enerji üretemez hâle gelirken kronik yorgunluk ve hücresel birikim kaçınılmaz olur.</p>
                 <blockquote>
                     <p>Sistem aslında kusursuz bir matematikte işler. O kadar kusursuz ki bu kusursuzluk hatalara yol açar. Çünkü sistem doğru olanı değil, hayatta kalmayı seçer. Net bir akıldır bu — hayatta kalmak için kendine zarar vermesi, hatta sistemin kendini kapatması bile aslında işini ne kadar kusursuz yaptığını gösterir.</p>
                 </blockquote>
@@ -576,8 +538,8 @@
                 <p>Y₁'de olanların dışarıya yansıması Y₂'de görünür. Kas, eklem, fasya ve postür yalnızca hareketi sağlayan yapılar değildir; sistemin mevcut durumunu gösteren en belirgin faktörlerdir.</p>
                 <p>Y₂'nin temel sorusu şudur: <em>"Oluşan sonucu fiziksel olarak nasıl taşıyabilirim?"</em></p>
                 <ul>
-                    <li><strong>Tehdit durumunda:</strong> Kas tonusu artar, fasya sertleşir, eklem hareketi daralır, postür kapanır. Nefes sığlaşır, bakış daralır — tehdide odaklanmayı kolaylaştırmak için. Beden savaşmaya veya kaçmaya hazır hale gelir. Zihin sağlıklı düşünemez, net yanıt veremez; kararlar refleksif ve hayatta kalmaya yönelik olur. Burada da başlangıçta problem yoktur. Ancak sürekli bu modda kalmak problemleri doğurur. Y₂ adapte olur ve zamanla bu "normal" haline gelir. Gerginlik fark edilmez, hareket daralması olağan kabul edilir, ağrı normalleşir. Çözüm için üretilen yanıt, zamanla problemin kaynağına dönüşür.</li>
-                    <li><strong>Güven durumunda:</strong> Kaslar gevşer, savaşmak yerine uyum sağlar, akışkan ve elastik olur. Nefes derinleşir. Postür açılır. Hareket alanı genişler. Düşünce refleksif olmaktan çıkıp analitik hale gelir.</li>
+                    <li><strong>Tehdit durumunda:</strong> Kas tonusu artar, fasya sertleşir, eklem hareketi daralır, postür kapanır. Nefes sığlaşır, bakış daralır — tehdide odaklanmayı kolaylaştırmak için. Beden savaşmaya veya kaçmaya hazır hale gelir. Zihin sağlıklı düşünemez, net yanıt veremez; kararlar refleksif ve hayatta kalmaya yönelik olur. Burada da başlangıçta problem yoktur. Ancak sürekli bu modda kalmak problemleri doğurur. Y₂ adapte olur ve zamanla bu "normal" hâline gelir. Gerginlik fark edilmez, hareket daralması olağan kabul edilir, ağrı normalleşir. Çözüm için üretilen yanıt, zamanla problemin kaynağına dönüşür.</li>
+                    <li><strong>Güven durumunda:</strong> Kaslar gevşer, savaşmak yerine uyum sağlar, akışkan ve elastik olur. Nefes derinleşir. Postür açılır. Hareket alanı genişler. Düşünce refleksif olmaktan çıkıp analitik hâle gelir.</li>
                 </ul>
                 <h2>Y₁ ve Y₂ Arasındaki Etkileşim</h2>
                 <p>Sinir sistemi iletiyi alır ve yorumlar, endokrin sistem bu yoruma göre yanıt oluşturur. Bu yanıt Y₁ ve Y₂ üzerinde doğrudan etkiye sahiptir. İletiyi alıp yorumlamak ise geçmiş ve hâlimiz çerçevesinde gerçekleşir. Y₁ üzerindeki etkiler hangi sisteme öncelik verileceğine göre değişir. Y₁'deki tepki sonucu Y₂'de bir sonuç doğar. Bu döngü kendini tekrar eder. Y₂'deki sonuç baştaki anlayışa geri döner.</p>
@@ -598,10 +560,10 @@
         <div id="KopruVeVagus">
             <h2>Köprü: Sistemin Merkezi</h2>
             <div class="content">
-                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrusal değil, "yukarıdan aşağıya (zihinden bedene) ve aşağıdan yukarıya (bedenden zihne) kesişim" prensibiyle çalışır. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
+                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrusal değil, "yukarıdan aşağıya (zihinden bedene) ve aşağıdan yukarıya (bedenden zihne) kesişim" prensibiyle işler. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
                 <p>Köprüyü oluşturan dört temel yapı: diyafram, pelvik taban, transversus abdominis ve multifidus. Bu dört yapı ayrı parçalar olmakla birlikte tek bir mekanizma gibi hareket eder. Köprü yalnızca kaslardan oluşan bir yapı değildir; iç basıncı yöneten ve tüm sistemi organize eden merkezdir. Bu ifade yalnızca mecazi değildir; aynı zamanda fiziki olarak da bedenin merkezinde yer alır.</p>
                 <h3>IAP: Köprünün Mekanizması</h3>
-                <p>Köprüyü oluşturan dört yapı birbirinden bağımsız çalışmaz; birlikte bir basınç sistemi oluşturur. Nefes alırken diyafram aşağı iner, pelvik taban buna eşlik eder. Bu sırada transversus abdominis ve multifidus devreye girerek karın içi basıncı (IAP) dengeler ve yapıyı stabil tutar. Nefes verirken diyafram yukarı çekilir, pelvik taban toparlanır; transversus abdominis ve multifidus yine bu hareketi kontrol eder.</p>
+                <p>Köprüyü oluşturan dört yapı birbirinden bağımsız çalışmaz; birlikte bir basınç sistemi oluşturur. Nefes alırken diyafram aşağı iner, pelvik taban buna eşlik eder. Bu sırada transversus ve multifidus devreye girerek karın içi basıncı (IAP) dengeler ve yapıyı stabil tutar. Nefes verirken diyafram yukarı çekilir, pelvik taban toparlanır; transversus ve multifidus yine bu hareketi kontrol eder.</p>
                 <p>Bu döngü karın içinde bir basınç dengesi oluşturur. Denge sağlandığında iç organlar yerinde tutulur, omurga desteklenir, yük tüm sisteme eşit dağılır. Köprü işlevini yitirdiğinde bu denge bozulur — yük belirli noktalara yığılır, iç organlar mekanik baskıya maruz kalır ve çalışmalarında aksamalar olur.</p>
                 <h3>Diyaframın Sistem Üzerine Etkileri</h3>
                 <p>Diyafram hareketi iç organlara ritmik olarak masaj yapar. Vagus siniri üzerinde doğrudan etkiye sahiptir. Vagus sinirinin dikkat çekici bir özelliği vardır: liflerinin yaklaşık %80'i bedenden beyne bilgi taşır. Bu, köprü üzerinden sistemi etkilemenin neden mümkün olduğunu açıklar — sinyal sadece yukarıdan aşağıya değil, aşağıdan yukarıya da iletilir.</p>
@@ -611,8 +573,8 @@
                 <p>Nefes alış verişimiz, güvende mi tehdit modunda mı olduğumuzu gösteren en önemli dışsal göstergedir. Tehdit anında nefes düzensizleşir ve sığlaşır. Güvende olunduğunda derin ve düzenli nefes alınabilir. Sığ nefes sistem için tehdit sinyalidir. Derin nefes ise sistemin güvende olduğunun işaretidir. Bu ilişki iki yönlüdür: tehdit altındaysak nefesimiz sığlaşır; nefesimiz sığsa tehdit altında hissederiz. Döngünün kırılamamasının temel nedeni bu iki yönlülüktür. Nefes kan dolaşımı demektir. Dolaşım ise besinlerin ve diğer maddelerin hücrelere aktarılması, atıkların uzaklaştırılması anlamına gelir.</p>
                 <h3>Köprü ve Döngünün Kırılması</h3>
                 <p>Köprü merkezdir; çünkü tüm sistemler üzerinde etkisi olan ve doğrudan müdahale edebildiğimiz, kalıcı ve sürdürülebilirlik açısından tek alandır. Hem Y₁'i hem Y₂'yi etkileyen, yukarıdan aşağıya ve aşağıdan yukarıya çift yönlü etkisiyle sistemin tamamına ulaşabilen tek noktadır.</p>
-                <p>Döngüden bilinçli olarak çıkabilmenin yolu köprü üzerine çalışmaktan geçer. Anlayışımızı doğrudan değiştiremiyorsak — ki bu çoğu zaman zordur — köprüyü sağlamlaştırmak en net çözümdür. Köprü iç ve dış sistem arasındaki baskıyı azaltır ve geri dönüşteki baskıyı hafifletir. Bu zamanla sistemin olması gereken hale gelmesine yardımcı olur.</p>
-                <p>Dışarıdan müdahale, sistemi hazırlamak veya hazır olan sistemi bir adım öteye taşımak için önemli bir yere sahiptir. Ancak süreler ve yöntemler kişiden kişiye değişir — burada bir reçete sunmak mümkün değildir. İnsan belli sınırları olan bir varlık değil, karmaşık bir organizmadır. Süreklilik için köprü üzerine çalışmak gerekir. Kendi haline bırakılan sistem o döngüde kalmaya devam eder. Nadir değişimler yaşansa da bunlar istisnadır; temelinde yine anlayıştaki bir kırılma yatar. Sistemde kalıcı bir değişim oluşabilmesi için anlayışın yönünün değişmesi gerekir. Anlayışın yönünü değiştirmenin en doğrudan yolu ise köprü üzerine çalışmaktan geçer.</p>
+                <p>Döngüden bilinçli olarak çıkabilmenin yolu köprü üzerine çalışmaktan geçer. Anlayışımızı doğrudan değiştiremiyorsak — ki bu çoğu zaman zordur — köprüyü sağlamlaştırmak en net çözümdür. Köprü iç ve dış sistem arasındaki baskıyı azaltır ve geri dönüşteki baskıyı hafifletir. Bu zamanla sistemin olması gereken hâle gelmesine yardımcı olur.</p>
+                <p>Dışarıdan müdahale, sistemi hazırlamak veya hazır olan sistemi bir adım öteye taşımak için önemli bir yere sahiptir. Ancak süreler ve yöntemler kişiden kişiye değişir — burada bir reçete sunmak mümkün değildir. İnsan belli sınırları olan bir varlık değil, karmaşık bir organizmadır. Süreklilik için köprü üzerine çalışmak gerekir. Kendi hâline bırakılan sistem o döngüde kalmaya devam eder. Nadir değişimler yaşansa da bunlar istisnadır; temelinde yine anlayıştaki bir kırılma yatar. Sistemde kalıcı bir değişim oluşabilmesi için anlayışın yönünün değişmesi gerekir. Anlayışın yönünü değiştirmenin en doğrudan yolu ise köprü üzerine çalışmaktan geçer.</p>
                 <h2>Anlayış Nasıl Değişir?</h2>
                 <p>Bu modelin kırılma noktası burasıdır: anlayış bir anda değişmez. Anlayış aslında bir yöndür; farkındalık ise bu yönü belirleyen şeydir. Farkındalık köprünün sağlamlaşmasıyla zemin bulur ve zamanla yön değişir. Bu yüzden anlayışı doğrudan değiştirmeye çalışmak çoğu zaman işe yaramaz — köprü üzerine çalışmak, farkındalığın oluşabileceği zemini hazırlar ve anlayış buradan dönüşür.</p>
                 <p>Özellikle tehdit durumundayken anlayış üzerine doğrudan çalışmak mümkün değildir. Çünkü amigdala hayatta kalmaya odaklanır; tehdidi merkeze alır ve geri kalan detayları göz ardı eder. Bu durumda anlayışı değiştirmeye çalışmak çoğu zaman sonuç vermez. Y₁ üzerine doğrudan müdahale sınırlıdır ve sürdürülebilirlik açısından sağlıklı olmayabilir. Y₂'ye yapılan müdahaleler ise tek başına kalıcı olmaz. Çünkü sistem, bilinmeyen yeni bir yoldansa, tanıdık olan eski yolu — yanlış dahi olsa — tercih eder.</p>
@@ -632,7 +594,7 @@
                 <p>Bedenin mimarisi, bir döngü sistemini anlatan bir denklem üzerine kurulmuştur. Mevcut mimari yapının sunduğu anlayış doğrultusunda eyleme geçeriz. Anlayış eylemi doğurur; eylem mimariyi değiştirir. Yeni mimari, yeni bir anlayış üretir.</p>
                 <div class="loop-title">Mimari bir döngüdür:</div>
                 <div class="loop-box">
-                    $$A \rightarrow \mathbf{\text{Eylem}} \rightarrow \Delta \mathbf{\text{BM}} \rightarrow \mathbf{\text{Yeni Mimari}} \rightarrow \mathbf{\text{Yeni }} A$$
+                    $$\Delta\mathbf{\text{BM}} \rightarrow A \rightarrow \mathbf{\text{Eylem}} \rightarrow \mathbf{\text{Yeni BM}} \rightarrow \mathbf{\text{Yeni }}{A}$$
                 </div>
                 <p>Aynı anlayış, aynı eylemi üretir. Aynı eylem, aynı mimariyi inşa eder. Döngüyü kırmadan sonuç değişmez.</p>
                 <h2>Modelin Matematiksel Yapısı</h2>
@@ -671,7 +633,7 @@
                 <p>Yoğunluk üç bileşenden oluşur:</p>
                 <ul>
                     <li><strong>(Y₁) İç Sistem:</strong> Sinir sistemi, iç organlar, hormonal denge, metabolik durum.</li>
-                    <li><strong>(K) Köprü:</strong> Diyafram, pelvik taban, multifidus ve transversus abdominis.</li>
+                    <li><strong>(K) Köprü:</strong> Diyafram, pelvik taban, multifidus ve transversus.</li>
                     <li><strong>(Y₂) Dış Sistem:</strong> Postür, kas tonusu, fasyal yapı, eklem organizasyonu.</li>
                 </ul>
                 <p>İç sistem gerilimi üretir, dış sistem taşır:</p>
@@ -718,7 +680,7 @@
                 </blockquote>
                 <h3>Kapalı Nedensellik Döngüsü ve Yanlışın "Rahatlığı"</h3>
                 <p>Mevcut mimarinin sinir sistemine gönderdiği sinyaller bir anlayış üretir; bu anlayış ise otonom yanıtlar üzerinden mimariyi anlık olarak yeniden şekillendirir.</p>
-                <p>Sistemin bilinçli bir müdahale olmadan kendi kendine iyileşememesinin ve problemlerin kronik hale gelmesinin kökeni, biyolojik <strong>Allostazi</strong> mekanizmasıdır. Allostazi; bedenin dış ve iç şartlara uyum sağlamak adına dinamik bir şekilde "değişim yoluyla istikrar" üretme çabasıdır.</p>
+                <p>Sistemin bilinçli bir müdahale olmadan kendi kendine iyileşememesinin ve problemlerin kronik hâle gelmesinin kökeni, biyolojik <strong>Allostazi</strong> mekanizmasıdır. Allostazi; bedenin dış ve iç şartlara uyum sağlamak adına dinamik bir şekilde "değişim yoluyla istikrar" üretme çabasıdır.</p>
                 <p>Bu mekanizma sinirsel boyutta "doğru" veya "yanlış" ile ilgilenmez; tek bir hedefi vardır: tutarlı olmak. Beyin kronik bir tehdit algıladığında — ister zihinsel bir sorumluluk yükü, ister fiziksel bir problem — zamanla patolojik dengeyi yeni "normal" ilan eder ve sistemi bu yapıda kararlı tutmak için çalışır.</p>
                 <p>Yanlış duruşun sana rahat geliyor olmasının sebebi budur. Alışmış olduğun yol, yanlış da olsa senin doğrundur.</p>
                 <h3>Enerji Neden İnşaya Gitmiyor?</h3>
@@ -731,7 +693,7 @@
                 <p>Bu süreç fark edilmeden her gün tekrar eder. Ve her tekrar, sistemi bir adım daha aynı yöne iter.</p>
                 <p>Bu doğrusal azalış, sistemin adaptasyon sınırını — eşik değerini — aşana kadar sessizce birikir ve nihayetinde semptomlar görünür olmaya başlar. İç algımız (interoception) ne kadar gelişmişse, erken fark edebilme ihtimali o kadar artar. Bu süreç herkeste işler; ama hızı ve şiddeti kişiden kişiye değişir — bu fark yoğunluk ve zaman bileşenlerinden gelir.</p>
                 <h3>Uyaran ile Tepki Arasındaki Boşluk</h3>
-                <p>Normalde yaptığın şeyleri yapmaya devam ederek yeni bir mimari inşa edemezsin. Çünkü seni buraya getiren şey, zaten yaptığın şeylerin toplamıdır. Süreç kendi haline bırakıldığında sistemin kendiliğinden değişememesinin sebebi, hücrelerin maruz kaldığı kronik kimyasal yankıyı zamanla kendi genetik ekspresyonu haline getirmesidir — buna <strong>Epigenetik Kilitleme</strong> denir. Kısaca: mevcut yapıyı koruma çabası.</p>
+                <p>Normalde yaptığın şeyleri yapmaya devam ederek yeni bir mimari inşa edemezsin. Çünkü seni buraya getiren şey, zaten yaptığın şeylerin toplamıdır. Süreç kendi hâline bırakıldığında sistemin kendiliğinden değişememesinin sebebi, hücrelerin maruz kaldığı kronik kimyasal yankıyı zamanla kendi genetik ekspresyonu hâline getirmesidir — buna <strong>Epigenetik Kilitleme</strong> denir. Kısaca: mevcut yapıyı koruma çabası.</p>
                 <p>Bu kısırdöngüyü kıracak tek güç, anın içine sızan farkındalıktır.</p>
                 <blockquote>
                     <p>Farkındalık; uyaran ile otomatik tepki arasına yerleşen bilinçli duraklama anıdır. Üzerindeki bir karıncayı refleks olarak üfleyip atmak — tehdit odaklı otomatik tepki — yıkım döngüsünü besler. Elini karıncanın altına koyup ona bir zemin sunmak — farkındalık odaklı bilinçli yanıt — ise döngüyü kırar ve yeni bir mimari oluşmasına yol açar. Zamanla bu yol daha kalıcı olur. Artık refleksif olarak elini zemin yapmak için uzatırsın. Aynı uyaran, farklı bir sonuç üretmeye başlar.</p>
@@ -756,7 +718,7 @@
             <h2>Yeniden İnşa: Çıkış Yolu ve Merkez</h2>
             <div class="content">
                 <p>Anlayış üzerine çalışmak, anlayışını fark etmekle başlar. Fark ettiğin an değişim kaçınılmaz olarak başlar — çünkü görülen şeyler değişmeye başlar.</p>
-                <p>Ama çoğu zaman anlayışı doğrudan fark etmek zordur. Bu yüzden köprü üzerine çalışmak gerekir. Köprü, farkındalık anları için zemin açar. Mimari sallantıdayken duraksayıp bakmak güçtür; köprü sağlamlaştıkça o <em>es</em>ler için alan açılır.</p>
+                <p>Ama çoğu zaman anlayışı doğrudan fark etmek zordur. Bu yüzden köprü üzerine çalışmak gerekir. Köprü, farkındalık anları için zemin açar. Mimari sallantıdayken duraksayıp bakmak güçtür; köprü sağlamlaştıkça o 'es'ler için alan açılır.</p>
                 <p>Mekanizma farkındalıkla başlar. Farkındalık bakış açısını genişletir, bakış açısı eylem kapasitemizi artırır, eylem ise zamanla anlayışı dönüştürür.</p>
                 <p>Bazen büyük kırılmalar olur — büyük bir olay yaşanır ve kişi tamamen değişir. Bu da mimarinin birikimiyle gerçekleşir; o kırılma zeminsiz gelmez.</p>
                 <p>Değişim sorumluluk almakla başlar. Dışarıdaki tetikleyiciyi suçladığımız sürece değişim zordur. Tetikleyicinin beden üzerindeki etkisini görebilirseniz anlayışınızı görebilirsiniz.</p>
@@ -835,11 +797,5 @@
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
 </div>
-<a href="mailto:kokensystems@gmail.com" class="mail-button" aria-label="E-posta gönder">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <rect x="2" y="4" width="20" height="16" rx="2"/>
-        <polyline points="2,4 12,13 22,4"/>
-    </svg>
-</a>
 </body>
 </html>
