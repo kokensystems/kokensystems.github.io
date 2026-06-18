@@ -238,11 +238,50 @@
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             max-width: 100%;
             box-sizing: border-box;
             overflow-x: auto;
+        }
+        @supports (justify-content: safe center) {
+            .formula, .loop-box { justify-content: safe center; }
+        }
+        /* ── MAİL BUTONU ── */
+        .mail-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            background-color: #3A2A1E;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+        .mail-button:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+        .mail-button svg {
+            width: 18px;
+            height: 18px;
+            stroke: rgba(229, 197, 131, 0.5);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+        .mail-button:hover svg { stroke: var(--accent-gold); }
+        @media (max-width: 480px) {
+            .mail-button { bottom: 16px; right: 16px; width: 40px; height: 40px; }
+            .mail-button svg { width: 16px; height: 16px; }
         }
         .formula-large { padding: 28px; }
         .inline-formula-block {
@@ -269,7 +308,7 @@
             box-sizing: border-box;
             max-width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             overflow-x: auto;
@@ -293,8 +332,7 @@
         /* ── MATHJax ORTALAMA FİX ── */
         mjx-container[display="true"] {
             display: block !important;
-            text-align: center !important;
-            margin: 0.5em auto !important;
+            text-align: center;
         }
         /* ── VURGU SATIRI ── */
         .emphasis-line {
@@ -538,12 +576,12 @@
                 <p>Y₁'de olanların dışarıya yansıması Y₂'de görünür. Kas, eklem, fasya ve postür yalnızca hareketi sağlayan yapılar değildir; sistemin mevcut durumunu gösteren en belirgin faktörlerdir.</p>
                 <p>Y₂'nin temel sorusu şudur: <em>"Oluşan sonucu fiziksel olarak nasıl taşıyabilirim?"</em></p>
                 <ul>
-                    <li><strong>Tehdit durumunda:</strong> Kas tonusu artar, fasya sertleşir, eklem hareketi daralır, postür kapanır. Nefes sığlaşır, bakış daralır — tehdide odaklanmayı kolaylaştırmak için. Beden savaşmaya veya kaçmaya hazır hale gelir. Zihin sağlıklı düşünemez, net yanıt veremez; kararlar refleksif ve hayatta kalmaya yönelik olur. Burada da başlangıçta problem yoktur. Ancak sürekli bu modda kalmak problemleri doğurur. Y₂ adapte olur ve zamanla bu "normal" hâline gelir. Gerginlik fark edilmez, hareket daralması olağan kabul edilir, ağrı normalleşir. Çözüm için üretilen yanıt, zamanla problemin kaynağına dönüşür.</li>
+                    <li><strong>Tehdit durumunda:</strong> Kas tonusu artar, fasya sertleşir, eklem hareketi daralır, postür kapanır. Nefes sığlaşır, bakış daralır — tehdide odaklanmayı kolaylaştırmak için. Beden savaşmaya veya kaçmaya hazır hâle gelir. Zihin sağlıklı düşünemez, net yanıt veremez; kararlar refleksif ve hayatta kalmaya yönelik olur. Burada da başlangıçta problem yoktur. Ancak sürekli bu modda kalmak problemleri doğurur. Y₂ adapte olur ve zamanla bu "normal" hâline gelir. Gerginlik fark edilmez, hareket daralması olağan kabul edilir, ağrı normalleşir. Çözüm için üretilen yanıt, zamanla problemin kaynağına dönüşür.</li>
                     <li><strong>Güven durumunda:</strong> Kaslar gevşer, savaşmak yerine uyum sağlar, akışkan ve elastik olur. Nefes derinleşir. Postür açılır. Hareket alanı genişler. Düşünce refleksif olmaktan çıkıp analitik hâle gelir.</li>
                 </ul>
                 <h2>Y₁ ve Y₂ Arasındaki Etkileşim</h2>
                 <p>Sinir sistemi iletiyi alır ve yorumlar, endokrin sistem bu yoruma göre yanıt oluşturur. Bu yanıt Y₁ ve Y₂ üzerinde doğrudan etkiye sahiptir. İletiyi alıp yorumlamak ise geçmiş ve hâlimiz çerçevesinde gerçekleşir. Y₁ üzerindeki etkiler hangi sisteme öncelik verileceğine göre değişir. Y₁'deki tepki sonucu Y₂'de bir sonuç doğar. Bu döngü kendini tekrar eder. Y₂'deki sonuç baştaki anlayışa geri döner.</p>
-                <p>Y₁ ve Y₂ ayrı sistemler değildir. Günü tanımlamak için nasıl ki gece ve gündüz diye isimlendiriyorsak, bunları da tanımlamak için ayrıymış gibi ele alıyoruz. Y₁ içeride organize olur, Y₂ bunu dışarıda görünür kılar. İki taraf birbirini besler ve bu döngüyü kısır hale getirir. Sürekli gergin bir kas, sinir sistemine tehdit olarak yansır. Kapanmış postür nefes düzenini bozar; nefes düzensizleşince bu yeniden tehdit olarak algılanır. Kısıtlı hareket dolaşımı ve lenf sisteminin çalışmasını bozar.</p>
+                <p>Y₁ ve Y₂ ayrı sistemler değildir. Günü tanımlamak için nasıl ki gece ve gündüz diye isimlendiriyorsak, bunları da tanımlamak için ayrıymış gibi ele alıyoruz. Y₁ içeride organize olur, Y₂ bunu dışarıda görünür kılar. İki taraf birbirini besler ve bu döngüyü kısır hâle getirir. Sürekli gergin bir kas, sinir sistemine tehdit olarak yansır. Kapanmış postür nefes düzenini bozar; nefes düzensizleşince bu yeniden tehdit olarak algılanır. Kısıtlı hareket dolaşımı ve lenf sisteminin çalışmasını bozar.</p>
                 <p>Y₁ ve Y₂ arasındaki iletişim fasyal ağ üzerinden gerçekleşir. Fasya vücudumuzu saran tek parça, bütünsel bir ağ gibidir; bütün iç iletim bu hat üzerinden gerçekleşir. Hücreler arası sıvının değişmesi fasyal ağın iletim yolunu değiştirir. Ayaktaki bir tıkanıklık çenedeki gerginliğe sebep olabilir. Bunun en net örneği çene sıkmasında görülür; ayaktaki hattan başlayıp yukarı çeneye kadar birkaç bölgede gerginlik görülür. Temeli strestir, yolu ise baldır, pelvik taban, sırt, boyun ve çene üzerindedir. Bütün bir parçanın bir tarafını çekiştirirseniz bütünün tamamında gerginlik oluşması kaçınılmazdır.</p>
                 <h2>Fiziksel Yansıma</h2>
                 <p>Fiziki bedenimizdeki sonuçlar anlayışımıza göre şekillenir.</p>
@@ -617,7 +655,7 @@
                     Bakış açısı daraldıkça sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir.<br>
                     \(F = +1\) ise mimari olabileceği en uygun açıdadır: $$B = 1$$
                     Bu durumda bakış açısı sonucu etkilemez; inşa olması gerektiği gibi sürer. $$0 < B \le 1$$</li>
-                    <li><strong>(G) Geçmiş:</strong> Yüklediğimiz anlamlar, deneyimler, inançlar, öğrendiklerimiz. Geçmiş, hâl ile karşılıklı etkileşim halindedir.</li>
+                    <li><strong>(G) Geçmiş:</strong> Yüklediğimiz anlamlar, deneyimler, inançlar, öğrendiklerimiz. Geçmiş, hâl ile karşılıklı etkileşim hâlindedir.</li>
                 </ul>
                 <div class="inline-formula-block">$$G \rightleftharpoons H$$</div>
                 <ul>
@@ -797,5 +835,11 @@
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
     </div>
 </div>
+<a href="mailto:kokensystems@gmail.com" class="mail-button" aria-label="E-posta gönder">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <polyline points="2,4 12,13 22,4"/>
+    </svg>
+</a>
 </body>
 </html>
