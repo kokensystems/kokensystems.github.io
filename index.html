@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KÖKEN / Bedenin Mimarisi — Anlayış değişmeden, hiçbir şey gerçekten değişmez. Semptomların değil, onları üreten yapının sistematik analizi.">
+    <meta property="og:title" content="KÖKEN / Bedenin Mimarisi">
+    <meta property="og:description" content="Anlayış değişmeden, hiçbir şey gerçekten değişmez. Beden sonuç üretmez; mimariyi yansıtır.">
+    <meta property="og:type" content="website">
+    <!-- og:image: Bu görseli sunucuya yükledikten sonra URL'i güncelleyin -->
+    <meta property="og:image" content="https://kokensystems.com/og-image.png">
     <title>KÖKEN / Bedenin Mimarisi</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] },
+            options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+        };
+    </script>
     <style>
         :root {
             --bg-color: #1A1310;
@@ -20,7 +32,7 @@
         }
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 72px;
         }
         body {
             background-color: var(--bg-color);
@@ -238,14 +250,11 @@
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             max-width: 100%;
             box-sizing: border-box;
             overflow-x: auto;
-        }
-        @supports (justify-content: safe center) {
-            .formula, .loop-box { justify-content: safe center; }
         }
         /* ── MAİL BUTONU ── */
         .mail-button {
@@ -284,6 +293,20 @@
             .mail-button svg { width: 16px; height: 16px; }
         }
         .formula-large { padding: 28px; }
+        .formula-scroll {
+            padding: 0;
+            overflow-x: auto;
+        }
+        .formula-scroll .formula-inner {
+            display: inline-block;
+            min-width: 100%;
+            padding: 24px;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+        .formula-scroll mjx-container[display="true"] {
+            text-align: left !important;
+        }
         .inline-formula-block {
             display: block;
             text-align: center;
@@ -308,7 +331,7 @@
             box-sizing: border-box;
             max-width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             overflow-x: auto;
@@ -329,7 +352,7 @@
             align-items: center;
         }
         .time-align-row:last-child { margin-bottom: 0; }
-        /* ── MATHJax ORTALAMA FİX ── */
+        /* ── MATHJax ORTALAMA ── */
         mjx-container[display="true"] {
             display: block !important;
             text-align: center;
@@ -401,7 +424,7 @@
             letter-spacing: 3px;
             color: var(--accent-gold);
             opacity: 0.55;
-            margin-top: 28px;
+            margin-top: 36px;
             text-transform: uppercase;
         }
         /* ── FOOTER ALANI ── */
@@ -441,6 +464,11 @@
             padding-top: 30px;
             letter-spacing: 0.5px;
         }
+        .footer-disclaimer {
+            font-size: 0.82rem;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
         @media (max-width: 768px) {
             .nav-item { font-size: 0.68rem; padding: 20px 8px; }
             .header-title { font-size: 2rem; }
@@ -458,7 +486,7 @@
             .content p { margin-bottom: 24px; }
             blockquote { padding: 20px 20px; }
             .highlight-threat, .highlight-safety { padding: 20px; }
-            .formula { padding: 16px 8px; margin: 25px 0 35px 0; justify-content: flex-start; }
+            .formula { padding: 16px 8px; margin: 25px 0 35px 0; }
             .formula .MathJax { font-size: 88% !important; }
             .formula-large .MathJax { font-size: 82% !important; }
             .loop-box { padding: 20px 6px; margin: 25px 0; }
@@ -479,7 +507,7 @@
         <a href="#kisirdongu" class="nav-item">Kısırdöngü</a>
         <a href="#yeniden-insa" class="nav-item">Yeniden İnşa</a>
         <a href="#beden-sozlugu" class="nav-item">Beden Sözlüğü</a>
-        <a href="#kokenin-ozu" class="nav-item">Köken'in Özü</a>
+        <a href="#kokenin-ozu" class="nav-item">KÖKEN'in Özü</a>
     </div>
 </nav>
 <div class="main-wrapper">
@@ -523,7 +551,7 @@
                 <p><strong>İç sistem (Y₁)</strong>; sindirim, bağışıklık, dolaşım, lenfatik, boşaltım ve üreme sistemlerinden oluşur. Y₁, dış sistemi (Y₂) doğrudan etkiler.</p>
                 <p><strong>Dış sistem (Y₂)</strong> ise kas, iskelet, fasya, tendon, eklemler ve deriden oluşan bir bütündür. Sistemdeki bir "çark", diğer bütün çarkları bir biçimde etkiler.</p>
                 <p>Bunlara ek olarak — üzerinde en somut biçimde çalışabileceğimiz yapı olması nedeniyle — <strong>Köprü</strong> ayrı bir bütün olarak ele alınmalıdır.</p>
-                <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban,transversus abdominis ve multifidus.</p>
+                <p><strong>Köprü (K)</strong>: Diyafram, pelvik taban, transversus abdominis ve multifidus.</p>
                 <h2>Anlayışı Etkileyen Sistemler</h2>
                 <p>Anlayış tek bir noktadan oluşmaz; birden fazla sistemin kesişimidir.</p>
                 <h3>Algı ve Yorum</h3>
@@ -598,7 +626,7 @@
         <div id="KopruVeVagus">
             <h2>Köprü: Sistemin Merkezi</h2>
             <div class="content">
-                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrusal değil, "yukarıdan aşağıya (zihinden bedene) ve aşağıdan yukarıya (bedenden zihne) kesişim" prensibiyle işler. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
+                <p>Köprü, sistemde doğrudan müdahale edebildiğimiz tek alandır. Sistem doğrudan değil, "yukarıdan aşağıya (zihinden bedene) ve aşağıdan yukarıya (bedenden zihne) kesişim" prensibiyle işler. Anlayış sistemin mimarıdır, ancak köprü bu mimarinin bedendeki fiziksel hareket noktasıdır — kaldırıcı gücüdür. Zihin kilitlendiğinde, mimari hareketi köprüden başlatır.</p>
                 <p>Köprüyü oluşturan dört temel yapı: diyafram, pelvik taban, transversus abdominis ve multifidus. Bu dört yapı ayrı parçalar olmakla birlikte tek bir mekanizma gibi hareket eder. Köprü yalnızca kaslardan oluşan bir yapı değildir; iç basıncı yöneten ve tüm sistemi organize eden merkezdir. Bu ifade yalnızca mecazi değildir; aynı zamanda fiziki olarak da bedenin merkezinde yer alır.</p>
                 <h3>IAP: Köprünün Mekanizması</h3>
                 <p>Köprüyü oluşturan dört yapı birbirinden bağımsız çalışmaz; birlikte bir basınç sistemi oluşturur. Nefes alırken diyafram aşağı iner, pelvik taban buna eşlik eder. Bu sırada transversus ve multifidus devreye girerek karın içi basıncı (IAP) dengeler ve yapıyı stabil tutar. Nefes verirken diyafram yukarı çekilir, pelvik taban toparlanır; transversus ve multifidus yine bu hareketi kontrol eder.</p>
@@ -606,7 +634,10 @@
                 <h3>Diyaframın Sistem Üzerine Etkileri</h3>
                 <p>Diyafram hareketi iç organlara ritmik olarak masaj yapar. Vagus siniri üzerinde doğrudan etkiye sahiptir. Vagus sinirinin dikkat çekici bir özelliği vardır: liflerinin yaklaşık %80'i bedenden beyne bilgi taşır. Bu, köprü üzerinden sistemi etkilemenin neden mümkün olduğunu açıklar — sinyal sadece yukarıdan aşağıya değil, aşağıdan yukarıya da iletilir.</p>
                 <p>Beyin tehdidi algıladığında sadece Vagus'un %20'lik kısıtlı çıkış hattını kullanmaz; çünkü sinirsel lokal emirler tüm mimariyi organize etmeye yetmez. Tehdit anında kan yoluyla tüm sisteme kimyasal bir bombardıman — kortizol ve adrenalin — gerçekleşir ve fasya sıvısal olarak kilitlenir. Bu kimyasal alarmı zihinle doğrudan kapatamayız; ancak köprü aracılığıyla, Vagus'un %80'lik mekanoreseptör hattı üzerinden beyne "Fiziksel olarak güvendeyiz" mekanik emrini göndererek döngüyü kırabiliriz.</p>
-                <p>Vagus bağırsakla doğrudan bağlantılıdır; diyaframın hareketi bağırsak hareketlerini de etkiler. Sindirim daha doğru çalışır, besinler daha verimli parçalanır, enflamasyon azalır. Diyafram, fasyal ağ üzerinde de doğrudan etkiye sahiptir. Kalbin çalışma biçimini etkiler, lenf sistemine katkı sağlar, böbrek üstü bezlerinin daha dengeli çalışmasına yardımcı olur. Vagus'un aktif olması parasempatik sisteme geçişin anahtarıdır. Vagus aracılığıyla amigdala sakinleşir ve frontal lob daha sağlıklı çalışır. <em>Bu yüzden beden üzerine çalışmak, zihin üzerine çalışmaktan daha kararlı ve doğrudan bir yoldur.</em></p>
+                <p>Vagus bağırsakla doğrudan bağlantılıdır; diyaframın hareketi bağırsak hareketlerini de etkiler. Sindirim daha doğru çalışır, besinler daha verimli parçalanır, enflamasyon azalır. Diyafram, fasyal ağ üzerinde de doğrudan etkiye sahiptir. Kalbin çalışma biçimini etkiler, lenf sistemine katkı sağlar, böbrek üstü bezlerinin daha dengeli çalışmasına yardımcı olur. Vagus'un aktif olması parasempatik sisteme geçişin anahtarıdır. Vagus aracılığıyla amigdala sakinleşir ve frontal lob daha sağlıklı çalışır.</p>
+                <blockquote>
+                    <p>Bu yüzden beden üzerine çalışmak, zihin üzerine çalışmaktan daha kararlı ve doğrudan bir yoldur.</p>
+                </blockquote>
                 <h3>Nefes ve Sistem</h3>
                 <p>Nefes alış verişimiz, güvende mi tehdit modunda mı olduğumuzu gösteren en önemli dışsal göstergedir. Tehdit anında nefes düzensizleşir ve sığlaşır. Güvende olunduğunda derin ve düzenli nefes alınabilir. Sığ nefes sistem için tehdit sinyalidir. Derin nefes ise sistemin güvende olduğunun işaretidir. Bu ilişki iki yönlüdür: tehdit altındaysak nefesimiz sığlaşır; nefesimiz sığsa tehdit altında hissederiz. Döngünün kırılamamasının temel nedeni bu iki yönlülüktür. Nefes kan dolaşımı demektir. Dolaşım ise besinlerin ve diğer maddelerin hücrelere aktarılması, atıkların uzaklaştırılması anlamına gelir.</p>
                 <h3>Köprü ve Döngünün Kırılması</h3>
@@ -720,13 +751,17 @@
                 <p>Mevcut mimarinin sinir sistemine gönderdiği sinyaller bir anlayış üretir; bu anlayış ise otonom yanıtlar üzerinden mimariyi anlık olarak yeniden şekillendirir.</p>
                 <p>Sistemin bilinçli bir müdahale olmadan kendi kendine iyileşememesinin ve problemlerin kronik hâle gelmesinin kökeni, biyolojik <strong>Allostazi</strong> mekanizmasıdır. Allostazi; bedenin dış ve iç şartlara uyum sağlamak adına dinamik bir şekilde "değişim yoluyla istikrar" üretme çabasıdır.</p>
                 <p>Bu mekanizma sinirsel boyutta "doğru" veya "yanlış" ile ilgilenmez; tek bir hedefi vardır: tutarlı olmak. Beyin kronik bir tehdit algıladığında — ister zihinsel bir sorumluluk yükü, ister fiziksel bir problem — zamanla patolojik dengeyi yeni "normal" ilan eder ve sistemi bu yapıda kararlı tutmak için çalışır.</p>
-                <p>Yanlış duruşun sana rahat geliyor olmasının sebebi budur. Alışmış olduğun yol, yanlış da olsa senin doğrundur.</p>
+                <blockquote>
+                    <p>Yanlış duruşun sana rahat geliyor olmasının sebebi budur. Alışmış olduğun yol, yanlış da olsa senin doğrundur.</p>
+                </blockquote>
                 <h3>Enerji Neden İnşaya Gitmiyor?</h3>
                 <p>Beden durup dururken kendi kendine yıkılmaz. Canlı sistemler, entropiye — dağılmaya — karşı sürekli dışarıdan enerji alarak iç dengesini korumak zorundadır. Yıkımın hiçbir çaba gerektirmeden kendiliğinden sürmesinin asıl sebebi, enerji bütçesinin yanlış yönetilmesidir.</p>
                 <p>Sistem kronik tehdit altındayken, hücrelerin ve dokuların kendini tamir etmek için harcayacağı enerji, sempatik sistem tarafından "savunma ve hayatta kalma" moduna aktarılır. İnşa bütçesi kısıldığı için yıkım, yokuşun tepesinden bırakılan bir taş gibi kendiliğinden ve zahmetsizce yoluna devam eder. Her döngüde ödenen bu biyolojik bedele <strong>Allostatik Yük</strong> denir.</p>
                 <p>Döngü, her tekrarda aynı yönde ilerler:</p>
-                <div class="formula">
-                    $$\text{Mevcut Yapı (%90)} \rightarrow \text{Mevcut Anlayış} \rightarrow \text{Mevcut Yankı} \rightarrow \text{Otomatik Reaksiyon} \rightarrow \text{Yeni Yapı (%89)}$$
+                <div class="formula formula-scroll">
+                    <div class="formula-inner">
+                        $$\text{Mevcut Yapı (%90)} \rightarrow \text{Mevcut Anlayış} \rightarrow \text{Mevcut Yankı} \rightarrow \text{Otomatik Reaksiyon} \rightarrow \text{Yeni Yapı (%89)}$$
+                    </div>
                 </div>
                 <p>Bu süreç fark edilmeden her gün tekrar eder. Ve her tekrar, sistemi bir adım daha aynı yöne iter.</p>
                 <p>Bu doğrusal azalış, sistemin adaptasyon sınırını — eşik değerini — aşana kadar sessizce birikir ve nihayetinde semptomlar görünür olmaya başlar. İç algımız (interoception) ne kadar gelişmişse, erken fark edebilme ihtimali o kadar artar. Bu süreç herkeste işler; ama hızı ve şiddeti kişiden kişiye değişir — bu fark yoğunluk ve zaman bileşenlerinden gelir.</p>
@@ -737,8 +772,10 @@
                     <p>Farkındalık; uyaran ile otomatik tepki arasına yerleşen bilinçli duraklama anıdır. Üzerindeki bir karıncayı refleks olarak üfleyip atmak — tehdit odaklı otomatik tepki — yıkım döngüsünü besler. Elini karıncanın altına koyup ona bir zemin sunmak — farkındalık odaklı bilinçli yanıt — ise döngüyü kırar ve yeni bir mimari oluşmasına yol açar. Zamanla bu yol daha kalıcı olur. Artık refleksif olarak elini zemin yapmak için uzatırsın. Aynı uyaran, farklı bir sonuç üretmeye başlar.</p>
                 </blockquote>
                 <p>Farkındalık devreye girdiğinde, otonom sistemin "tehdit var, kasıl" emrine karşı bilinçli bir duruş sergilenir. Zihin ve beden, maruz kaldığı yükü panikle uzaklaştırmak yerine onunla yeni bir ilişki kurmayı öğrenir. Farkındalık her zaman devreye giremez — o anlarda bir es verebilmek için köprünün devrede olması gerekir. Tepkisellik ile yanıt vermenin arasındaki ufak boşluk farkındalıktır; ama bu kısa boşluk için es verebilecek bir köprüye ihtiyacımız vardır.</p>
-                <div class="formula">
-                    $$\text{Mevcut Yapı (%90)} \rightarrow \text{Farkındalık} \rightarrow \text{Gelişmiş Anlayış} \rightarrow \text{Yeni Yankı} \rightarrow \text{Farklı Eylem} \rightarrow \text{Yeni Yapı (%91)}$$
+                <div class="formula formula-scroll">
+                    <div class="formula-inner">
+                        $$\text{Mevcut Yapı (%90)} \rightarrow \text{Farkındalık} \rightarrow \text{Gelişmiş Anlayış} \rightarrow \text{Yeni Yankı} \rightarrow \text{Farklı Eylem} \rightarrow \text{Yeni Yapı (%91)}$$
+                    </div>
                 </div>
                 <p>Farkındalık otonom sistemi mekanik olarak çözdükçe — köprü ve karın içi basınç üzerinden — yeni eylem yeni bir dokusal yankı uyandırır, hücresel hafıza yeniden programlanır ve allostatik yükün yerini yapısal inşa almaya başlar.</p>
                 <blockquote>
@@ -750,7 +787,7 @@
         </div>
         <hr class="section-divider">
         <!-- ═══════════════════════════════════════
-             YAKINDA — YENİDEN İNŞA
+             YENİDEN İNŞA
         ════════════════════════════════════════ -->
         <div id="yeniden-insa">
             <h2>Yeniden İnşa: Çıkış Yolu ve Merkez</h2>
@@ -764,12 +801,14 @@
                     <p>İki eli dolu birinin eline bir de fener tutuşturup ışık tutmasını beklemek haksızlık olur. Elleri rahatlayana kadar feneri tutmak KÖKEN'in niyetidir.</p>
                 </blockquote>
                 <p>Köprü üzerine çalışmak nefes farkındalığıyla başlar. 360° diyafram nefesi, dead bug, bird dog gibi hareketler köprünün sağlamlaşmasına yardım eder. Ancak bu egzersizlerin hangisi, ne kadar ve nasıl yapılacağı kişinin mimarisine göre şekillenir.</p>
-                <p>KÖKEN reçete sunmaz — yön gösterir, sadece ışık tutar.</p>
+                <blockquote>
+                    <p>KÖKEN reçete sunmaz — yön gösterir, sadece ışık tutar.</p>
+                </blockquote>
             </div>
         </div>
         <hr class="section-divider">
         <!-- ═══════════════════════════════════════
-             YAKINDA — BEDEN SÖZLÜĞÜ
+             BEDEN SÖZLÜĞÜ
         ════════════════════════════════════════ -->
         <div id="beden-sozlugu">
             <h2>Beden Sözlüğü: Arızaların Kökeni</h2>
@@ -829,7 +868,7 @@
     <hr class="section-divider">
     <div class="math-motto">Sadece ışık tutar.</div>
     <div class="footer">
-        <p style="font-size: 0.82rem; margin-bottom: 12px; font-style: italic;">
+        <p class="footer-disclaimer">
             Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
         </p>
         © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
@@ -841,5 +880,29 @@
         <polyline points="2,4 12,13 22,4"/>
     </svg>
 </a>
+
+<script>
+    // Formül kutularını MathJax render sonrası ortala
+    // Safari'de `justify-content: safe center` çalışmadığı için JS fallback
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof MathJax !== 'undefined') {
+            MathJax.startup.promise.then(function () {
+                var boxes = document.querySelectorAll('.formula, .loop-box');
+                boxes.forEach(function (box) {
+                    var mjx = box.querySelector('mjx-container');
+                    if (mjx) {
+                        var boxW = box.clientWidth;
+                        var mjxW = mjx.scrollWidth;
+                        if (mjxW <= boxW) {
+                            box.style.justifyContent = 'center';
+                        } else {
+                            box.style.justifyContent = 'flex-start';
+                        }
+                    }
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
