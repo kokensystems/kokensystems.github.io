@@ -65,10 +65,14 @@
             max-width: 760px;
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             overflow-x: auto;
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-mask-image: linear-gradient(to right, black 70%, transparent 100%);
+            mask-image: linear-gradient(to right, black 70%, transparent 100%);
         }
         .nav-container::-webkit-scrollbar { display: none; }
         .nav-item {
@@ -883,24 +887,28 @@
 
 <script>
     // Formül kutularını MathJax render sonrası ortala
-    // Safari'de `justify-content: safe center` çalışmadığı için JS fallback
-    document.addEventListener('DOMContentLoaded', function () {
-        if (typeof MathJax !== 'undefined') {
-            MathJax.startup.promise.then(function () {
-                var boxes = document.querySelectorAll('.formula, .loop-box');
-                boxes.forEach(function (box) {
-                    var mjx = box.querySelector('mjx-container');
-                    if (mjx) {
-                        var boxW = box.clientWidth;
-                        var mjxW = mjx.scrollWidth;
-                        if (mjxW <= boxW) {
-                            box.style.justifyContent = 'center';
-                        } else {
-                            box.style.justifyContent = 'flex-start';
-                        }
-                    }
-                });
+    window.addEventListener('load', function () {
+        function alignBoxes() {
+            var boxes = document.querySelectorAll('.formula, .loop-box');
+            boxes.forEach(function (box) {
+                var mjx = box.querySelector('mjx-container');
+                if (mjx) {
+                    box.style.justifyContent = mjx.scrollWidth <= box.clientWidth ? 'center' : 'flex-start';
+                }
             });
+        }
+        if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+            MathJax.startup.promise.then(alignBoxes);
+        } else {
+            // MathJax henüz config edilmemişse ready callback'e ekle
+            var prev = window.MathJax && MathJax.startup && MathJax.startup.ready;
+            window.MathJax = window.MathJax || {};
+            MathJax.startup = MathJax.startup || {};
+            var origReady = MathJax.startup.ready;
+            MathJax.startup.ready = function () {
+                if (origReady) origReady();
+                MathJax.startup.promise.then(alignBoxes);
+            };
         }
     });
 </script>
