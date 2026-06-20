@@ -115,7 +115,15 @@
         .highlight-safety { border-left: 4px solid var(--safety-green); background: linear-gradient(90deg, #2E342B 0%, var(--box-bg) 100%); padding: 24px; border-radius: 0 6px 6px 0; margin-bottom: 30px; border: 1px solid var(--border-color); border-left-width: 4px; }
         .highlight-safety h3 { color: var(--safety-green); margin-top: 0; border-left: none; padding-left: 0; letter-spacing: 2.5px; }
         
-        .loop-box { margin: 35px 0; background-color: var(--box-bg); padding: 24px 15px; border-radius: 6px; border: 1px solid var(--border-color); max-width: 100%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2); overflow-x: auto; }
+       }
+        .loop-box { padding: 24px 15px; margin: 35px 0; }
+        
+        mjx-container[display="true"] { 
+            display: block !important; 
+            text-align: center; 
+            margin: 0 !important; 
+            padding: 0 10px; /* Sağdan harf kesilmesini engeller */
+        }
         mjx-container[display="true"] { display: block !important; text-align: center; }
         
         /* ── SONRAKİ SAYFA BUTONU ── */
