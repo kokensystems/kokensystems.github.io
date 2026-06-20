@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KÖKEN / Beden Sözlüğü — Hastalıkların ve arızaların mimari kökenleri.">
+    <title>Beden Sözlüğü / KÖKEN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1A1310; --text-color: #F4EFEA; --accent-gold: #E5C583;
+            --sub-heading: #D1C4B9; --border-color: #4A3B31; --nav-bg: rgba(37, 28, 23, 0.93);
+        }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: Georgia, serif; line-height: 1.78; margin: 0; padding: 0; }
+        
+        .navbar { position: sticky; top: 0; background-color: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 0 20px; display: flex; justify-content: center; }
+        .nav-container { max-width: 640px; width: 100%; display: flex; justify-content: space-between; }
+        .nav-item { font-family: -apple-system, sans-serif; color: rgba(209, 196, 185, 0.65); text-decoration: none; font-size: 0.73rem; font-weight: 600; padding: 24px 0; letter-spacing: 1.2px; text-transform: uppercase; transition: color 0.3s ease; }
+        .nav-item:hover { color: var(--accent-gold); }
+        .nav-item.active { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); margin-bottom: -1px; }
+        
+        .main-wrapper { display: flex; justify-content: center; padding: 60px 24px 80px 24px; }
+        .container { max-width: 640px; width: 100%; }
+        
+        h1 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--accent-gold); letter-spacing: 3px; margin-bottom: 12px; font-weight: 700; }
+        h3 { font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600; color: var(--sub-heading); letter-spacing: 2.5px; text-transform: uppercase; margin-top: 55px; margin-bottom: 18px; border-left: 3px solid var(--accent-gold); padding-left: 14px; }
+        
+        .content { font-size: 1.08rem; text-align: left; }
+        .content p { margin-bottom: 28px; opacity: 0.95; letter-spacing: 0.25px; }
+        .content strong { color: var(--accent-gold); font-weight: 600; }
+        
+        .coming-soon-preview { filter: blur(4px); opacity: 0.18; user-select: none; pointer-events: none; margin-top: 60px; }
+        .coming-soon-badge { text-align: center; font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 3px; color: var(--accent-gold); opacity: 0.55; margin-top: 36px; text-transform: uppercase; }
+        
+        .footer-area { max-width: 640px; margin: 0 auto; padding: 0 24px 80px; }
+        .section-divider { border: 0; height: 1px; background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent); margin: 60px 0; }
+        .math-motto { text-align: center; font-family: 'Cinzel', serif; font-size: 0.72rem; color: var(--accent-gold); margin: 60px 0 30px 0; letter-spacing: 5px; text-transform: uppercase; opacity: 0.65; }
+        .footer { margin-top: 40px; font-size: 0.83rem; color: #8C7A6B; text-align: center; border-top: 1px solid var(--border-color); padding-top: 30px; letter-spacing: 0.5px; }
+
+        @media (max-width: 480px) {
+            .nav-container { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+            .nav-container::-webkit-scrollbar { display: none; }
+            .nav-item { font-size: 0.64rem; padding: 20px 10px; margin-right: 15px; }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-item">KÖKEN (Felsefe)</a>
+        <a href="matematik.html" class="nav-item">Matematiksel Kanıt</a>
+        <a href="sozluk.html" class="nav-item active">Beden Sözlüğü</a>
+    </div>
+</nav>
+
+<main class="main-wrapper">
+    <div class="container">
+        <h1>Beden Sözlüğü</h1>
+        <div class="content">
+            <p style="opacity: 0.65; font-style: italic; font-size: 0.95rem;">Bu bölümü okurken şunlara dikkat etmeliyiz: anlayış herkeste aynı çalışmaz. Belli bir anlayış farklı kişilerde farklı sonuçlara sebep olabilir. Anlayış genellemesi yapılabilir, ama kişi özelinde çok fazla değişken vardır. Yoğunluk ve zamanla birlikte hastalığın yönü belli olur. Bu yüzden buradaki bağlantılar kesin teşhis değil, örüntüdür. Kendi hastalığına veya problemine bakabilirsen anlayışın görünür olacaktır.</p>
+            
+            <h3>Anksiyete</h3>
+            <p><strong>Anlayış bağlantısı:</strong> Güvensizlik. Sürecin ve olayların bütününün kontrol dışı olduğu, her an tehdit gelebileceği varsayımı. Zihin hayatta kalmak için sürekli tetikte beklemeyi tek çare görür.</p>
+            <p><strong>Y₁ etkisi:</strong> Sempatik sistem kronik aktif kalır. HPA ekseni sürekli kortizol ve adrenalin üretir. Bağışıklık baskılanır, sindirim geri plana alınır, uyku bozulur. Hücresel onarım durur.</p>
+            <p><strong>Y₂ yansıması:</strong> Boyun, omuz ve çene kronik gergin kalır. Nefes sığlaşır, göğse sıkışır. Postür içe kapanır. Hareket kapasitesi ve bakış açısı fiziksel olarak daralır.</p>
+            <p><strong>Döngü:</strong> Zihin tetikte olduğu için beden gerilir. İç algı bu gerilimi tehdit olarak okur, zihin daha da tetikte kalır. Ortada nesnel bir tehlike olmasa bile sistem kendi yarattığı yankıyla beslenir.</p>
+            
+            <h3>Kronik Boyun Ağrısı</h3>
+            <p><strong>Anlayış bağlantısı:</strong> <em>"Her şeyi tek başıma taşımalıyım."</em> Kontrolü kaybederse güvende olamayacağı ve değer görmeyeceği varsayımı. Kontrol bir savunma mekanizmasıdır — temelde değer görmeme ve başarısız olma korkusunun yansıması.</p>
+            <p><strong>Y₁ etkisi:</strong> Kronik kortizol servikal bölgedeki doku kalitesini bozar. Sinir kökleri sürekli baskı altında kalır. Bölgesel kan akışı kısıtlanır, kronik enflamasyon başlar, onarım yavaşlar.</p>
+            <p><strong>Y₂ yansıması:</strong> Boyun ve omuz kasları sürekli yüksek tonusta. Baş öne düşer, omuzlar içe döner. Servikal yapı bozulur, fasya katılaşır. Gerilim zamanla çeneye ve başa yayılır.</p>
+            <p><strong>Döngü:</strong> Sıkışan doku sinir sistemine sürekli tehdit sinyali gönderir. Sinir sistemi boyun kaslarını daha da kasarak koruma duvarını kalınlaştırır. Postür bozuldukça nefes daralır.</p>
+            
+            <h3>Tip 2 Diyabet</h3>
+            <p><strong>Anlayış bağlantısı:</strong> Kronik stres altında metabolik teselli ve ilkel güvenlik arayışı. Zihin sürekli tükenmişlik ve tehdit algısı içindeyken beden en hızlı yolla — glukoz üzerinden — anlık bir güvenlik alanı yaratmaya çalışır.</p>
+            <p><strong>Y₁ etkisi:</strong> Kronik kortizol karaciğerden sürekli glukoz salınımını tetikler, insülin salınımı artar. Hücreler sürekli yüksek insüline maruz kalınca duyarsızlaşır — insülin direnci gelişir. Kan şekeri hücreye giremez, kanda birikir. Sistem enerji üretemez, kronik yorgunluk başlar.</p>
+            <p><strong>Y₂ yansıması:</strong> Üretilemeyen enerji hareketi kısıtlar. İnsülin duyarlılığını koruyan kas kütlesi azalır. Hareket azaldıkça postüral çöküş hızlanır, kan dolaşımı bozulur.</p>
+            <p><strong>Döngü:</strong> Tehdit algısı → kortizol → insülin direnci → enerji düşüklüğü → hareketsizlik → daha fazla insülin direnci.</p>
+            
+            <h3>Sindirim Sorunları</h3>
+            <p><strong>Anlayış bağlantısı:</strong> Yaşananları, duyguları, maruz kalınan girdileri sinir sisteminde işleyememek. <em>"Yutmak zorundayım"</em> diyerek içeride biriktiren, sınır çizemeyen anlayış.</p>
+            <p><strong>Y₁ etkisi:</strong> Tehdit algısıyla vagus sinirinin tonu düşer, bağırsak-beyin hattı bozulur. Sindirim salgıları dengesizleşir. Bağırsak hareketleri düzensizleşir, mikrobiyom değişir, enflamasyon artar.</p>
+            <p><strong>Y₂ yansıması:</strong> Karın bölgesinde kronik gerginlik oluşur. Diyafram aşağı inemez, nefes sığlaşır. Pelvik taban kilitlenir. Öne kapanan postür karın içi basıncı bozar, organlar üzerindeki mekanik baskı sindirimi zorlaştırır.</p>
+            <p><strong>Döngü:</strong> Bastırılan girdi → sindirimin ertelenmesi → bağırsak ritmi bozulur → karın gerginliği → diyafram kısıtlanır → nefes sığlaşır → tehdit modu devam eder.</p>
+            
+            <div class="coming-soon-preview">
+                <p>Migren, fibromiyalji, kronik yorgunluk sendromu, bel fıtığı, eklem ağrıları, otoimmün durumlar ve daha fazlası...</p>
+            </div>
+            <p class="coming-soon-badge">Devamı çok yakında</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer-area">
+    <hr class="section-divider">
+    <div class="math-motto">Sadece ışık tutar.</div>
+    <div class="footer">
+        © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
+    </div>
+</footer>
+
+</body>
+</html>
