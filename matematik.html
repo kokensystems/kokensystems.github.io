@@ -20,16 +20,19 @@
             --nav-bg: rgba(37, 28, 23, 0.93);
         }
         html { scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); color: var(--text-color); font-family: Georgia, serif; line-height: 1.78; margin: 0; padding: 0; }
-        
-        .navbar { position: sticky; top: 0; background-color: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 0 20px; display: flex; justify-content: center; }
-        .nav-container { max-width: 640px; width: 100%; display: flex; justify-content: space-between; }
-        .nav-item { font-family: -apple-system, sans-serif; color: rgba(209, 196, 185, 0.65); text-decoration: none; font-size: 0.73rem; font-weight: 600; padding: 24px 0; letter-spacing: 1.2px; text-transform: uppercase; transition: color 0.3s ease; }
-        .nav-item:hover { color: var(--accent-gold); }
-        .nav-item.active { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); margin-bottom: -1px; }
-        
-        .main-wrapper { display: flex; justify-content: center; padding: 60px 24px 80px 24px; }
-        .container { max-width: 640px; width: 100%; }
+      body {
+    background-color: var(--bg-color);
+    background-image:
+        radial-gradient(at 10% 20%, rgba(74, 59, 49, 0.6) 0px, transparent 50%),
+        radial-gradient(at 90% 40%, rgba(45, 35, 28, 0.7) 0px, transparent 45%),
+        radial-gradient(at 40% 85%, rgba(61, 46, 38, 0.5) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(29, 21, 17, 0.8) 0px, transparent 50%);
+    color: var(--text-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.78;
+    margin: 0; 
+    padding: 0;
+}
         
         h1 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--accent-gold); letter-spacing: 3px; margin-bottom: 12px; font-weight: 700; }
         h2 { font-family: 'Cinzel', serif; font-size: 0.88rem; font-weight: 600; color: var(--accent-gold); letter-spacing: 4px; text-transform: uppercase; margin-top: 64px; margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
