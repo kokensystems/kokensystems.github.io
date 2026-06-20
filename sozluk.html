@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="KÖKEN / Beden Sözlüğü — Hastalıkların ve arızaların mimari kökenleri.">
     <title>Beden Sözlüğü / KÖKEN</title>
     
@@ -13,10 +13,13 @@
         :root {
             --bg-color: #1A1310; --text-color: #F4EFEA; --accent-gold: #E5C583;
             --sub-heading: #D1C4B9; --border-color: #4A3B31; --nav-bg: rgba(37, 28, 23, 0.93);
+            --box-bg: #2D231C;
         }
-        html { scroll-behavior: smooth; }
         
-        /* ── YUMUŞAK SAYFA GEÇİŞİ VE ZENGİN ARKA PLAN ── */
+        /* ── SAYFANIN SAĞA KAYMASINI ENGELLEYEN KİLİT KODU ── */
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { max-width: 100vw; overflow-x: hidden; scroll-behavior: smooth; }
+        
         body {
             background-color: var(--bg-color);
             background-image:
@@ -24,21 +27,12 @@
                 radial-gradient(at 90% 40%, rgba(45, 35, 28, 0.7) 0px, transparent 45%),
                 radial-gradient(at 40% 85%, rgba(61, 46, 38, 0.5) 0px, transparent 50%),
                 radial-gradient(at 0% 100%, rgba(29, 21, 17, 0.8) 0px, transparent 50%);
-            color: var(--text-color);
-            font-family: Georgia, serif;
-            line-height: 1.78;
-            margin: 0; padding: 0;
-            animation: fadeIn 0.8s ease-in-out;
+            color: var(--text-color); font-family: Georgia, serif; line-height: 1.78; margin: 0; padding: 0; animation: fadeIn 0.8s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* ── METİN SEÇİM RENGİ VE KAYDIRMA ÇUBUĞU ── */
         ::selection { background-color: rgba(229, 197, 131, 0.25); color: var(--accent-gold); }
         ::-moz-selection { background-color: rgba(229, 197, 131, 0.25); color: var(--accent-gold); }
-        
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: rgba(229, 197, 131, 0.3); border-radius: 4px; }
@@ -63,38 +57,20 @@
         .coming-soon-preview { filter: blur(4px); opacity: 0.18; user-select: none; pointer-events: none; margin-top: 60px; }
         .coming-soon-badge { text-align: center; font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 3px; color: var(--accent-gold); opacity: 0.55; margin-top: 36px; text-transform: uppercase; }
         
+        .next-page-link { display: block; text-align: center; font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--accent-gold); text-decoration: none; margin: 80px auto 20px; padding: 18px 24px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--box-bg); transition: all 0.3s ease; max-width: 400px; letter-spacing: 1.5px; }
+        .next-page-link:hover { background: rgba(229, 197, 131, 0.08); border-color: var(--accent-gold); transform: translateY(-2px); }
+
         .footer-area { max-width: 640px; margin: 0 auto; padding: 0 24px 80px; }
         .section-divider { border: 0; height: 1px; background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent); margin: 60px 0; }
         .math-motto { text-align: center; font-family: 'Cinzel', serif; font-size: 0.72rem; color: var(--accent-gold); margin: 60px 0 30px 0; letter-spacing: 5px; text-transform: uppercase; opacity: 0.65; }
         .footer { margin-top: 40px; font-size: 0.83rem; color: #8C7A6B; text-align: center; border-top: 1px solid var(--border-color); padding-top: 30px; letter-spacing: 0.5px; }
 
         @media (max-width: 480px) {
-            .nav-container { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+            .nav-container { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 5px;}
             .nav-container::-webkit-scrollbar { display: none; }
             .nav-item { font-size: 0.64rem; padding: 20px 10px; margin-right: 15px; }
+            .next-page-link { font-size: 0.85rem; padding: 16px 20px; }
         }
-        /* ── DÖNÜŞ BUTONU TASARIMI ── */
-.next-page-link { 
-    display: block; 
-    text-align: center; 
-    font-family: 'Cinzel', serif; 
-    font-size: 0.95rem; 
-    color: var(--accent-gold); 
-    text-decoration: none; 
-    margin: 80px auto 20px; 
-    padding: 18px 24px; 
-    border: 1px solid var(--border-color); 
-    border-radius: 6px; 
-    background: var(--box-bg); 
-    transition: all 0.3s ease; 
-    max-width: 400px; 
-    letter-spacing: 1.5px; 
-}
-.next-page-link:hover { 
-    background: rgba(229, 197, 131, 0.08); 
-    border-color: var(--accent-gold); 
-    transform: translateY(-2px); 
-}
     </style>
 </head>
 <body>
