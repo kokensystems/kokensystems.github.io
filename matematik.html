@@ -73,8 +73,29 @@
         .content li { margin-bottom: 18px; position: relative; opacity: 0.95; }
         .content li::before { content: "•"; color: rgba(140, 118, 95, 0.70); font-weight: bold; font-size: 1.2rem; display: inline-block; width: 1em; margin-left: -1em; position: absolute; top: -1px; }
         
-        .formula { margin: 35px 0 45px 0; background-color: var(--box-bg); padding: 24px; border-radius: 6px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center; overflow-x: auto; }
-        .loop-box { margin: 35px 0; background-color: var(--box-bg); padding: 24px 15px; border-radius: 6px; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.2); overflow-x: auto; }
+       /* ── FORMÜLLER VE DÖNGÜ KUTULARI (KAYDIRMA DÜZELTMESİ) ── */
+        .formula, .loop-box { 
+            margin: 35px 0 45px 0; 
+            background-color: var(--box-bg); 
+            padding: 24px 20px; /* Sağdan kesilmemesi için yanlara yastık eklendi */
+            border-radius: 6px; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2); 
+            display: flex; 
+            align-items: center; 
+            max-width: 100%; 
+            overflow-x: auto; /* Sağa sola kaydırmayı açar */
+            -webkit-overflow-scrolling: touch; /* Mobilde kaydırmayı pürüzsüz yapar */
+            scrollbar-width: thin; /* Firefox için ince çubuk */
+        }
+        .loop-box { padding: 24px 15px; margin: 35px 0; }
+        
+        mjx-container[display="true"] { 
+            display: block !important; 
+            text-align: center; 
+            margin: 0 !important; 
+            padding: 0 10px; /* Sağdan harf kesilmesini engeller */
+        }
         .inline-formula-block { display: block; text-align: center; margin: 20px 0; }
         .time-align-container { max-width: 460px; margin: 0 auto 28px auto; padding: 15px; background-color: rgba(0,0,0,0.1); border-radius: 6px; border: 1px solid rgba(255,255,255,0.03); }
         .time-align-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; margin-bottom: 10px; align-items: center; }
