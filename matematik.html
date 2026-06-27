@@ -126,22 +126,122 @@
         blockquote::before { content: '"'; position: absolute; top: -10px; left: 15px; font-family: Georgia, serif; font-size: 140px; color: var(--accent-gold); opacity: 0.04; z-index: -1; line-height: 1; user-select: none; }
         blockquote p { margin: 0; opacity: 1; letter-spacing: 0.3px; }
         
-        @media (max-width: 480px) {
-            .nav-container { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 5px;}
-            .nav-container::-webkit-scrollbar { display: none; }
-            .nav-item { font-size: 0.64rem; padding: 20px 10px; margin-right: 15px; }
-            .main-wrapper { padding: 30px 18px 50px 18px; }
-            h1 { font-size: 1.8rem; letter-spacing: 2px; }
-            h2 { font-size: 0.78rem; margin-top: 52px; margin-bottom: 22px; letter-spacing: 3px; }
-            h3 { font-size: 0.68rem; margin-top: 36px; letter-spacing: 2px; }
-            .content { font-size: 1.02rem; line-height: 1.82; }
-            .loop-box { padding: 20px 6px; margin: 25px 0; }
-            .time-align-row { grid-template-columns: 1fr; text-align: center; gap: 4px; margin-bottom: 20px; }
-            .next-page-link { font-size: 0.85rem; padding: 16px 20px; }
-            .mail-button { bottom: 16px; right: 16px; width: 40px; height: 40px; }
-            .mail-button svg { width: 16px; height: 16px; }
-            .formula .MathJax, .loop-box .MathJax { font-size: 85% !important; }
-        }
+      ```html
+@media (max-width: 480px) {
+    .nav-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 5px;
+    }
+
+    .nav-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-item {
+        font-size: 0.61rem;
+        padding: 16px 10px;
+        margin-right: 14px;
+        letter-spacing: 0.8px;
+    }
+
+    .main-wrapper {
+        padding: 28px 18px 52px 18px;
+    }
+
+    h1 {
+        font-size: 1.65rem;
+        letter-spacing: 2px;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 0.74rem;
+        letter-spacing: 2.2px;
+        margin-top: 42px;
+        margin-bottom: 18px;
+    }
+
+    h3 {
+        font-size: 0.66rem;
+        letter-spacing: 1.8px;
+        margin-top: 30px;
+        margin-bottom: 14px;
+    }
+
+    .content {
+        font-size: 0.98rem;
+        line-height: 1.68;
+    }
+
+    .content p {
+        margin-bottom: 18px;
+        letter-spacing: 0.15px;
+    }
+
+    .content ul {
+        margin-bottom: 22px;
+        padding-left: 18px;
+    }
+
+    .content li {
+        margin-bottom: 14px;
+        line-height: 1.65;
+    }
+
+    .formula,
+    .loop-box {
+        margin: 24px 0;
+        padding: 18px 10px;
+    }
+
+    .inline-formula-block {
+        margin: 14px 0;
+    }
+
+    blockquote {
+        margin: 26px 0;
+        padding: 18px 20px;
+    }
+
+    blockquote::before {
+        font-size: 90px;
+        top: -6px;
+        left: 12px;
+    }
+
+    .time-align-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4px;
+        margin-bottom: 20px;
+    }
+
+    .next-page-link {
+        font-size: 0.82rem;
+        padding: 15px 18px;
+        margin-top: 48px;
+    }
+
+    .mail-button {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .mail-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .formula .MathJax,
+    .loop-box .MathJax {
+        font-size: 78% !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -225,7 +325,7 @@
       $$F \in \{-1, 0, +1\}$$
 </div> 
               
-                <li><strong>(B) Bakış Açısı:</strong> Bağımsız bir değişken değildir; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir.<br>
+                <li><strong>(B) Bakış Açısı:</strong> Bağımsız bir değişken değildir; farkındalık çerçevesinde açıyı belirleyen geometrik etkidir.</li>
                 \(F = -1\) ise bakış açısı daralır: $$B \in (0,1)$$
                 Bakış açısı daraldıkça sistemdeki kararsızlık çarpanı büyür; yıkım daha belirgin hâle gelir.<br>
                 <p>\(F = +1\) ise mimari olabileceği en uygun açıdadır: $$B = 1$$</p>
