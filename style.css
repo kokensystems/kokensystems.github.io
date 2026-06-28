@@ -81,7 +81,7 @@ h3 { font-family: 'Cinzel', serif; font-size: 0.76rem; font-weight: 600; color: 
 .content li::before { content: "•"; color: rgba(140, 118, 95, 0.55); font-weight: bold; font-size: 1.2rem; display: inline-block; width: 1em; margin-left: -1em; position: absolute; top: -1px; }
 .content strong { color: var(--accent-gold); font-weight: 600; }
 
-.tooltip { border-bottom: 1px dashed var(--accent-gold); cursor: help; position: relative; transition: color 0.2s; }
+.tooltip { border-bottom: 1px dashed var(--accent-gold); cursor: help; position: relative; transition: color 0.2s; font-style: italic; font-weight: 400; color: inherit; }
 .tooltip:hover, .tooltip:active { color: var(--accent-gold); }
 .tooltip::after { content: attr(data-tooltip); position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); background-color: var(--box-bg); border: 1px solid var(--accent-gold); color: var(--text-color); padding: 10px 14px; border-radius: 6px; font-size: 0.82rem; line-height: 1.5; white-space: normal; width: max-content; max-width: 250px; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.5); font-family: -apple-system, sans-serif; text-align: center; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s, bottom 0.2s; pointer-events: none; }
 .tooltip:hover::after, .tooltip:active::after { opacity: 1; visibility: visible; bottom: 100%; }
@@ -198,6 +198,7 @@ mjx-container[display="true"] { display: inline-block !important; text-align: ce
     .formula .MathJax, .loop-box .MathJax { font-size: 85% !important; }
     
     .concept-card { padding: 24px 18px; margin-bottom: 40px; }
+    blockquote { font-size: 1.05rem; padding: 30px 30px; }
 }
 
 /* ========================================================
@@ -218,7 +219,7 @@ mjx-container[display="true"] { display: inline-block !important; text-align: ce
     .content ul { margin-bottom: 22px; padding-left: 18px; }
     .content li { margin-bottom: 14px; line-height: 1.65; }
     
-    blockquote { padding: 25px 20px; margin: 45px 0; }
+    blockquote { padding: 25px 20px; margin: 45px 0; font-size: 0.95rem; }
     .golden-aforizma { font-size: 1.05rem; }
     
     .next-page-link { font-size: 0.82rem; padding: 15px 18px; margin-top: 48px; }
