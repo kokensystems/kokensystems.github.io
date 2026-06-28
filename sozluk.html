@@ -9,109 +9,8 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23251C17'/><text y='75' x='50' font-family='Georgia, serif' font-size='70' font-weight='bold' fill='%23E5C583' text-anchor='middle'>K</text></svg>">
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #1A1310; --text-color: #F4EFEA; --accent-gold: #E5C583;
-            --sub-heading: #D1C4B9; --border-color: #4A3B31; --nav-bg: rgba(37, 28, 23, 0.93);
-            --box-bg: #2D231C;
-        }
-        
-        /* ── SAYFANIN SAĞA KAYMASINI ENGELLEYEN KİLİT KODU ── */
-        *, *::before, *::after { box-sizing: border-box; }
-        html, body { max-width: 100vw; overflow-x: hidden; scroll-behavior: smooth; }
-        
-        /* ── YUMUŞAK SAYFA GEÇİŞİ VE ZENGİN ARKA PLAN ── */
-        body {
-            background-color: var(--bg-color);
-            background-image:
-                radial-gradient(at 10% 20%, rgba(74, 59, 49, 0.6) 0px, transparent 50%),
-                radial-gradient(at 90% 40%, rgba(45, 35, 28, 0.7) 0px, transparent 45%),
-                radial-gradient(at 40% 85%, rgba(61, 46, 38, 0.5) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(29, 21, 17, 0.8) 0px, transparent 50%);
-            color: var(--text-color); font-family: Georgia, serif; line-height: 1.78; margin: 0; padding: 0; animation: fadeIn 0.8s ease-in-out;
-        }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* ── METİN SEÇİM RENGİ (SARI VURGU) ── */
-        ::selection { background-color: rgba(229, 197, 131, 0.25); color: var(--accent-gold); }
-        ::-moz-selection { background-color: rgba(229, 197, 131, 0.25); color: var(--accent-gold); }
-        
-        /* ── ZARİF KAYDIRMA ÇUBUĞU (SCROLLBAR) ── */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-color); }
-        ::-webkit-scrollbar-thumb { background: rgba(229, 197, 131, 0.3); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(229, 197, 131, 0.5); }
-        
-        /* ── NAVİGASYON (SÖZLÜK ACTIVE KİLİTLİ) ── */
-        .navbar { position: sticky; top: 0; background-color: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 0 20px; display: flex; justify-content: center; }
-        .nav-container { max-width: 640px; width: 100%; display: flex; justify-content: space-between; }
-        .nav-item { font-family: -apple-system, sans-serif; color: rgba(209, 196, 185, 0.65); text-decoration: none; font-size: 0.73rem; font-weight: 600; padding: 24px 0; letter-spacing: 1.2px; text-transform: uppercase; transition: color 0.3s ease; }
-        .nav-item:hover { color: var(--accent-gold); }
-        .nav-item.active { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); margin-bottom: -1px; }
-        
-        /* ── LAYOUT & BAŞLIKLAR ── */
-        .main-wrapper { display: flex; justify-content: center; padding: 60px 24px 80px 24px; }
-        .container { max-width: 640px; width: 100%; }
-        
-        h1 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--accent-gold); letter-spacing: 3px; margin-bottom: 12px; font-weight: 700; }
-        h3 { font-family: 'Cinzel', serif; font-size: 0.85rem; font-weight: 600; color: var(--sub-heading); letter-spacing: 2.5px; text-transform: uppercase; margin-top: 55px; margin-bottom: 18px; border-left: 3px solid var(--accent-gold); padding-left: 14px; }
-        
-        /* ── İÇERİK MİMARİSİ ── */
-        .content { font-size: 1.08rem; text-align: left; }
-        .content p { margin-bottom: 28px; opacity: 0.95; letter-spacing: 0.25px; }
-        .content strong { color: var(--accent-gold); font-weight: 600; }
-        
-        /* ── FLAN PREVIEW (YAKINDA SEKMESİ) ── */
-        .coming-soon-preview { filter: blur(4px); opacity: 0.18; user-select: none; pointer-events: none; margin-top: 60px; }
-        .coming-soon-badge { text-align: center; font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 3px; color: var(--accent-gold); opacity: 0.55; margin-top: 36px; text-transform: uppercase; }
-        
-        /* ── KÖKEN SAYFASINA DÖNÜŞ BUTONU (ALTIN ÇERÇEVELİ) ── */
-        .next-page-link { display: block; text-align: center; font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--accent-gold); text-decoration: none; margin: 80px auto 20px; padding: 18px 24px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--box-bg); transition: all 0.3s ease; max-width: 400px; letter-spacing: 1.5px; }
-        .next-page-link:hover { background: rgba(229, 197, 131, 0.08); border-color: var(--accent-gold); transform: translateY(-2px); }
-
-        /* ── SABİT İLETİŞİM (MAİL) BUTONU ── */
-        .mail-button { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; background-color: #3A2A1E; border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; transition: border-color 0.3s ease, transform 0.2s ease; text-decoration: none; }
-        .mail-button:hover { border-color: var(--accent-gold); transform: translateY(-2px); }
-        .mail-button svg { width: 18px; height: 18px; stroke: rgba(229, 197, 131, 0.5); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.3s ease; }
-        .mail-button:hover svg { stroke: var(--accent-gold); }
-
-        .section-divider { border: 0; height: 1px; background: linear-gradient(to right, transparent, var(--border-color) 20%, var(--border-color) 80%, transparent); margin: 60px 0; }
-        .footer-area { max-width: 640px; margin: 0 auto; padding: 0 24px 80px; }
-        
-        @media (max-width: 480px) {
-            .nav-container { justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 5px;}
-            .nav-container::-webkit-scrollbar { display: none; }
-            .nav-item { font-size: 0.64rem; padding: 20px 10px; margin-right: 15px; }
-            .main-wrapper { padding: 30px 18px 50px 18px; }
-            h1 { font-size: 1.8rem; letter-spacing: 2px; }
-            h3 { font-size: 0.68rem; margin-top: 36px; letter-spacing: 2px; }
-            .content { font-size: 1.02rem; line-height: 1.82; }
-            .next-page-link { font-size: 0.85rem; padding: 16px 20px; }
-            .mail-button { bottom: 16px; right: 16px; width: 40px; height: 40px; }
-            .mail-button svg { width: 16px; height: 16px; }
-        }
-
-        /* ── SOSYAL MEDYA İKONLARI ── */
-.social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto 10px auto;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-.social-icon:hover {
-    transform: translateY(-2px);
-}
-.social-icon svg {
-    stroke: rgba(209, 196, 185, 0.65); /* Soluk kremsi ton */
-    fill: none;
-    transition: stroke 0.3s ease;
-}
-.social-icon:hover svg {
-    stroke: #E5C583; /* KÖKEN Altın Sarısı */
-}
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <nav class="navbar">
@@ -133,23 +32,29 @@
             <p><strong>Y₂ yansıması:</strong> Boyun, omuz ve çene kronik gergin kalır. Nefes sığlaşır, göğse sıkışır. Postür içe kapanır. Hareket kapasitesi ve bakış açısı fiziksel olarak daralır.</p>
             <p><strong>Döngü:</strong> Zihin tetikte olduğu için beden gerilir. İç algı bu gerilimi tehdit olarak okur, zihin daha da tetikte kalır. Ortada nesnel bir tehlike olmasa bile sistem kendi yarattığı yankıyla beslenir. Allostazi bu gerilimi yeni normal ilan eder.</p>
             
-            <h3>Kronik Boyun Ağrısı</h3>
-            <p><strong>Anlayış bağlantısı:</strong> <em>"Her şeyi tek başıma taşımalıyım."</em> Kontrolü kaybederse güvende olamayacağı ve değer görmeyeceği varsayımı. Kontrol bir savunma mekanizmasıdır — temelde değer görmeme ve başarısız olma korkusunun yansıması.</p>
-            <p><strong>Y₁ etkisi:</strong> Kronik kortizol servikal bölgedeki doku kalitesini bozar. Sinir kökleri sürekli baskı altında kalır. Bölgesel kan akışı kısıtlanır, kronik enflamasyon başlar, onarım yavaşlar.</p>
-            <p><strong>Y₂ yansıması:</strong> Boyun ve omuz kasları sürekli yüksek tonusta. Baş öne düşer, omuzlar içe döner. Servikal yapı bozulur, fasya katılaşır. Gerilim zamanla çeneye ve başa yayılır.</p>
-            <p><strong>Döngü:</strong> Sıkışan doku sinir sistemine sürekli tehdit sinyali gönderir. Sinir sistemi boyun kaslarını daha da kasarak koruma duvarını kalınlaştırır. Postür bozuldukça nefes daralır. Anlayış değişmeden yük taşınmaya devam ettiği için döngü kırılamaz.</p>
+            <div class="concept-card">
+                <h3 class="concept-card-title">Kronik Boyun Ağrısı</h3>
+                <p><strong>Anlayış bağlantısı:</strong> <em>"Her şeyi tek başıma taşımalıyım."</em> Kontrolü kaybederse güvende olamayacağı ve değer görmeyeceği varsayımı. Kontrol bir savunma mekanizmasıdır — temelde değer görmeme ve başarısız olma korkusunun yansıması.</p>
+                <p><strong>Y₁ etkisi:</strong> Kronik kortizol servikal bölgedeki doku kalitesini bozar. Sinir kökleri sürekli baskı altında kalır. Bölgesel kan akışı kısıtlanır, kronik enflamasyon başlar, onarım yavaşlar.</p>
+                <p><strong>Y₂ yansıması:</strong> Boyun ve omuz kasları sürekli yüksek tonusta. Baş öne düşer, omuzlar içe döner. Servikal yapı bozulur, fasya katılaşır. Gerilim zamanla çeneye ve başa yayılır.</p>
+                <p><strong>Döngü:</strong> Sıkışan doku sinir sistemine sürekli tehdit sinyali gönderir. Sinir sistemi boyun kaslarını daha da kasarak koruma duvarını kalınlaştırır. Postür bozuldukça nefes daralır. Anlayış değişmeden yük taşınmaya devam ettiği için döngü kırılamaz.</p>
+            </div>
             
-            <h3>Tip 2 Diyabet</h3>
-            <p><strong>Anlayış bağlantısı:</strong> Kronik stres altında metabolik teselli ve ilkel güvenlik arayışı. Zihin sürekli tükenmişlik ve tehdit algısı içindeyken beden en hızlı yolla — glukoz üzerinden — anlık bir güvenlik alanı yaratmaya çalışır.</p>
-            <p><strong>Y₁ etkisi:</strong> Kronik kortizol karaciğerden sürekli glukoz salınımını tetikler, insülin salınımı artar. Hücreler sürekli yüksek insüline maruz kalınca duyarsızlaşır — insülin direnci gelişir. Kan şekeri hücreye giremez, kanda birikir. Sistem enerji üretemez, kronik yorgunluk başlar. Pankreas zamanla yorulur.</p>
-            <p><strong>Y₂ yansıması:</strong> Üretilemeyen enerji hareketi kısıtlar. İnsülin duyarlılığını koruyan kas kütlesi azalır. Hareket azaldıkça postüral çöküş hızlanır, kan dolaşımı bozulur.</p>
-            <p><strong>Döngü:</strong> Tehdit algısı → kortizol → insülin direnci → enerji düşüklüğü → hareketsizlik → daha fazla insülin direnci. Sistem güvenlik ve teselli arayışını sürdürdükçe metabolik döngü kendini besler.</p>
+            <div class="concept-card">
+                <h3 class="concept-card-title">Tip 2 Diyabet</h3>
+                <p><strong>Anlayış bağlantısı:</strong> Kronik stres altında metabolik teselli ve ilkel güvenlik arayışı. Zihin sürekli tükenmişlik ve tehdit algısı içindeyken beden en hızlı yolla — glukoz üzerinden — anlık bir güvenlik alanı yaratmaya çalışır.</p>
+                <p><strong>Y₁ etkisi:</strong> Kronik kortizol karaciğerden sürekli glukoz salınımını tetikler, insülin salınımı artar. Hücreler sürekli yüksek insüline maruz kalınca duyarsızlaşır — insülin direnci gelişir. Kan şekeri hücreye giremez, kanda birikir. Sistem enerji üretemez, kronik yorgunluk başlar. Pankreas zamanla yorulur.</p>
+                <p><strong>Y₂ yansıması:</strong> Üretilemeyen enerji hareketi kısıtlar. İnsülin duyarlılığını koruyan kas kütlesi azalır. Hareket azaldıkça postüral çöküş hızlanır, kan dolaşımı bozulur.</p>
+                <p><strong>Döngü:</strong> Tehdit algısı → kortizol → insülin direnci → enerji düşüklüğü → hareketsizlik → daha fazla insülin direnci. Sistem güvenlik ve teselli arayışını sürdürdükçe metabolik döngü kendini besler.</p>
+            </div>
             
-            <h3>Sindirim Sorunları</h3>
-            <p><strong>Anlayış bağlantısı:</strong> Yaşananları, duyguları, maruz kalınan girdileri sinir sisteminde işleyememek. <em>"Yutmak zorundayım"</em> diyerek içeride biriktiren, sınır çizemeyen anlayış.</p>
-            <p><strong>Y₁ etkisi:</strong> Tehdit algısıyla vagus sinirinin tonu düşer, bağırsak-beyin hattı bozulur. Sindirim salgıları dengesizleşir. Bağırsak hareketleri düzensizleşir, mikrobiyom değişir, enflamasyon artar.</p>
-            <p><strong>Y₂ yansıması:</strong> Karın bölgesinde kronik gerginlik oluşur. Diyafram aşağı inemez, nefes sığlaşır. Pelvik taban kilitlenir. Öne kapanan postür karın içi basıncı bozar, organlar üzerindeki mekanik baskı sindirimi zorlaştırır.</p>
-            <p><strong>Döngü:</strong> Bastırılan girdi → sindirimin ertelenmesi → bağırsak ritmi bozulur → karın gerginliği → diyafram kısıtlanır → nefes sığlaşır → tehdit modu devam eder. İşleyemeyen zihin, öğütemeyen bir bağırsak mimarisi üretir.</p>
+            <div class="concept-card">
+                <h3 class="concept-card-title">Sindirim Sorunları</h3>
+                <p><strong>Anlayış bağlantısı:</strong> Yaşananları, duyguları, maruz kalınan girdileri sinir sisteminde işleyememek. <em>"Yutmak zorundayım"</em> diyerek içeride biriktiren, sınır çizemeyen anlayış.</p>
+                <p><strong>Y₁ etkisi:</strong> Tehdit algısıyla vagus sinirinin tonu düşer, bağırsak-beyin hattı bozulur. Sindirim salgıları dengesizleşir. Bağırsak hareketleri düzensizleşir, mikrobiyom değişir, enflamasyon artar.</p>
+                <p><strong>Y₂ yansıması:</strong> Karın bölgesinde kronik gerginlik oluşur. Diyafram aşağı inemez, nefes sığlaşır. Pelvik taban kilitlenir. Öne kapanan postür karın içi basıncı bozar, organlar üzerindeki mekanik baskı sindirimi zorlaştırır.</p>
+                <p><strong>Döngü:</strong> Bastırılan girdi → sindirimin ertelenmesi → bağırsak ritmi bozulur → karın gerginliği → diyafram kısıtlanır → nefes sığlaşır → tehdit modu devam eder. İşleyemeyen zihin, öğütemeyen bir bağırsak mimarisi üretir.</p>
+            </div>
             
             <div class="coming-soon-preview">
                 <p>Migren, fibromiyalji, kronik yorgunluk sendromu, bel fıtığı, eklem ağrıları, otoimmün durumlar ve daha fazlası...</p>
@@ -161,15 +66,10 @@
     </div>
 </main>
 
-<footer class="footer-area" style="text-align: center !important; margin: 0 auto !important; max-width: 640px !important; padding: 0 24px 80px !important; display: block !important; float: none !important; clear: both !important;">
-    
-    <hr class="section-divider" style="border: 0 !important; height: 1px !important; background: linear-gradient(to right, transparent, #4A3B31 20%, #4A3B31 80%, transparent) !important; margin: 60px 0 !important; display: block !important; width: 100% !important;">
-    
-    <div style="font-family: 'Cinzel', serif !important; font-size: 1rem !important; color: #E5C583 !important; letter-spacing: 4px !important; text-transform: uppercase !important; text-align: center !important; margin: 40px auto 20px auto !important; font-weight: 600 !important; display: block !important; opacity: 1 !important; line-height: 1.4 !important; float: none !important;">
-        Sadece ışık tutar.
-    </div>
-
-    <div style="text-align: center !important; display: block !important;">
+<footer class="footer-area">
+    <hr class="section-divider">
+    <div class="footer-inline-motto">Sadece ışık tutar.</div>
+    <div class="social-icon-wrapper">
         <a href="https://instagram.com/SENIN_KULLANICI_ADIN" target="_blank" class="social-icon" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -178,14 +78,8 @@
             </svg>
         </a>
     </div>
-    
-    <p style="font-family: Georgia, serif !important; font-size: 0.85rem !important; margin: 0 auto 12px auto !important; font-style: italic !important; opacity: 0.7 !important; text-align: center !important; color: #D1C4B9 !important; display: block !important; line-height: 1.7 !important; max-width: 520px !important; float: none !important;">
-        Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.
-    </p>
-    
-    <div style="font-family: -apple-system, BlinkMacSystemFont, sans-serif !important; margin: 40px auto 0 auto !important; font-size: 0.83rem !important; color: #8C7A6B !important; text-align: center !important; border-top: 1px solid #4A3B31 !important; padding-top: 24px !important; letter-spacing: 0.5px !important; display: block !important; opacity: 1 !important; max-width: 100% !important; float: none !important;">
-        © 2026 KÖKEN Systems. Tüm Hakları Saklıdır.
-    </div>
+    <p class="footer-inline-disclaimer">Bu bir tedavi yöntemi veya egzersiz programı değildir; kavramsal bir modeldir.</p>
+    <div class="footer-inline-copyright">© 2026 KÖKEN Systems. Tüm Hakları Saklıdır.</div>
 </footer>
 
 <a href="mailto:kokensystems@gmail.com" class="mail-button" aria-label="E-posta gönder">
