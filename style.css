@@ -91,6 +91,8 @@ blockquote { background: linear-gradient(90deg, rgba(229,197,131,0) 0%, rgba(229
 blockquote::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.085; mix-blend-mode: color-dodge; pointer-events: none; z-index: -1; }
 blockquote:hover { transform: translateY(-2px); }
 blockquote p { margin: 0; opacity: 0.95; letter-spacing: 0.5px; }
+.content blockquote p { margin-bottom: 0; }
+.footer-aforizma { margin: 20px auto 40px auto; }
 .golden-aforizma { text-align: center; font-style: italic; color: var(--accent-gold); margin: 45px auto; font-size: 1.15rem; line-height: 1.8; letter-spacing: 0.5px; opacity: 0.95; max-width: 520px; }
 .emphasis-line { font-family: 'Cinzel', serif; font-size: 0.95rem; color: var(--accent-gold); text-align: center; letter-spacing: 2px; margin: 20px 0; opacity: 0.9; font-weight: 600; }
 .emphasis-text { font-style: italic; font-weight: 700; color: var(--text-color); opacity: 0.95; }
@@ -158,12 +160,12 @@ mjx-container[display="true"] { display: inline-block !important; text-align: ce
 
 /* ── FOOTER ALANI ── */
 .footer-area { max-width: 640px; margin: 0 auto; padding: 0 24px 80px; text-align: center; display: block; clear: both; }
-.math-motto { text-align: center; font-family: 'Cinzel', serif; font-size: 0.72rem; color: var(--accent-gold); margin: 60px 0 30px 0; letter-spacing: 5px; text-transform: uppercase; opacity: 0.65; }
+.math-motto { text-align: center; font-family: 'Cinzel', serif; font-size: 0.72rem; color: var(--accent-gold); margin: 60px 0 30px 0; letter-spacing: 5px; text-transform: uppercase; opacity: 0.95; }
 .footer { margin-top: 40px; font-size: 0.83rem; color: #8C7A6B; text-align: center; border-top: 1px solid var(--border-color); padding-top: 30px; letter-spacing: 0.5px; }
 .footer-disclaimer { font-size: 0.82rem; margin-bottom: 12px; font-style: italic; opacity: 0.65; text-align: center; color: var(--sub-heading); }
 
 /* Footer Inline Replacements */
-.footer-inline-motto { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--accent-gold); letter-spacing: 4px; text-transform: uppercase; text-align: center; margin: 40px auto 20px auto; font-weight: 600; display: block; opacity: 1; line-height: 1.4; float: none; }
+.footer-inline-motto { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--accent-gold); letter-spacing: 4px; text-transform: uppercase; text-align: center; margin: 40px auto 20px auto; font-weight: 600; display: block; opacity: 0.95; line-height: 1.4; float: none; }
 .footer-inline-disclaimer { font-family: Georgia, serif; font-size: 0.85rem; margin: 0 auto 12px auto; font-style: italic; opacity: 0.7; text-align: center; color: var(--sub-heading); display: block; line-height: 1.7; max-width: 520px; float: none; }
 .footer-inline-copyright { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 40px auto 0 auto; font-size: 0.83rem; color: #8C7A6B; text-align: center; border-top: 1px solid var(--border-color); padding-top: 24px; letter-spacing: 0.5px; display: block; opacity: 1; max-width: 100%; float: none; }
 .social-icon-wrapper { text-align: center; display: block; }
