@@ -9,7 +9,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23251C17'/><text y='75' x='50' font-family='Georgia, serif' font-size='70' font-weight='bold' fill='%23E5C583' text-anchor='middle'>K</text></svg>">
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -27,13 +27,12 @@
         <div class="content">
             <p style="opacity: 0.65; font-style: italic; font-size: 0.95rem;">Bu bölümü okurken şunlara dikkat etmeliyiz: anlayış herkeste aynı çalışmaz. Belli bir anlayış farklı kişilerde farklı sonuçlara sebep olabilir. Anlayış genellemesi yapılabilir ama kişi özelinde çok fazla değişken vardır. Yoğunluk ve zamanla birlikte hastalığın yönü belli olur. Bu yüzden buradaki bağlantılar kesin teşhis değil, örüntüdür. Kendi hastalığına veya problemine bakabilirsen anlayışın görünür olacaktır.</p>
             
-          <div class="concept-card">
-                <h3 class="concept-card-title">Anksiyete</h3>
-                <p><strong>Anlayış bağlantısı:</strong> Güvensizlik. Sürecin ve olayların bütününün kontrol dışı olduğu, her an tehdit gelebileceği varsayımı. Zihin hayatta kalmak için sürekli tetikte beklemeyi tek çare görür.</p>
-                <p><strong>Y₁ etkisi:</strong> <span class="tooltip" data-tooltip="Tehdit anında sistemi alarm durumuna geçiren ve enerjiyi hayatta kalma reflekslerine yönlendiren otonom ağ">Sempatik sistem</span> kronik aktif kalır. <span class="tooltip" data-tooltip="Stres anında beynin böbrek üstü bezlerini uyarmak için kullandığı biyolojik komut hattı">HPA ekseni</span> sürekli <span class="tooltip" data-tooltip="Bedenin stres ve tehdit altında ürettiği ana hayatta kalma (ve hücresel yıkım) hormonu">kortizol</span> ve adrenalin üretir. Bağışıklık baskılanır, sindirim geri plana alınır, uyku bozulur. Hücresel onarım durur.</p>
-                <p><strong>Y₂ yansıması:</strong> Boyun, omuz ve çene kronik gergin kalır. Nefes sığlaşır, göğse sıkışır. Postür içe kapanır. Hareket kapasitesi ve bakış açısı fiziksel olarak daralır.</p>
-                <p><strong>Döngü:</strong> Zihin tetikte olduğu için beden gerilir. <span class="tooltip" data-tooltip="Sinir sisteminin iç organlardan ve dokulardan gelen verileri okuyarak bedenin anlık haritasını çıkarma becerisi (İnteroception)">İç algı</span> bu gerilimi tehdit olarak okur, zihin daha da tetikte kalır. Ortada nesnel bir tehlike olmasa bile sistem kendi yarattığı yankıyla beslenir. <span class="tooltip" data-tooltip="Bedenin stres veya değişen koşullar altında hayatta kalmak için yeni bir denge (yeni normal) kurma çabasıdır.">Allostazi</span> bu gerilimi yeni normal ilan eder.</p>
-            </div>
+            <h3>Anksiyete</h3>
+            <p><strong>Anlayış bağlantısı:</strong> Güvensizlik. Sürecin ve olayların bütününün kontrol dışı olduğu, her an tehdit gelebileceği varsayımı. Zihin hayatta kalmak için sürekli tetikte beklemeyi tek çare görür.</p>
+            <p><strong>Y₁ etkisi:</strong> <span class="tooltip" data-tooltip="Tehdit anında sistemi alarm durumuna geçiren ve enerjiyi hayatta kalma reflekslerine yönlendiren otonom ağ">Sempatik sistem</span> kronik aktif kalır. <span class="tooltip" data-tooltip="Stres anında beynin böbrek üstü bezlerini uyarmak için kullandığı biyolojik komut hattı">HPA ekseni</span> sürekli <span class="tooltip" data-tooltip="Bedenin stres ve tehdit altında ürettiği ana hayatta kalma (ve hücresel yıkım) hormonu">kortizol</span> ve adrenalin üretir. Bağışıklık baskılanır, sindirim geri plana alınır, uyku bozulur. Hücresel onarım durur.</p>
+            <p><strong>Y₂ yansıması:</strong> Boyun, omuz ve çene kronik gergin kalır. Nefes sığlaşır, göğse sıkışır. Postür içe kapanır. Hareket kapasitesi ve bakış açısı fiziksel olarak daralır.</p>
+            <p><strong>Döngü:</strong> Zihin tetikte olduğu için beden gerilir. <span class="tooltip" data-tooltip="Sinir sisteminin iç organlardan ve dokulardan gelen verileri okuyarak bedenin anlık haritasını çıkarma becerisi (İnteroception)">İç algı</span> bu gerilimi tehdit olarak okur, zihin daha da tetikte kalır. Ortada nesnel bir tehlike olmasa bile sistem kendi yarattığı yankıyla beslenir. <span class="tooltip" data-tooltip="Bedenin stres veya değişen koşullar altında hayatta kalmak için yeni bir denge (yeni normal) kurma çabasıdır.">Allostazi</span> bu gerilimi yeni normal ilan eder.</p>
+            
             <div class="concept-card">
                 <h3 class="concept-card-title">Kronik Boyun Ağrısı</h3>
                 <p><strong>Anlayış bağlantısı:</strong> <em>"Her şeyi tek başıma taşımalıyım."</em> Kontrolü kaybederse güvende olamayacağı ve değer görmeyeceği varsayımı. Kontrol bir savunma mekanizmasıdır — temelde değer görmeme ve başarısız olma korkusunun yansıması.</p>
@@ -58,10 +57,21 @@
                 <p><strong>Döngü:</strong> Bastırılan girdi → sindirimin ertelenmesi → bağırsak ritmi bozulur → karın gerginliği → diyafram kısıtlanır → nefes sığlaşır → tehdit modu devam eder. İşleyemeyen zihin, öğütemeyen bir bağırsak mimarisi üretir.</p>
             </div>
             
-            <div class="coming-soon-preview">
-                <p>Migren, fibromiyalji, kronik yorgunluk sendromu, bel fıtığı, eklem ağrıları, otoimmün durumlar ve daha fazlası...</p>
+            <div class="coming-soon-wrapper">
+                <div class="coming-soon-preview">
+                    <p>Migren, fibromiyalji, kronik yorgunluk sendromu, bel fıtığı, eklem ağrıları, otoimmun durumlar ve daha fazlası...</p>
+                </div>
+                <div class="coming-soon-overlay">
+                    <span class="coming-soon-lock">🔒</span>
+                    <span class="coming-soon-badge">Yeni içerik ekleniyor</span>
+                </div>
             </div>
-            <p class="coming-soon-badge">Devamı çok yakında</p>
+            <p class="page-progress-label">Bölüm</p>
+            <div class="page-progress">
+                <div class="page-progress-dot"></div>
+                <div class="page-progress-dot"></div>
+                <div class="page-progress-dot active"></div>
+            </div>
         </div>
 
         <a href="index.html" class="next-page-link">&larr; Ana Sayfaya Dön</a>
